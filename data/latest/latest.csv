@@ -543,10 +543,10 @@ betonlineag,MMA,fdb9ea14f1cb6fc8c84b0f02c36e41e6,2026-02-01T02:45:00+00:00,Tai T
 draftkings,MMA,fdb9ea14f1cb6fc8c84b0f02c36e41e6,2026-02-01T02:45:00+00:00,Tai Tuivasa,Tallison Teixeira,total,under,-260,-245,15,1.5,1.5,0.0,2026-01-31T17:44:30.573227+00:00
 betonlineag,MMA,fdfd5be0d82f9e915c12c69fc9f71cb8,2026-01-31T17:00:00+00:00,Daniel Schwindt,Brian Manning,moneyline,away,125,115,-10,,,,2026-01-31T15:42:19.295540+00:00
 betonlineag,MMA,fdfd5be0d82f9e915c12c69fc9f71cb8,2026-01-31T17:00:00+00:00,Daniel Schwindt,Brian Manning,moneyline,home,-145,-135,10,,,,2026-01-31T15:42:19.295540+00:00
-fanduel,MMA,mma_stub_001,2026-02-07T19:36:10.008264+00:00,Jon Jones,Stipe Miocic,moneyline,away,210,210,0,,,,2026-01-31T19:36:10.009549+00:00
-fanduel,MMA,mma_stub_001,2026-02-07T19:36:10.008264+00:00,Jon Jones,Stipe Miocic,moneyline,home,-250,-250,0,,,,2026-01-31T19:36:10.009549+00:00
-fanduel,MMA,mma_stub_002,2026-02-07T21:36:10.008264+00:00,Islam Makhachev,Charles Oliveira,moneyline,away,155,155,0,,,,2026-01-31T19:36:10.009549+00:00
-fanduel,MMA,mma_stub_002,2026-02-07T21:36:10.008264+00:00,Islam Makhachev,Charles Oliveira,moneyline,home,-180,-180,0,,,,2026-01-31T19:36:10.009549+00:00
+fanduel,MMA,mma_stub_001,2026-02-07T20:19:29.623752+00:00,Jon Jones,Stipe Miocic,moneyline,away,210,210,0,,,,2026-01-31T20:19:29.624574+00:00
+fanduel,MMA,mma_stub_001,2026-02-07T20:19:29.623752+00:00,Jon Jones,Stipe Miocic,moneyline,home,-250,-250,0,,,,2026-01-31T20:19:29.624574+00:00
+fanduel,MMA,mma_stub_002,2026-02-07T22:19:29.623752+00:00,Islam Makhachev,Charles Oliveira,moneyline,away,155,155,0,,,,2026-01-31T20:19:29.624574+00:00
+fanduel,MMA,mma_stub_002,2026-02-07T22:19:29.623752+00:00,Islam Makhachev,Charles Oliveira,moneyline,home,-180,-180,0,,,,2026-01-31T20:19:29.624574+00:00
 fanduel,NBA,00747f8760cdab8e1f83fde19f362d2b,2026-01-27T01:12:00+00:00,Boston Celtics,Portland Trail Blazers,moneyline,away,300,1100,800,,,,2026-01-27T03:17:32.713110+00:00
 draftkings,NBA,00747f8760cdab8e1f83fde19f362d2b,2026-01-27T01:12:00+00:00,Boston Celtics,Portland Trail Blazers,moneyline,away,300,1400,1100,,,,2026-01-27T03:17:32.713110+00:00
 betmgm,NBA,00747f8760cdab8e1f83fde19f362d2b,2026-01-27T01:12:00+00:00,Boston Celtics,Portland Trail Blazers,moneyline,away,310,2800,2490,,,,2026-01-27T03:43:12.878106+00:00
@@ -3207,18 +3207,18 @@ fanduel,NBA,fb399b86d88c46a22fa7c2e3d981fdda,2026-01-21T01:35:00+00:00,Houston R
 betonlineag,NBA,fb399b86d88c46a22fa7c2e3d981fdda,2026-01-21T01:35:00+00:00,Houston Rockets,San Antonio Spurs,total,under,-115,-115,0,223.5,221.0,-2.5,2026-01-21T01:43:01.182333+00:00
 draftkings,NBA,fb399b86d88c46a22fa7c2e3d981fdda,2026-01-21T01:35:00+00:00,Houston Rockets,San Antonio Spurs,total,under,-110,-115,-5,224.5,221.5,-3.0,2026-01-21T03:42:35.817964+00:00
 betmgm,NBA,fb399b86d88c46a22fa7c2e3d981fdda,2026-01-21T01:35:00+00:00,Houston Rockets,San Antonio Spurs,total,under,-115,-110,5,224.5,221.5,-3.0,2026-01-21T03:42:35.817964+00:00
-fanduel,NBA,nba_stub_001,2026-02-01T19:36:09.381172+00:00,Los Angeles Lakers,Boston Celtics,moneyline,away,-140,-140,0,,,,2026-01-31T19:36:10.009549+00:00
-fanduel,NBA,nba_stub_001,2026-02-01T19:36:09.381172+00:00,Los Angeles Lakers,Boston Celtics,moneyline,home,120,120,0,,,,2026-01-31T19:36:10.009549+00:00
-fanduel,NBA,nba_stub_001,2026-02-01T19:36:09.381172+00:00,Los Angeles Lakers,Boston Celtics,spread,away,-110,-110,0,-2.5,-2.5,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NBA,nba_stub_001,2026-02-01T19:36:09.381172+00:00,Los Angeles Lakers,Boston Celtics,spread,home,-110,-110,0,2.5,2.5,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NBA,nba_stub_001,2026-02-01T19:36:09.381172+00:00,Los Angeles Lakers,Boston Celtics,total,over,-110,-110,0,225.5,225.5,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NBA,nba_stub_001,2026-02-01T19:36:09.381172+00:00,Los Angeles Lakers,Boston Celtics,total,under,-110,-110,0,225.5,225.5,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NBA,nba_stub_002,2026-02-01T22:36:09.381172+00:00,Golden State Warriors,Phoenix Suns,moneyline,away,145,145,0,,,,2026-01-31T19:36:10.009549+00:00
-fanduel,NBA,nba_stub_002,2026-02-01T22:36:09.381172+00:00,Golden State Warriors,Phoenix Suns,moneyline,home,-165,-165,0,,,,2026-01-31T19:36:10.009549+00:00
-fanduel,NBA,nba_stub_002,2026-02-01T22:36:09.381172+00:00,Golden State Warriors,Phoenix Suns,spread,away,-112,-112,0,4.0,4.0,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NBA,nba_stub_002,2026-02-01T22:36:09.381172+00:00,Golden State Warriors,Phoenix Suns,spread,home,-108,-108,0,-4.0,-4.0,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NBA,nba_stub_002,2026-02-01T22:36:09.381172+00:00,Golden State Warriors,Phoenix Suns,total,over,-105,-105,0,232.0,232.0,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NBA,nba_stub_002,2026-02-01T22:36:09.381172+00:00,Golden State Warriors,Phoenix Suns,total,under,-115,-115,0,232.0,232.0,0.0,2026-01-31T19:36:10.009549+00:00
+fanduel,NBA,nba_stub_001,2026-02-01T20:19:29.442784+00:00,Los Angeles Lakers,Boston Celtics,moneyline,away,-140,-140,0,,,,2026-01-31T20:19:29.624574+00:00
+fanduel,NBA,nba_stub_001,2026-02-01T20:19:29.442784+00:00,Los Angeles Lakers,Boston Celtics,moneyline,home,120,120,0,,,,2026-01-31T20:19:29.624574+00:00
+fanduel,NBA,nba_stub_001,2026-02-01T20:19:29.442784+00:00,Los Angeles Lakers,Boston Celtics,spread,away,-110,-110,0,-2.5,-2.5,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NBA,nba_stub_001,2026-02-01T20:19:29.442784+00:00,Los Angeles Lakers,Boston Celtics,spread,home,-110,-110,0,2.5,2.5,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NBA,nba_stub_001,2026-02-01T20:19:29.442784+00:00,Los Angeles Lakers,Boston Celtics,total,over,-110,-110,0,225.5,225.5,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NBA,nba_stub_001,2026-02-01T20:19:29.442784+00:00,Los Angeles Lakers,Boston Celtics,total,under,-110,-110,0,225.5,225.5,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NBA,nba_stub_002,2026-02-01T23:19:29.442784+00:00,Golden State Warriors,Phoenix Suns,moneyline,away,145,145,0,,,,2026-01-31T20:19:29.624574+00:00
+fanduel,NBA,nba_stub_002,2026-02-01T23:19:29.442784+00:00,Golden State Warriors,Phoenix Suns,moneyline,home,-165,-165,0,,,,2026-01-31T20:19:29.624574+00:00
+fanduel,NBA,nba_stub_002,2026-02-01T23:19:29.442784+00:00,Golden State Warriors,Phoenix Suns,spread,away,-112,-112,0,4.0,4.0,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NBA,nba_stub_002,2026-02-01T23:19:29.442784+00:00,Golden State Warriors,Phoenix Suns,spread,home,-108,-108,0,-4.0,-4.0,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NBA,nba_stub_002,2026-02-01T23:19:29.442784+00:00,Golden State Warriors,Phoenix Suns,total,over,-105,-105,0,232.0,232.0,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NBA,nba_stub_002,2026-02-01T23:19:29.442784+00:00,Golden State Warriors,Phoenix Suns,total,under,-115,-115,0,232.0,232.0,0.0,2026-01-31T20:19:29.624574+00:00
 draftkings,NBA Futures,0646d720c3fd59168e130d26a5a9d3ca,2026-06-10T21:00:00+00:00,NBA Championship,,futures,Atlanta Hawks,15000,15000,0,,,,2026-01-26T19:40:42.013240+00:00
 fanduel,NBA Futures,0646d720c3fd59168e130d26a5a9d3ca,2026-06-10T21:00:00+00:00,NBA Championship,,futures,Atlanta Hawks,17500,17500,0,,,,2026-01-26T19:40:42.013240+00:00
 betonlineag,NBA Futures,0646d720c3fd59168e130d26a5a9d3ca,2026-06-10T21:00:00+00:00,NBA Championship,,futures,Atlanta Hawks,12500,12500,0,,,,2026-01-26T19:40:42.013240+00:00
@@ -12243,18 +12243,18 @@ betonlineag,NFL,f1d11f109fd93364e11f97623bddf652,2026-01-25T20:00:00+00:00,Denve
 betmgm,NFL,f1d11f109fd93364e11f97623bddf652,2026-01-25T20:03:08+00:00,Denver Broncos,New England Patriots,total,under,-105,-150,-45,40.5,28.5,-12.0,2026-01-25T22:18:57.477740+00:00
 fanduel,NFL,f1d11f109fd93364e11f97623bddf652,2026-01-25T20:03:08+00:00,Denver Broncos,New England Patriots,total,under,-110,-154,-44,40.5,27.5,-13.0,2026-01-25T22:18:57.477740+00:00
 espnbet,NFL,f1d11f109fd93364e11f97623bddf652,2026-01-25T20:00:00+00:00,Denver Broncos,New England Patriots,total,under,-120,-120,0,43.5,43.5,0.0,2026-01-24T23:26:08.362401+00:00
-fanduel,NFL,nfl_stub_001,2026-02-02T19:36:08.552591+00:00,Kansas City Chiefs,Buffalo Bills,moneyline,away,130,130,0,,,,2026-01-31T19:36:10.009549+00:00
-fanduel,NFL,nfl_stub_001,2026-02-02T19:36:08.552591+00:00,Kansas City Chiefs,Buffalo Bills,moneyline,home,-150,-150,0,,,,2026-01-31T19:36:10.009549+00:00
-fanduel,NFL,nfl_stub_001,2026-02-02T19:36:08.552591+00:00,Kansas City Chiefs,Buffalo Bills,spread,away,-110,-110,0,3.0,3.0,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NFL,nfl_stub_001,2026-02-02T19:36:08.552591+00:00,Kansas City Chiefs,Buffalo Bills,spread,home,-110,-110,0,-3.0,-3.0,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NFL,nfl_stub_001,2026-02-02T19:36:08.552591+00:00,Kansas City Chiefs,Buffalo Bills,total,over,-110,-110,0,47.5,47.5,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NFL,nfl_stub_001,2026-02-02T19:36:08.552591+00:00,Kansas City Chiefs,Buffalo Bills,total,under,-110,-110,0,47.5,47.5,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NFL,nfl_stub_002,2026-02-03T19:36:08.552591+00:00,San Francisco 49ers,Dallas Cowboys,moneyline,away,155,155,0,,,,2026-01-31T19:36:10.009549+00:00
-fanduel,NFL,nfl_stub_002,2026-02-03T19:36:08.552591+00:00,San Francisco 49ers,Dallas Cowboys,moneyline,home,-180,-180,0,,,,2026-01-31T19:36:10.009549+00:00
-fanduel,NFL,nfl_stub_002,2026-02-03T19:36:08.552591+00:00,San Francisco 49ers,Dallas Cowboys,spread,away,-115,-115,0,4.0,4.0,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NFL,nfl_stub_002,2026-02-03T19:36:08.552591+00:00,San Francisco 49ers,Dallas Cowboys,spread,home,-105,-105,0,-4.0,-4.0,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NFL,nfl_stub_002,2026-02-03T19:36:08.552591+00:00,San Francisco 49ers,Dallas Cowboys,total,over,-108,-108,0,49.0,49.0,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NFL,nfl_stub_002,2026-02-03T19:36:08.552591+00:00,San Francisco 49ers,Dallas Cowboys,total,under,-112,-112,0,49.0,49.0,0.0,2026-01-31T19:36:10.009549+00:00
+fanduel,NFL,nfl_stub_001,2026-02-02T20:19:29.117539+00:00,Kansas City Chiefs,Buffalo Bills,moneyline,away,130,130,0,,,,2026-01-31T20:19:29.624574+00:00
+fanduel,NFL,nfl_stub_001,2026-02-02T20:19:29.117539+00:00,Kansas City Chiefs,Buffalo Bills,moneyline,home,-150,-150,0,,,,2026-01-31T20:19:29.624574+00:00
+fanduel,NFL,nfl_stub_001,2026-02-02T20:19:29.117539+00:00,Kansas City Chiefs,Buffalo Bills,spread,away,-110,-110,0,3.0,3.0,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NFL,nfl_stub_001,2026-02-02T20:19:29.117539+00:00,Kansas City Chiefs,Buffalo Bills,spread,home,-110,-110,0,-3.0,-3.0,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NFL,nfl_stub_001,2026-02-02T20:19:29.117539+00:00,Kansas City Chiefs,Buffalo Bills,total,over,-110,-110,0,47.5,47.5,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NFL,nfl_stub_001,2026-02-02T20:19:29.117539+00:00,Kansas City Chiefs,Buffalo Bills,total,under,-110,-110,0,47.5,47.5,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NFL,nfl_stub_002,2026-02-03T20:19:29.117539+00:00,San Francisco 49ers,Dallas Cowboys,moneyline,away,155,155,0,,,,2026-01-31T20:19:29.624574+00:00
+fanduel,NFL,nfl_stub_002,2026-02-03T20:19:29.117539+00:00,San Francisco 49ers,Dallas Cowboys,moneyline,home,-180,-180,0,,,,2026-01-31T20:19:29.624574+00:00
+fanduel,NFL,nfl_stub_002,2026-02-03T20:19:29.117539+00:00,San Francisco 49ers,Dallas Cowboys,spread,away,-115,-115,0,4.0,4.0,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NFL,nfl_stub_002,2026-02-03T20:19:29.117539+00:00,San Francisco 49ers,Dallas Cowboys,spread,home,-105,-105,0,-4.0,-4.0,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NFL,nfl_stub_002,2026-02-03T20:19:29.117539+00:00,San Francisco 49ers,Dallas Cowboys,total,over,-108,-108,0,49.0,49.0,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NFL,nfl_stub_002,2026-02-03T20:19:29.117539+00:00,San Francisco 49ers,Dallas Cowboys,total,under,-112,-112,0,49.0,49.0,0.0,2026-01-31T20:19:29.624574+00:00
 fanduel,NHL,00fabc2b8792f1e59ecdecec06443557,2026-01-28T01:11:56+00:00,Minnesota Wild,Chicago Blackhawks,moneyline,away,205,122,-83,,,,2026-01-28T03:40:41.281805+00:00
 draftkings,NHL,00fabc2b8792f1e59ecdecec06443557,2026-01-28T01:11:56+00:00,Minnesota Wild,Chicago Blackhawks,moneyline,away,200,110,-90,,,,2026-01-28T03:40:41.281805+00:00
 betonlineag,NHL,00fabc2b8792f1e59ecdecec06443557,2026-01-28T01:11:56+00:00,Minnesota Wild,Chicago Blackhawks,moneyline,away,200,164,-36,,,,2026-01-28T01:17:28.203749+00:00
@@ -15118,18 +15118,18 @@ betonlineag,NHL,fed149cc816fb5569db4d7f3af6bdf86,2026-01-25T01:10:00+00:00,St Lo
 unibet,NHL,fed149cc816fb5569db4d7f3af6bdf86,2026-01-25T01:10:00+00:00,St Louis Blues,Los Angeles Kings,total,under,-122,-122,0,5.5,5.5,0.0,2026-01-24T23:26:08.362401+00:00
 betrivers,NHL,fed149cc816fb5569db4d7f3af6bdf86,2026-01-25T01:10:00+00:00,St Louis Blues,Los Angeles Kings,total,under,-125,-125,0,5.5,5.5,0.0,2026-01-24T23:26:08.362401+00:00
 espnbet,NHL,fed149cc816fb5569db4d7f3af6bdf86,2026-01-25T01:10:00+00:00,St Louis Blues,Los Angeles Kings,total,under,-125,-125,0,5.5,5.5,0.0,2026-01-24T23:26:08.362401+00:00
-fanduel,NHL,nhl_stub_001,2026-02-01T19:36:09.674095+00:00,Toronto Maple Leafs,Montreal Canadiens,moneyline,away,135,135,0,,,,2026-01-31T19:36:10.009549+00:00
-fanduel,NHL,nhl_stub_001,2026-02-01T19:36:09.674095+00:00,Toronto Maple Leafs,Montreal Canadiens,moneyline,home,-155,-155,0,,,,2026-01-31T19:36:10.009549+00:00
-fanduel,NHL,nhl_stub_001,2026-02-01T19:36:09.674095+00:00,Toronto Maple Leafs,Montreal Canadiens,spread,away,-105,-105,0,1.5,1.5,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NHL,nhl_stub_001,2026-02-01T19:36:09.674095+00:00,Toronto Maple Leafs,Montreal Canadiens,spread,home,-115,-115,0,-1.5,-1.5,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NHL,nhl_stub_001,2026-02-01T19:36:09.674095+00:00,Toronto Maple Leafs,Montreal Canadiens,total,over,-110,-110,0,6.5,6.5,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NHL,nhl_stub_001,2026-02-01T19:36:09.674095+00:00,Toronto Maple Leafs,Montreal Canadiens,total,under,-110,-110,0,6.5,6.5,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NHL,nhl_stub_002,2026-02-01T22:36:09.674095+00:00,Vegas Golden Knights,Colorado Avalanche,moneyline,away,110,110,0,,,,2026-01-31T19:36:10.009549+00:00
-fanduel,NHL,nhl_stub_002,2026-02-01T22:36:09.674095+00:00,Vegas Golden Knights,Colorado Avalanche,moneyline,home,-130,-130,0,,,,2026-01-31T19:36:10.009549+00:00
-fanduel,NHL,nhl_stub_002,2026-02-01T22:36:09.674095+00:00,Vegas Golden Knights,Colorado Avalanche,spread,away,-125,-125,0,1.5,1.5,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NHL,nhl_stub_002,2026-02-01T22:36:09.674095+00:00,Vegas Golden Knights,Colorado Avalanche,spread,home,105,105,0,-1.5,-1.5,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NHL,nhl_stub_002,2026-02-01T22:36:09.674095+00:00,Vegas Golden Knights,Colorado Avalanche,total,over,-105,-105,0,5.5,5.5,0.0,2026-01-31T19:36:10.009549+00:00
-fanduel,NHL,nhl_stub_002,2026-02-01T22:36:09.674095+00:00,Vegas Golden Knights,Colorado Avalanche,total,under,-115,-115,0,5.5,5.5,0.0,2026-01-31T19:36:10.009549+00:00
+fanduel,NHL,nhl_stub_001,2026-02-01T20:19:29.544214+00:00,Toronto Maple Leafs,Montreal Canadiens,moneyline,away,135,135,0,,,,2026-01-31T20:19:29.624574+00:00
+fanduel,NHL,nhl_stub_001,2026-02-01T20:19:29.544214+00:00,Toronto Maple Leafs,Montreal Canadiens,moneyline,home,-155,-155,0,,,,2026-01-31T20:19:29.624574+00:00
+fanduel,NHL,nhl_stub_001,2026-02-01T20:19:29.544214+00:00,Toronto Maple Leafs,Montreal Canadiens,spread,away,-105,-105,0,1.5,1.5,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NHL,nhl_stub_001,2026-02-01T20:19:29.544214+00:00,Toronto Maple Leafs,Montreal Canadiens,spread,home,-115,-115,0,-1.5,-1.5,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NHL,nhl_stub_001,2026-02-01T20:19:29.544214+00:00,Toronto Maple Leafs,Montreal Canadiens,total,over,-110,-110,0,6.5,6.5,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NHL,nhl_stub_001,2026-02-01T20:19:29.544214+00:00,Toronto Maple Leafs,Montreal Canadiens,total,under,-110,-110,0,6.5,6.5,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NHL,nhl_stub_002,2026-02-01T23:19:29.544214+00:00,Vegas Golden Knights,Colorado Avalanche,moneyline,away,110,110,0,,,,2026-01-31T20:19:29.624574+00:00
+fanduel,NHL,nhl_stub_002,2026-02-01T23:19:29.544214+00:00,Vegas Golden Knights,Colorado Avalanche,moneyline,home,-130,-130,0,,,,2026-01-31T20:19:29.624574+00:00
+fanduel,NHL,nhl_stub_002,2026-02-01T23:19:29.544214+00:00,Vegas Golden Knights,Colorado Avalanche,spread,away,-125,-125,0,1.5,1.5,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NHL,nhl_stub_002,2026-02-01T23:19:29.544214+00:00,Vegas Golden Knights,Colorado Avalanche,spread,home,105,105,0,-1.5,-1.5,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NHL,nhl_stub_002,2026-02-01T23:19:29.544214+00:00,Vegas Golden Knights,Colorado Avalanche,total,over,-105,-105,0,5.5,5.5,0.0,2026-01-31T20:19:29.624574+00:00
+fanduel,NHL,nhl_stub_002,2026-02-01T23:19:29.544214+00:00,Vegas Golden Knights,Colorado Avalanche,total,under,-115,-115,0,5.5,5.5,0.0,2026-01-31T20:19:29.624574+00:00
 draftkings,NHL Futures,7ddd332d431345caf3e23db5343a9142,2026-06-27T23:00:00+00:00,Stanley Cup Winner,,futures,Anaheim Ducks,9000,9000,0,,,,2026-01-26T19:40:42.013240+00:00
 fanduel,NHL Futures,7ddd332d431345caf3e23db5343a9142,2026-06-27T23:00:00+00:00,Stanley Cup Winner,,futures,Anaheim Ducks,8000,8000,0,,,,2026-01-26T19:40:42.013240+00:00
 betonlineag,NHL Futures,7ddd332d431345caf3e23db5343a9142,2026-06-27T23:00:00+00:00,Stanley Cup Winner,,futures,Anaheim Ducks,8000,8000,0,,,,2026-01-26T19:40:42.013240+00:00
