@@ -18,6 +18,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: odds-feed
+  cancel-in-progress: true
+
 jobs:
   update-feed:
     runs-on: ubuntu-latest
