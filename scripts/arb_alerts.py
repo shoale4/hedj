@@ -38,14 +38,14 @@ SPORTSBOOK_LINKS = {
 }
 
 # Minimum ROI to alert on (percentage)
-MIN_ROI_PERCENT = 0.5
+MIN_ROI_PERCENT = 0.1
 
 # Maximum ROI (above this is likely bad data)
 MAX_ROI_PERCENT = 15.0
 
 # Maximum age of odds to consider (in hours)
-# Odds older than this are likely stale and have changed
-MAX_ODDS_AGE_HOURS = 2
+# Data updates every ~40 min, so 1.5h covers ~2 update cycles
+MAX_ODDS_AGE_HOURS = 1.5
 
 # Discord webhook URL from environment
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL", "")

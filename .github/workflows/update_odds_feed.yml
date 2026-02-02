@@ -2,11 +2,16 @@ name: Update Odds Feed
 
 on:
   schedule:
-    # Run every 40 minutes (36 runs/day)
-    # 5 sports × 3 markets = 15 credits/run × 36 runs/day = 540/day = 16,200/month
-    - cron: "0 */2 * * *"     # :00 every even hour
-    - cron: "40 */2 * * *"    # :40 every even hour
-    - cron: "20 1-23/2 * * *" # :20 every odd hour
+    # 6 sports × 3 markets = 18 credits/run
+    # Peak (12pm-12am ET = 17-05 UTC): every 30 min = 24 runs/day
+    # Off-peak (12am-12pm ET = 5-17 UTC): every 2 hours = 6 runs/day
+    # Total: 30 runs/day × 18 credits = 540/day = 16,200/month (under 20k)
+    #
+    # Peak: every 30 min during game hours
+    - cron: "0,30 17-23 * * *"    # 12pm-7:30pm ET
+    - cron: "0,30 0-4 * * *"      # 7pm-12:30am ET
+    # Off-peak: every 2 hours
+    - cron: "0 5,7,9,11,13,15 * * *"  # 12am-12pm ET
   workflow_dispatch:
     # Allow manual triggers
 

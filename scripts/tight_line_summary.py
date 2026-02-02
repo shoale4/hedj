@@ -25,7 +25,7 @@ ILLINOIS_BOOKS = {
 MAX_IMPLIED_PROB = 1.02  # 102%
 
 # Maximum age of odds to consider (in hours)
-MAX_ODDS_AGE_HOURS = 2
+MAX_ODDS_AGE_HOURS = 1.5
 
 # Discord webhook URL from environment
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL", "")
