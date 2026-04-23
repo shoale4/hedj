@@ -121331,3 +121331,819 @@ timestamp_utc,book,sport,event_id,event_start_time,home_team,away_team,market_ty
 2026-04-23T05:15:44.265478+00:00,draftkings,MMA,fa2d7e022c2c47e0855f04084d08f163,2026-12-31T20:00:00+00:00,Tom Aspinall,Ciryl Gane,moneyline,home,-192,
 2026-04-23T05:15:44.265478+00:00,betonlineag,MMA,fcee675894f8285afc8daf0808198b74,2027-07-02T02:00:00+00:00,Islam Makhachev,Kamaru Usman,moneyline,home,-330,
 2026-04-23T05:15:44.265478+00:00,betonlineag,MMA,fcee675894f8285afc8daf0808198b74,2027-07-02T02:00:00+00:00,Islam Makhachev,Kamaru Usman,moneyline,away,270,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,moneyline,home,-110,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,moneyline,away,-110,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,spread,home,-102,-1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,spread,away,-118,1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,total,over,-108,216.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,total,under,-112,216.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,moneyline,home,-104,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,moneyline,away,-112,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,spread,home,-118,1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,spread,away,-104,-1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,total,over,-108,216.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,total,under,-112,216.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,moneyline,home,-104,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,moneyline,away,-116,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,spread,home,-110,1.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,spread,away,-110,-1.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,total,over,-110,216.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,total,under,-110,216.0
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,moneyline,home,-105,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,moneyline,away,-115,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,spread,home,-118,1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,spread,away,-102,-1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,total,over,-105,216.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,b2b129565e14b8782b318b699b05ab3b,2026-04-23T23:10:00+00:00,Atlanta Hawks,New York Knicks,total,under,-115,216.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,moneyline,away,-155,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,moneyline,home,130,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,spread,away,-115,-2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,spread,home,-105,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,total,over,-115,219.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,total,under,-105,219.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,moneyline,away,-154,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,moneyline,home,130,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,spread,away,-104,-3.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,spread,home,-118,3.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,total,over,-106,220.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,total,under,-114,220.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,moneyline,away,-155,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,moneyline,home,125,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,spread,away,-118,-2.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,spread,home,-102,2.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,total,over,-110,219.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,total,under,-110,219.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,moneyline,away,-150,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,moneyline,home,130,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,spread,away,-108,-3.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,spread,home,-112,3.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,total,over,-115,219.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,b754568efb2036d7f3b661cc8093e66f,2026-04-24T00:10:00+00:00,Toronto Raptors,Cleveland Cavaliers,total,under,-105,219.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,moneyline,away,-130,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,moneyline,home,110,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,spread,away,-115,-1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,spread,home,-105,1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,total,over,-105,234.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,total,under,-115,234.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,moneyline,away,-135,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,moneyline,home,114,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,spread,away,-108,-2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,spread,home,-112,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,total,over,-112,233.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,total,under,-108,233.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,moneyline,away,-135,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,moneyline,home,110,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,spread,away,-105,-2.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,spread,home,-115,2.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,total,over,-105,234.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,total,under,-115,234.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,moneyline,away,-135,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,moneyline,home,115,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,spread,away,-110,-2.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,spread,home,-110,2.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,total,over,-105,234.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,c548073cbcde990c77986a123bd2d5bd,2026-04-24T01:30:00+00:00,Minnesota Timberwolves,Denver Nuggets,total,under,-115,234.0
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,moneyline,away,-298,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,moneyline,home,240,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,spread,away,-108,-7.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,spread,home,-112,7.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,total,over,-110,215.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,total,under,-110,215.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,moneyline,away,-275,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,moneyline,home,225,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,spread,away,-106,-7.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,spread,home,-114,7.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,total,over,-106,215.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,total,under,-114,215.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,moneyline,away,-300,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,moneyline,home,240,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,spread,away,-105,-7.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,spread,home,-115,7.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,total,over,-110,215.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,total,under,-110,215.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,moneyline,away,-300,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,moneyline,home,245,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,spread,away,-115,-7.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,spread,home,-105,7.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,total,over,-108,215.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,8d8ab21ae69d529ee4bd01fb8ace8276,2026-04-24T23:10:00+00:00,Philadelphia 76ers,Boston Celtics,total,under,-112,215.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,moneyline,home,-395,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,moneyline,away,310,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,spread,home,-110,-9.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,spread,away,-110,9.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,total,over,-112,205.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,total,under,-108,205.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,moneyline,home,-390,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,moneyline,away,310,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,spread,home,-112,-9.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,spread,away,-108,9.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,total,over,-110,205.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,total,under,-110,205.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,moneyline,home,-375,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,moneyline,away,300,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,spread,home,-110,-9.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,spread,away,-110,9.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,total,over,-110,205.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,total,under,-110,205.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,moneyline,home,-375,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,moneyline,away,299,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,spread,home,-110,-9.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,spread,away,-110,9.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,total,over,-110,206.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,5000a9f1dd7ba71de7ae6ceef836aa48,2026-04-25T00:10:00+00:00,Houston Rockets,Los Angeles Lakers,total,under,-110,206.0
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,moneyline,home,110,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,moneyline,away,-130,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,spread,home,-108,1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,spread,away,-112,-1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,total,over,-110,220.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,total,under,-110,220.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,moneyline,home,110,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,moneyline,away,-130,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,spread,home,-105,1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,spread,away,-115,-1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,total,over,-108,220.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,total,under,-112,220.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,moneyline,home,110,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,moneyline,away,-135,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,spread,home,-105,1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,spread,away,-115,-1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,total,over,-110,220.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,total,under,-110,220.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,moneyline,home,110,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,moneyline,away,-130,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,spread,home,-108,1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,spread,away,-112,-1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,total,over,-105,220.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,af4847d63733e67ddd02f2bafac8ea6f,2026-04-25T02:40:00+00:00,Portland Trail Blazers,San Antonio Spurs,total,under,-115,220.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,moneyline,away,-148,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,moneyline,home,124,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,spread,away,-110,-2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,spread,home,-110,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,total,over,-105,213.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,total,under,-115,213.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,moneyline,away,-150,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,moneyline,home,125,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,spread,away,-115,-2.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,spread,home,-105,2.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,total,over,-110,213.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,total,under,-110,213.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,moneyline,away,-142,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,moneyline,home,120,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,spread,away,-110,-2.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,spread,home,-110,2.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,total,over,-108,213.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,total,under,-112,213.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,moneyline,away,-150,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,moneyline,home,130,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,spread,away,-115,-2.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,spread,home,-105,2.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,total,over,-105,214.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,e480da9a1b9dacbed9120388db4f133f,2026-04-25T17:10:00+00:00,Orlando Magic,Detroit Pistons,total,under,-115,214.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,moneyline,away,-420,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,moneyline,home,330,
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,spread,away,-108,-9.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,spread,home,-112,9.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,total,over,-114,214.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,total,under,-106,214.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,moneyline,away,-470,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,moneyline,home,360,
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,spread,away,-110,-9.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,spread,home,-110,9.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,total,over,-110,215.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,total,under,-110,215.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,moneyline,away,-460,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,moneyline,home,358,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,spread,away,-105,-9.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,spread,home,-115,9.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,total,over,-110,214.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,total,under,-110,214.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,moneyline,away,-475,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,moneyline,home,350,
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,spread,away,-110,-9.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,spread,home,-110,9.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,total,over,-110,215.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NBA,9f41c322eb6aa09683dc241cacc31d7c,2026-04-25T19:30:00+00:00,Phoenix Suns,Oklahoma City Thunder,total,under,-110,215.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,394a702a8e29834913f57266c9f99c51,2026-05-08T23:30:00+00:00,New York Liberty,Connecticut Sun,moneyline,away,980,
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,394a702a8e29834913f57266c9f99c51,2026-05-08T23:30:00+00:00,New York Liberty,Connecticut Sun,moneyline,home,-2200,
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,394a702a8e29834913f57266c9f99c51,2026-05-08T23:30:00+00:00,New York Liberty,Connecticut Sun,spread,away,-112,17.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,394a702a8e29834913f57266c9f99c51,2026-05-08T23:30:00+00:00,New York Liberty,Connecticut Sun,spread,home,-108,-17.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,394a702a8e29834913f57266c9f99c51,2026-05-08T23:30:00+00:00,New York Liberty,Connecticut Sun,total,over,-110,162.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,394a702a8e29834913f57266c9f99c51,2026-05-08T23:30:00+00:00,New York Liberty,Connecticut Sun,total,under,-110,162.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,394a702a8e29834913f57266c9f99c51,2026-05-08T23:30:00+00:00,New York Liberty,Connecticut Sun,moneyline,away,1100,
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,394a702a8e29834913f57266c9f99c51,2026-05-08T23:30:00+00:00,New York Liberty,Connecticut Sun,moneyline,home,-2100,
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,394a702a8e29834913f57266c9f99c51,2026-05-08T23:30:00+00:00,New York Liberty,Connecticut Sun,spread,away,-110,17.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,394a702a8e29834913f57266c9f99c51,2026-05-08T23:30:00+00:00,New York Liberty,Connecticut Sun,spread,home,-110,-17.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,394a702a8e29834913f57266c9f99c51,2026-05-08T23:30:00+00:00,New York Liberty,Connecticut Sun,total,over,-110,163.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,394a702a8e29834913f57266c9f99c51,2026-05-08T23:30:00+00:00,New York Liberty,Connecticut Sun,total,under,-110,163.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,cc10e0482e68ed9de54b97d21c46596e,2026-05-08T23:30:00+00:00,Toronto Tempo,Washington Mystics,moneyline,home,-130,
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,cc10e0482e68ed9de54b97d21c46596e,2026-05-08T23:30:00+00:00,Toronto Tempo,Washington Mystics,moneyline,away,110,
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,cc10e0482e68ed9de54b97d21c46596e,2026-05-08T23:30:00+00:00,Toronto Tempo,Washington Mystics,spread,home,-110,-1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,cc10e0482e68ed9de54b97d21c46596e,2026-05-08T23:30:00+00:00,Toronto Tempo,Washington Mystics,spread,away,-110,1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,cc10e0482e68ed9de54b97d21c46596e,2026-05-08T23:30:00+00:00,Toronto Tempo,Washington Mystics,total,over,-110,158.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,cc10e0482e68ed9de54b97d21c46596e,2026-05-08T23:30:00+00:00,Toronto Tempo,Washington Mystics,total,under,-110,158.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,cc10e0482e68ed9de54b97d21c46596e,2026-05-08T23:30:00+00:00,Toronto Tempo,Washington Mystics,moneyline,home,-130,
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,cc10e0482e68ed9de54b97d21c46596e,2026-05-08T23:30:00+00:00,Toronto Tempo,Washington Mystics,moneyline,away,106,
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,cc10e0482e68ed9de54b97d21c46596e,2026-05-08T23:30:00+00:00,Toronto Tempo,Washington Mystics,spread,home,-110,-1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,cc10e0482e68ed9de54b97d21c46596e,2026-05-08T23:30:00+00:00,Toronto Tempo,Washington Mystics,spread,away,-110,1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,cc10e0482e68ed9de54b97d21c46596e,2026-05-08T23:30:00+00:00,Toronto Tempo,Washington Mystics,total,over,-110,159.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,cc10e0482e68ed9de54b97d21c46596e,2026-05-08T23:30:00+00:00,Toronto Tempo,Washington Mystics,total,under,-110,159.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,05ba9c19c44fa11daedbeb4c4eaf9aab,2026-05-09T02:00:00+00:00,Seattle Storm,Golden State Valkyries,moneyline,away,-170,
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,05ba9c19c44fa11daedbeb4c4eaf9aab,2026-05-09T02:00:00+00:00,Seattle Storm,Golden State Valkyries,moneyline,home,138,
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,05ba9c19c44fa11daedbeb4c4eaf9aab,2026-05-09T02:00:00+00:00,Seattle Storm,Golden State Valkyries,spread,away,-106,-3.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,05ba9c19c44fa11daedbeb4c4eaf9aab,2026-05-09T02:00:00+00:00,Seattle Storm,Golden State Valkyries,spread,home,-114,3.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,05ba9c19c44fa11daedbeb4c4eaf9aab,2026-05-09T02:00:00+00:00,Seattle Storm,Golden State Valkyries,total,over,-110,154.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,05ba9c19c44fa11daedbeb4c4eaf9aab,2026-05-09T02:00:00+00:00,Seattle Storm,Golden State Valkyries,total,under,-110,154.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,05ba9c19c44fa11daedbeb4c4eaf9aab,2026-05-09T02:00:00+00:00,Seattle Storm,Golden State Valkyries,moneyline,away,-175,
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,05ba9c19c44fa11daedbeb4c4eaf9aab,2026-05-09T02:00:00+00:00,Seattle Storm,Golden State Valkyries,moneyline,home,145,
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,05ba9c19c44fa11daedbeb4c4eaf9aab,2026-05-09T02:00:00+00:00,Seattle Storm,Golden State Valkyries,spread,away,-105,-3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,05ba9c19c44fa11daedbeb4c4eaf9aab,2026-05-09T02:00:00+00:00,Seattle Storm,Golden State Valkyries,spread,home,-115,3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,05ba9c19c44fa11daedbeb4c4eaf9aab,2026-05-09T02:00:00+00:00,Seattle Storm,Golden State Valkyries,total,over,-110,154.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,05ba9c19c44fa11daedbeb4c4eaf9aab,2026-05-09T02:00:00+00:00,Seattle Storm,Golden State Valkyries,total,under,-110,154.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,moneyline,away,290,
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,moneyline,home,-385,
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,spread,away,-114,8.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,spread,home,-106,-8.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,total,over,-108,167.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,total,under,-112,167.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,moneyline,away,260,
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,moneyline,home,-325,
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,spread,away,-110,7.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,spread,home,-110,-7.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,total,over,-110,168.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,total,under,-110,168.5
+2026-04-23T06:53:40.658470+00:00,betmgm,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,moneyline,away,270,
+2026-04-23T06:53:40.658470+00:00,betmgm,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,moneyline,home,-350,
+2026-04-23T06:53:40.658470+00:00,betmgm,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,spread,away,-115,8.5
+2026-04-23T06:53:40.658470+00:00,betmgm,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,spread,home,-105,-8.5
+2026-04-23T06:53:40.658470+00:00,betmgm,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,total,over,-115,167.5
+2026-04-23T06:53:40.658470+00:00,betmgm,WNBA,e28d54c8b0fc7378902ab7a5c361d19d,2026-05-09T17:00:00+00:00,Indiana Fever,Dallas Wings,total,under,-105,167.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,0f8c28106a569b3b61d33ef0c0e272ec,2026-05-09T19:30:00+00:00,Las Vegas Aces,Phoenix Mercury,moneyline,home,-300,
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,0f8c28106a569b3b61d33ef0c0e272ec,2026-05-09T19:30:00+00:00,Las Vegas Aces,Phoenix Mercury,moneyline,away,235,
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,0f8c28106a569b3b61d33ef0c0e272ec,2026-05-09T19:30:00+00:00,Las Vegas Aces,Phoenix Mercury,spread,home,-110,-7.0
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,0f8c28106a569b3b61d33ef0c0e272ec,2026-05-09T19:30:00+00:00,Las Vegas Aces,Phoenix Mercury,spread,away,-110,7.0
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,0f8c28106a569b3b61d33ef0c0e272ec,2026-05-09T19:30:00+00:00,Las Vegas Aces,Phoenix Mercury,total,over,-110,165.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,0f8c28106a569b3b61d33ef0c0e272ec,2026-05-09T19:30:00+00:00,Las Vegas Aces,Phoenix Mercury,total,under,-110,165.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,0f8c28106a569b3b61d33ef0c0e272ec,2026-05-09T19:30:00+00:00,Las Vegas Aces,Phoenix Mercury,moneyline,home,-325,
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,0f8c28106a569b3b61d33ef0c0e272ec,2026-05-09T19:30:00+00:00,Las Vegas Aces,Phoenix Mercury,moneyline,away,260,
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,0f8c28106a569b3b61d33ef0c0e272ec,2026-05-09T19:30:00+00:00,Las Vegas Aces,Phoenix Mercury,spread,home,-110,-7.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,0f8c28106a569b3b61d33ef0c0e272ec,2026-05-09T19:30:00+00:00,Las Vegas Aces,Phoenix Mercury,spread,away,-110,7.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,0f8c28106a569b3b61d33ef0c0e272ec,2026-05-09T19:30:00+00:00,Las Vegas Aces,Phoenix Mercury,total,over,-110,166.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,0f8c28106a569b3b61d33ef0c0e272ec,2026-05-09T19:30:00+00:00,Las Vegas Aces,Phoenix Mercury,total,under,-110,166.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,616912e86364746bdaa3f23d68819458,2026-05-10T01:00:00+00:00,Portland Fire,Chicago Sky,moneyline,away,-176,
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,616912e86364746bdaa3f23d68819458,2026-05-10T01:00:00+00:00,Portland Fire,Chicago Sky,moneyline,home,142,
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,616912e86364746bdaa3f23d68819458,2026-05-10T01:00:00+00:00,Portland Fire,Chicago Sky,spread,away,-108,-3.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,616912e86364746bdaa3f23d68819458,2026-05-10T01:00:00+00:00,Portland Fire,Chicago Sky,spread,home,-112,3.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,616912e86364746bdaa3f23d68819458,2026-05-10T01:00:00+00:00,Portland Fire,Chicago Sky,total,over,-110,157.5
+2026-04-23T06:53:40.658470+00:00,fanduel,WNBA,616912e86364746bdaa3f23d68819458,2026-05-10T01:00:00+00:00,Portland Fire,Chicago Sky,total,under,-110,157.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,616912e86364746bdaa3f23d68819458,2026-05-10T01:00:00+00:00,Portland Fire,Chicago Sky,moneyline,away,-170,
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,616912e86364746bdaa3f23d68819458,2026-05-10T01:00:00+00:00,Portland Fire,Chicago Sky,moneyline,home,142,
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,616912e86364746bdaa3f23d68819458,2026-05-10T01:00:00+00:00,Portland Fire,Chicago Sky,spread,away,-105,-3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,616912e86364746bdaa3f23d68819458,2026-05-10T01:00:00+00:00,Portland Fire,Chicago Sky,spread,home,-115,3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,616912e86364746bdaa3f23d68819458,2026-05-10T01:00:00+00:00,Portland Fire,Chicago Sky,total,over,-110,156.5
+2026-04-23T06:53:40.658470+00:00,draftkings,WNBA,616912e86364746bdaa3f23d68819458,2026-05-10T01:00:00+00:00,Portland Fire,Chicago Sky,total,under,-110,156.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,moneyline,home,-110,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,moneyline,away,-110,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,spread,home,205,-1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,spread,away,-260,1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,total,over,108,6.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,total,under,-132,6.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,moneyline,home,-110,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,moneyline,away,-110,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,spread,home,225,-1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,spread,away,-278,1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,total,over,114,6.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,total,under,-135,6.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,moneyline,home,-107,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,moneyline,away,-107,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,spread,home,222,-1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,spread,away,-270,1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,total,over,-108,6.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,total,under,-108,6.0
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,moneyline,home,-110,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,moneyline,away,-110,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,spread,home,-275,1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,spread,away,220,-1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,total,over,-115,6.0
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,d618bdbd532e173a5e9e0f985de4af4c,2026-04-23T23:00:08+00:00,Boston Bruins,Buffalo Sabres,total,under,-105,6.0
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,moneyline,away,102,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,moneyline,home,-122,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,spread,away,-250,1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,spread,home,205,-1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,total,over,-122,5.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,total,under,102,5.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,moneyline,away,108,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,moneyline,home,-122,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,spread,away,-245,1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,spread,home,203,-1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,total,over,-125,5.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,total,under,109,5.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,moneyline,away,100,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,moneyline,home,-120,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,spread,away,-235,1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,spread,home,190,-1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,total,over,100,6.0
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,total,under,-120,6.0
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,moneyline,away,104,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,moneyline,home,-125,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,spread,away,-250,1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,spread,home,198,-1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,total,over,-130,5.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,51287ae15947cf3f02665904d8b8be9d,2026-04-23T23:40:00+00:00,Ottawa Senators,Carolina Hurricanes,total,under,106,5.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,moneyline,away,-156,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,moneyline,home,130,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,spread,away,154,-1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,spread,home,-192,1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,total,over,-115,5.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,total,under,-105,5.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,moneyline,away,-166,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,moneyline,home,140,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,spread,away,160,-1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,spread,home,-192,1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,total,over,-115,5.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,total,under,-105,5.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,moneyline,away,-165,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,moneyline,home,135,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,spread,away,154,-1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,spread,home,-190,1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,total,over,-115,5.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,total,under,-105,5.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,moneyline,away,-153,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,moneyline,home,135,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,spread,away,170,-1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,spread,home,-195,1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,total,over,-110,5.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,524a4ecbfee90fb1259c3e30014629ab,2026-04-24T02:00:00+00:00,Los Angeles Kings,Colorado Avalanche,total,under,-106,5.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,moneyline,home,102,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,moneyline,away,-122,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,spread,home,-245,1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,spread,away,200,-1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,total,over,-135,5.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,total,under,114,5.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,moneyline,home,100,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,moneyline,away,-120,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,spread,home,-250,1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,spread,away,198,-1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,total,over,-132,5.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,total,under,108,5.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,moneyline,home,100,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,moneyline,away,-120,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,spread,home,-235,1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,spread,away,195,-1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,total,over,-105,6.0
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,total,under,-115,6.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,moneyline,home,100,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,moneyline,away,-114,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,spread,home,-245,1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,spread,away,203,-1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,total,over,-104,6.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,ae9003a3e6fcbb6dcb1aa2bb4ce6947a,2026-04-24T23:10:00+00:00,Montréal Canadiens,Tampa Bay Lightning,total,under,-112,6.0
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,moneyline,home,-108,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,moneyline,away,-112,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,spread,home,-270,1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,spread,away,220,-1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,total,over,-130,5.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,total,under,110,5.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,moneyline,home,-105,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,moneyline,away,-114,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,spread,home,-260,1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,spread,away,205,-1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,total,over,-128,5.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,total,under,104,5.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,moneyline,home,-110,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,moneyline,away,-110,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,spread,home,-275,1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,spread,away,220,-1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,total,over,100,6.0
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,total,under,-120,6.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,moneyline,home,-105,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,moneyline,away,-109,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,spread,home,-270,1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,spread,away,222,-1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,total,over,101,6.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,863fdb33769ad2bb155134384e205a7a,2026-04-25T01:40:00+00:00,Utah Mammoth,Vegas Golden Knights,total,under,-117,6.0
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,moneyline,home,114,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,moneyline,away,-135,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,spread,home,-205,1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,spread,away,170,-1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,total,over,-162,6.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,total,under,136,6.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,moneyline,home,118,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,moneyline,away,-142,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,spread,home,-188,1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,spread,away,152,-1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,total,over,-162,6.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,total,under,132,6.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,moneyline,home,110,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,moneyline,away,-135,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,spread,home,-210,1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,spread,away,170,-1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,total,over,-110,7.0
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,total,under,-110,7.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,moneyline,home,113,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,moneyline,away,-128,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,spread,home,-195,1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,spread,away,170,-1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,total,over,-102,7.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,e2d2c01a1afa073fc70698a37554c36e,2026-04-25T02:10:00+00:00,Anaheim Ducks,Edmonton Oilers,total,under,-114,7.0
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,moneyline,away,114,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,moneyline,home,-135,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,spread,away,-218,1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,spread,home,180,-1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,total,over,-135,5.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,total,under,114,5.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,moneyline,away,110,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,moneyline,home,-132,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,spread,away,-220,1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,spread,home,176,-1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,total,over,-134,5.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,total,under,110,5.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,moneyline,away,119,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,moneyline,home,-135,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,spread,away,-210,1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,spread,home,180,-1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,total,over,-110,6.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,total,under,-106,6.0
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,moneyline,away,110,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,moneyline,home,-135,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,spread,away,-210,1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,spread,home,170,-1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,total,over,-118,6.0
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,6031286e148baa9052fdb432c6534b8e,2026-04-25T21:40:00+00:00,Minnesota Wild,Dallas Stars,total,under,-102,6.0
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,moneyline,home,-113,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,moneyline,away,-106,
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,spread,home,205,-1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,spread,away,-260,1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,total,over,-122,5.5
+2026-04-23T06:53:40.658470+00:00,fanduel,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,total,under,100,5.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,moneyline,home,-120,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,moneyline,away,100,
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,spread,home,190,-1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,spread,away,-235,1.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,total,over,-120,5.5
+2026-04-23T06:53:40.658470+00:00,betmgm,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,total,under,100,5.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,moneyline,home,-120,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,moneyline,away,100,
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,spread,home,210,-1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,spread,away,-258,1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,total,over,-122,5.5
+2026-04-23T06:53:40.658470+00:00,draftkings,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,total,under,102,5.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,moneyline,home,-116,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,moneyline,away,102,
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,spread,home,211,-1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,spread,away,-255,1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,total,over,104,6.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,NHL,63dc13d149982e8f2c908b42b236c912,2026-04-26T00:00:00+00:00,Philadelphia Flyers,Pittsburgh Penguins,total,under,-120,6.0
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f02afc2144b7ee7577b4832b34c8a842,2026-04-25T00:00:00+00:00,Quentin Gaskin,Matt Guymon,moneyline,away,200,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f02afc2144b7ee7577b4832b34c8a842,2026-04-25T00:00:00+00:00,Quentin Gaskin,Matt Guymon,moneyline,home,-300,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,1b133f01c3e4dd8ae3d9be72d7758752,2026-04-25T11:00:00+00:00,Colby Thicknesse,Vince Morales,moneyline,home,-153,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,1b133f01c3e4dd8ae3d9be72d7758752,2026-04-25T11:00:00+00:00,Colby Thicknesse,Vince Morales,moneyline,away,133,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f653096bcf609fcc576b95c20de1a71f,2026-04-25T13:00:00+00:00,Cam Rowston,Robert Bryczek,moneyline,home,-260,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f653096bcf609fcc576b95c20de1a71f,2026-04-25T13:00:00+00:00,Cam Rowston,Robert Bryczek,moneyline,away,220,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,500e9366e542205610993207438927a4,2026-04-25T13:00:00+00:00,Dom Mar Fan,Kody Steele,moneyline,home,143,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,500e9366e542205610993207438927a4,2026-04-25T13:00:00+00:00,Dom Mar Fan,Kody Steele,moneyline,away,-163,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f0169fdb2d288a2ffca9f471794684f6,2026-04-25T13:00:00+00:00,Jonathan Micallef,Themba Gorimbo,moneyline,home,-285,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f0169fdb2d288a2ffca9f471794684f6,2026-04-25T13:00:00+00:00,Jonathan Micallef,Themba Gorimbo,moneyline,away,245,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,27bc929d177802feaee53041df721c85,2026-04-25T13:00:00+00:00,Junior Tafa,Kevin Christian,moneyline,home,-185,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,27bc929d177802feaee53041df721c85,2026-04-25T13:00:00+00:00,Junior Tafa,Kevin Christian,moneyline,away,160,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,138bc104b6cdd2fdfc397abede15fd53,2026-04-25T15:00:00+00:00,Beneil Dariush,Quillan Salkilld,moneyline,home,375,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,138bc104b6cdd2fdfc397abede15fd53,2026-04-25T15:00:00+00:00,Beneil Dariush,Quillan Salkilld,moneyline,away,-500,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,6581114b383b0b1e5ac1a47aa2e794e8,2026-04-25T15:00:00+00:00,Jacob Malkoun,Gerald Meerschaert,moneyline,away,550,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,6581114b383b0b1e5ac1a47aa2e794e8,2026-04-25T15:00:00+00:00,Jacob Malkoun,Gerald Meerschaert,moneyline,home,-800,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,b390ef641a9cccfac91867957a84637e,2026-04-25T16:00:00+00:00,Dominik Humburger,Zebaztian Kadestam,moneyline,home,-260,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,b390ef641a9cccfac91867957a84637e,2026-04-25T16:00:00+00:00,Dominik Humburger,Zebaztian Kadestam,moneyline,away,175,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,2ab22c70f1079dd8d3ebe771b11a6c83,2026-04-25T16:00:00+00:00,Ozan Aslaner,Vladimír Lengál,moneyline,home,140,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,2ab22c70f1079dd8d3ebe771b11a6c83,2026-04-25T16:00:00+00:00,Ozan Aslaner,Vladimír Lengál,moneyline,away,-180,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,16eb0bb1dd8395b18e168cb516aaca80,2026-04-25T21:00:00+00:00,Jafel Filho,Cody Durden,moneyline,away,475,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,16eb0bb1dd8395b18e168cb516aaca80,2026-04-25T21:00:00+00:00,Jafel Filho,Cody Durden,moneyline,home,-650,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,16eb0bb1dd8395b18e168cb516aaca80,2026-04-25T21:00:00+00:00,Jafel Filho,Cody Durden,moneyline,away,430,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,16eb0bb1dd8395b18e168cb516aaca80,2026-04-25T21:00:00+00:00,Jafel Filho,Cody Durden,moneyline,home,-670,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,16eb0bb1dd8395b18e168cb516aaca80,2026-04-25T21:00:00+00:00,Jafel Filho,Cody Durden,moneyline,away,500,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,16eb0bb1dd8395b18e168cb516aaca80,2026-04-25T21:00:00+00:00,Jafel Filho,Cody Durden,moneyline,home,-700,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,16eb0bb1dd8395b18e168cb516aaca80,2026-04-25T21:00:00+00:00,Jafel Filho,Cody Durden,moneyline,away,490,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,16eb0bb1dd8395b18e168cb516aaca80,2026-04-25T21:00:00+00:00,Jafel Filho,Cody Durden,moneyline,home,-675,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,5e3ed97a4087084bdfff2683bcfd2d49,2026-04-25T21:00:00+00:00,Rodolfo Vieira,Eric McConico,moneyline,away,250,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,5e3ed97a4087084bdfff2683bcfd2d49,2026-04-25T21:00:00+00:00,Rodolfo Vieira,Eric McConico,moneyline,home,-300,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,5e3ed97a4087084bdfff2683bcfd2d49,2026-04-25T21:00:00+00:00,Rodolfo Vieira,Eric McConico,total,over,-110,2.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,5e3ed97a4087084bdfff2683bcfd2d49,2026-04-25T21:00:00+00:00,Rodolfo Vieira,Eric McConico,total,under,-110,2.5
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,5e3ed97a4087084bdfff2683bcfd2d49,2026-04-25T21:00:00+00:00,Rodolfo Vieira,Eric McConico,moneyline,away,220,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,5e3ed97a4087084bdfff2683bcfd2d49,2026-04-25T21:00:00+00:00,Rodolfo Vieira,Eric McConico,moneyline,home,-295,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,5e3ed97a4087084bdfff2683bcfd2d49,2026-04-25T21:00:00+00:00,Rodolfo Vieira,Eric McConico,moneyline,away,240,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,5e3ed97a4087084bdfff2683bcfd2d49,2026-04-25T21:00:00+00:00,Rodolfo Vieira,Eric McConico,moneyline,home,-300,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,5e3ed97a4087084bdfff2683bcfd2d49,2026-04-25T21:00:00+00:00,Rodolfo Vieira,Eric McConico,moneyline,away,225,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,5e3ed97a4087084bdfff2683bcfd2d49,2026-04-25T21:00:00+00:00,Rodolfo Vieira,Eric McConico,moneyline,home,-278,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,5e3ed97a4087084bdfff2683bcfd2d49,2026-04-25T21:00:00+00:00,Rodolfo Vieira,Eric McConico,spread,away,110,3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,5e3ed97a4087084bdfff2683bcfd2d49,2026-04-25T21:00:00+00:00,Rodolfo Vieira,Eric McConico,spread,home,-145,-3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,5e3ed97a4087084bdfff2683bcfd2d49,2026-04-25T21:00:00+00:00,Rodolfo Vieira,Eric McConico,total,over,-125,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,5e3ed97a4087084bdfff2683bcfd2d49,2026-04-25T21:00:00+00:00,Rodolfo Vieira,Eric McConico,total,under,-105,2.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,c0aba79416a727841a9bc74ba317e525,2026-04-25T21:00:00+00:00,Francis Marshall,Lucas Brennan,moneyline,home,-610,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,c0aba79416a727841a9bc74ba317e525,2026-04-25T21:00:00+00:00,Francis Marshall,Lucas Brennan,moneyline,away,460,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,c0aba79416a727841a9bc74ba317e525,2026-04-25T21:00:00+00:00,Francis Marshall,Lucas Brennan,total,over,-110,2.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,c0aba79416a727841a9bc74ba317e525,2026-04-25T21:00:00+00:00,Francis Marshall,Lucas Brennan,total,under,-110,2.5
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,c0aba79416a727841a9bc74ba317e525,2026-04-25T21:00:00+00:00,Francis Marshall,Lucas Brennan,moneyline,home,-620,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,c0aba79416a727841a9bc74ba317e525,2026-04-25T21:00:00+00:00,Francis Marshall,Lucas Brennan,moneyline,away,400,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,c0aba79416a727841a9bc74ba317e525,2026-04-25T21:00:00+00:00,Francis Marshall,Lucas Brennan,moneyline,home,-600,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,c0aba79416a727841a9bc74ba317e525,2026-04-25T21:00:00+00:00,Francis Marshall,Lucas Brennan,moneyline,away,425,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c0aba79416a727841a9bc74ba317e525,2026-04-25T21:00:00+00:00,Francis Marshall,Lucas Brennan,moneyline,home,-550,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c0aba79416a727841a9bc74ba317e525,2026-04-25T21:00:00+00:00,Francis Marshall,Lucas Brennan,moneyline,away,410,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c0aba79416a727841a9bc74ba317e525,2026-04-25T21:00:00+00:00,Francis Marshall,Lucas Brennan,spread,home,-225,-3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c0aba79416a727841a9bc74ba317e525,2026-04-25T21:00:00+00:00,Francis Marshall,Lucas Brennan,spread,away,165,3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c0aba79416a727841a9bc74ba317e525,2026-04-25T21:00:00+00:00,Francis Marshall,Lucas Brennan,total,over,-125,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c0aba79416a727841a9bc74ba317e525,2026-04-25T21:00:00+00:00,Francis Marshall,Lucas Brennan,total,under,-105,2.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,657d5a2a5693234ca1aa298a7ee4d977,2026-04-25T21:00:00+00:00,Jackson McVey,Sedriques Dumas,moneyline,home,-190,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,657d5a2a5693234ca1aa298a7ee4d977,2026-04-25T21:00:00+00:00,Jackson McVey,Sedriques Dumas,moneyline,away,165,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,657d5a2a5693234ca1aa298a7ee4d977,2026-04-25T21:00:00+00:00,Jackson McVey,Sedriques Dumas,total,over,140,1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,657d5a2a5693234ca1aa298a7ee4d977,2026-04-25T21:00:00+00:00,Jackson McVey,Sedriques Dumas,total,under,-160,1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,657d5a2a5693234ca1aa298a7ee4d977,2026-04-25T21:00:00+00:00,Jackson McVey,Sedriques Dumas,moneyline,home,-198,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,657d5a2a5693234ca1aa298a7ee4d977,2026-04-25T21:00:00+00:00,Jackson McVey,Sedriques Dumas,moneyline,away,164,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,657d5a2a5693234ca1aa298a7ee4d977,2026-04-25T21:00:00+00:00,Jackson McVey,Sedriques Dumas,spread,home,-175,-3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,657d5a2a5693234ca1aa298a7ee4d977,2026-04-25T21:00:00+00:00,Jackson McVey,Sedriques Dumas,spread,away,130,3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,657d5a2a5693234ca1aa298a7ee4d977,2026-04-25T21:00:00+00:00,Jackson McVey,Sedriques Dumas,total,over,130,1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,657d5a2a5693234ca1aa298a7ee4d977,2026-04-25T21:00:00+00:00,Jackson McVey,Sedriques Dumas,total,under,-166,1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,657d5a2a5693234ca1aa298a7ee4d977,2026-04-25T21:00:00+00:00,Jackson McVey,Sedriques Dumas,moneyline,home,-220,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,657d5a2a5693234ca1aa298a7ee4d977,2026-04-25T21:00:00+00:00,Jackson McVey,Sedriques Dumas,moneyline,away,168,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,657d5a2a5693234ca1aa298a7ee4d977,2026-04-25T21:00:00+00:00,Jackson McVey,Sedriques Dumas,moneyline,home,-210,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,657d5a2a5693234ca1aa298a7ee4d977,2026-04-25T21:00:00+00:00,Jackson McVey,Sedriques Dumas,moneyline,away,170,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,c1ca349730d52f62b779f10f9f90f960,2026-04-25T21:00:00+00:00,Talita Alencar,Julia Polastri,moneyline,away,-235,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,c1ca349730d52f62b779f10f9f90f960,2026-04-25T21:00:00+00:00,Talita Alencar,Julia Polastri,moneyline,home,200,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,c1ca349730d52f62b779f10f9f90f960,2026-04-25T21:00:00+00:00,Talita Alencar,Julia Polastri,total,over,-270,2.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,c1ca349730d52f62b779f10f9f90f960,2026-04-25T21:00:00+00:00,Talita Alencar,Julia Polastri,total,under,222,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c1ca349730d52f62b779f10f9f90f960,2026-04-25T21:00:00+00:00,Talita Alencar,Julia Polastri,moneyline,away,-258,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c1ca349730d52f62b779f10f9f90f960,2026-04-25T21:00:00+00:00,Talita Alencar,Julia Polastri,moneyline,home,210,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c1ca349730d52f62b779f10f9f90f960,2026-04-25T21:00:00+00:00,Talita Alencar,Julia Polastri,spread,away,-105,-3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c1ca349730d52f62b779f10f9f90f960,2026-04-25T21:00:00+00:00,Talita Alencar,Julia Polastri,spread,home,-125,3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c1ca349730d52f62b779f10f9f90f960,2026-04-25T21:00:00+00:00,Talita Alencar,Julia Polastri,total,over,-330,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c1ca349730d52f62b779f10f9f90f960,2026-04-25T21:00:00+00:00,Talita Alencar,Julia Polastri,total,under,240,2.5
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,c1ca349730d52f62b779f10f9f90f960,2026-04-25T21:00:00+00:00,Talita Alencar,Julia Polastri,moneyline,away,-295,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,c1ca349730d52f62b779f10f9f90f960,2026-04-25T21:00:00+00:00,Talita Alencar,Julia Polastri,moneyline,home,220,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,c1ca349730d52f62b779f10f9f90f960,2026-04-25T21:00:00+00:00,Talita Alencar,Julia Polastri,moneyline,away,-275,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,c1ca349730d52f62b779f10f9f90f960,2026-04-25T21:00:00+00:00,Talita Alencar,Julia Polastri,moneyline,home,220,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,47769d01880fd9cc3753f75a697688d8,2026-04-25T21:00:00+00:00,Max Griffin,Victor Valenzuela,moneyline,home,113,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,47769d01880fd9cc3753f75a697688d8,2026-04-25T21:00:00+00:00,Max Griffin,Victor Valenzuela,moneyline,away,-133,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,47769d01880fd9cc3753f75a697688d8,2026-04-25T21:00:00+00:00,Max Griffin,Victor Valenzuela,total,over,-170,2.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,47769d01880fd9cc3753f75a697688d8,2026-04-25T21:00:00+00:00,Max Griffin,Victor Valenzuela,total,under,149,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,47769d01880fd9cc3753f75a697688d8,2026-04-25T21:00:00+00:00,Max Griffin,Victor Valenzuela,moneyline,home,114,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,47769d01880fd9cc3753f75a697688d8,2026-04-25T21:00:00+00:00,Max Griffin,Victor Valenzuela,moneyline,away,-135,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,47769d01880fd9cc3753f75a697688d8,2026-04-25T21:00:00+00:00,Max Griffin,Victor Valenzuela,spread,home,-160,3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,47769d01880fd9cc3753f75a697688d8,2026-04-25T21:00:00+00:00,Max Griffin,Victor Valenzuela,spread,away,120,-3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,47769d01880fd9cc3753f75a697688d8,2026-04-25T21:00:00+00:00,Max Griffin,Victor Valenzuela,total,over,-180,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,47769d01880fd9cc3753f75a697688d8,2026-04-25T21:00:00+00:00,Max Griffin,Victor Valenzuela,total,under,140,2.5
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,47769d01880fd9cc3753f75a697688d8,2026-04-25T21:00:00+00:00,Max Griffin,Victor Valenzuela,moneyline,home,125,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,47769d01880fd9cc3753f75a697688d8,2026-04-25T21:00:00+00:00,Max Griffin,Victor Valenzuela,moneyline,away,-150,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,47769d01880fd9cc3753f75a697688d8,2026-04-25T21:00:00+00:00,Max Griffin,Victor Valenzuela,moneyline,home,126,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,47769d01880fd9cc3753f75a697688d8,2026-04-25T21:00:00+00:00,Max Griffin,Victor Valenzuela,moneyline,away,-162,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,c625ba8faec8f1445c8543f1c0698f15,2026-04-25T21:00:00+00:00,Mayra Bueno Silva,Michelle Montague,moneyline,home,330,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,c625ba8faec8f1445c8543f1c0698f15,2026-04-25T21:00:00+00:00,Mayra Bueno Silva,Michelle Montague,moneyline,away,-400,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,c625ba8faec8f1445c8543f1c0698f15,2026-04-25T21:00:00+00:00,Mayra Bueno Silva,Michelle Montague,total,over,-210,2.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,c625ba8faec8f1445c8543f1c0698f15,2026-04-25T21:00:00+00:00,Mayra Bueno Silva,Michelle Montague,total,under,180,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c625ba8faec8f1445c8543f1c0698f15,2026-04-25T21:00:00+00:00,Mayra Bueno Silva,Michelle Montague,moneyline,home,310,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c625ba8faec8f1445c8543f1c0698f15,2026-04-25T21:00:00+00:00,Mayra Bueno Silva,Michelle Montague,moneyline,away,-395,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c625ba8faec8f1445c8543f1c0698f15,2026-04-25T21:00:00+00:00,Mayra Bueno Silva,Michelle Montague,spread,home,110,3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c625ba8faec8f1445c8543f1c0698f15,2026-04-25T21:00:00+00:00,Mayra Bueno Silva,Michelle Montague,spread,away,-145,-3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c625ba8faec8f1445c8543f1c0698f15,2026-04-25T21:00:00+00:00,Mayra Bueno Silva,Michelle Montague,total,over,-215,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,c625ba8faec8f1445c8543f1c0698f15,2026-04-25T21:00:00+00:00,Mayra Bueno Silva,Michelle Montague,total,under,165,2.5
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,c625ba8faec8f1445c8543f1c0698f15,2026-04-25T21:00:00+00:00,Mayra Bueno Silva,Michelle Montague,moneyline,home,300,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,c625ba8faec8f1445c8543f1c0698f15,2026-04-25T21:00:00+00:00,Mayra Bueno Silva,Michelle Montague,moneyline,away,-430,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,c625ba8faec8f1445c8543f1c0698f15,2026-04-25T21:00:00+00:00,Mayra Bueno Silva,Michelle Montague,moneyline,home,340,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,c625ba8faec8f1445c8543f1c0698f15,2026-04-25T21:00:00+00:00,Mayra Bueno Silva,Michelle Montague,moneyline,away,-450,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,d2ac12b5386816e01cf62a6b787eb57e,2026-04-26T00:00:00+00:00,Gary Priestly,Aaron Towns,moneyline,away,-200,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,d2ac12b5386816e01cf62a6b787eb57e,2026-04-26T00:00:00+00:00,Gary Priestly,Aaron Towns,moneyline,home,170,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,deb30327ec5e4718b7209327e5eae733,2026-04-26T00:00:00+00:00,Rafa Garcia,Alex Hernandez,moneyline,away,-130,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,deb30327ec5e4718b7209327e5eae733,2026-04-26T00:00:00+00:00,Rafa Garcia,Alex Hernandez,moneyline,home,110,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,deb30327ec5e4718b7209327e5eae733,2026-04-26T00:00:00+00:00,Rafa Garcia,Alex Hernandez,total,over,-220,2.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,deb30327ec5e4718b7209327e5eae733,2026-04-26T00:00:00+00:00,Rafa Garcia,Alex Hernandez,total,under,186,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,deb30327ec5e4718b7209327e5eae733,2026-04-26T00:00:00+00:00,Rafa Garcia,Alex Hernandez,moneyline,away,-130,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,deb30327ec5e4718b7209327e5eae733,2026-04-26T00:00:00+00:00,Rafa Garcia,Alex Hernandez,moneyline,home,110,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,deb30327ec5e4718b7209327e5eae733,2026-04-26T00:00:00+00:00,Rafa Garcia,Alex Hernandez,spread,away,140,-3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,deb30327ec5e4718b7209327e5eae733,2026-04-26T00:00:00+00:00,Rafa Garcia,Alex Hernandez,spread,home,-190,3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,deb30327ec5e4718b7209327e5eae733,2026-04-26T00:00:00+00:00,Rafa Garcia,Alex Hernandez,total,over,-238,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,deb30327ec5e4718b7209327e5eae733,2026-04-26T00:00:00+00:00,Rafa Garcia,Alex Hernandez,total,under,180,2.5
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,deb30327ec5e4718b7209327e5eae733,2026-04-26T00:00:00+00:00,Rafa Garcia,Alex Hernandez,moneyline,away,-132,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,deb30327ec5e4718b7209327e5eae733,2026-04-26T00:00:00+00:00,Rafa Garcia,Alex Hernandez,moneyline,home,104,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,deb30327ec5e4718b7209327e5eae733,2026-04-26T00:00:00+00:00,Rafa Garcia,Alex Hernandez,moneyline,away,-125,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,deb30327ec5e4718b7209327e5eae733,2026-04-26T00:00:00+00:00,Rafa Garcia,Alex Hernandez,moneyline,home,105,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f7469df672b3385e51e6ab329401c474,2026-04-26T00:00:00+00:00,Aljamain Sterling,Youssef Zalal,moneyline,home,100,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f7469df672b3385e51e6ab329401c474,2026-04-26T00:00:00+00:00,Aljamain Sterling,Youssef Zalal,moneyline,away,-120,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f7469df672b3385e51e6ab329401c474,2026-04-26T00:00:00+00:00,Aljamain Sterling,Youssef Zalal,total,over,-185,4.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f7469df672b3385e51e6ab329401c474,2026-04-26T00:00:00+00:00,Aljamain Sterling,Youssef Zalal,total,under,161,4.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,f7469df672b3385e51e6ab329401c474,2026-04-26T00:00:00+00:00,Aljamain Sterling,Youssef Zalal,moneyline,home,105,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,f7469df672b3385e51e6ab329401c474,2026-04-26T00:00:00+00:00,Aljamain Sterling,Youssef Zalal,moneyline,away,-125,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,f7469df672b3385e51e6ab329401c474,2026-04-26T00:00:00+00:00,Aljamain Sterling,Youssef Zalal,spread,home,-190,5.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,f7469df672b3385e51e6ab329401c474,2026-04-26T00:00:00+00:00,Aljamain Sterling,Youssef Zalal,spread,away,140,-5.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,f7469df672b3385e51e6ab329401c474,2026-04-26T00:00:00+00:00,Aljamain Sterling,Youssef Zalal,total,over,-180,4.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,f7469df672b3385e51e6ab329401c474,2026-04-26T00:00:00+00:00,Aljamain Sterling,Youssef Zalal,total,under,140,4.5
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,f7469df672b3385e51e6ab329401c474,2026-04-26T00:00:00+00:00,Aljamain Sterling,Youssef Zalal,moneyline,home,110,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,f7469df672b3385e51e6ab329401c474,2026-04-26T00:00:00+00:00,Aljamain Sterling,Youssef Zalal,moneyline,away,-140,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,f7469df672b3385e51e6ab329401c474,2026-04-26T00:00:00+00:00,Aljamain Sterling,Youssef Zalal,moneyline,home,110,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,f7469df672b3385e51e6ab329401c474,2026-04-26T00:00:00+00:00,Aljamain Sterling,Youssef Zalal,moneyline,away,-135,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,69ad0ca0db8f4f188ea51a504006528e,2026-04-26T00:00:00+00:00,Damon Donald,Leon Armes,moneyline,home,100,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,69ad0ca0db8f4f188ea51a504006528e,2026-04-26T00:00:00+00:00,Damon Donald,Leon Armes,moneyline,away,-120,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,6b3528b7e5e209d21853eb358e58a3ca,2026-04-26T00:00:00+00:00,Michael Blair,Ermil Xhaferi,moneyline,away,110,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,6b3528b7e5e209d21853eb358e58a3ca,2026-04-26T00:00:00+00:00,Michael Blair,Ermil Xhaferi,moneyline,home,-130,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,e8694139eea78ce7af19505a3b62c97f,2026-04-26T00:00:00+00:00,Jamie McGowan,Taylor Sullivan,moneyline,home,-700,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,e8694139eea78ce7af19505a3b62c97f,2026-04-26T00:00:00+00:00,Jamie McGowan,Taylor Sullivan,moneyline,away,400,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,9c6070346b2ffcbf81ff71b2bd58f98c,2026-04-26T00:00:00+00:00,Jordan Stronge,Marc-Philippe Ngatchou,moneyline,home,140,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,9c6070346b2ffcbf81ff71b2bd58f98c,2026-04-26T00:00:00+00:00,Jordan Stronge,Marc-Philippe Ngatchou,moneyline,away,-160,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,54e3384b808042a9f21b3139925a61c5,2026-04-26T00:00:00+00:00,Norma Dumont,Joselyne Edwards,moneyline,away,205,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,54e3384b808042a9f21b3139925a61c5,2026-04-26T00:00:00+00:00,Norma Dumont,Joselyne Edwards,moneyline,home,-240,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,54e3384b808042a9f21b3139925a61c5,2026-04-26T00:00:00+00:00,Norma Dumont,Joselyne Edwards,total,over,-400,2.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,54e3384b808042a9f21b3139925a61c5,2026-04-26T00:00:00+00:00,Norma Dumont,Joselyne Edwards,total,under,316,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,54e3384b808042a9f21b3139925a61c5,2026-04-26T00:00:00+00:00,Norma Dumont,Joselyne Edwards,moneyline,away,200,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,54e3384b808042a9f21b3139925a61c5,2026-04-26T00:00:00+00:00,Norma Dumont,Joselyne Edwards,moneyline,home,-245,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,54e3384b808042a9f21b3139925a61c5,2026-04-26T00:00:00+00:00,Norma Dumont,Joselyne Edwards,spread,away,-160,3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,54e3384b808042a9f21b3139925a61c5,2026-04-26T00:00:00+00:00,Norma Dumont,Joselyne Edwards,spread,home,120,-3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,54e3384b808042a9f21b3139925a61c5,2026-04-26T00:00:00+00:00,Norma Dumont,Joselyne Edwards,total,over,-500,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,54e3384b808042a9f21b3139925a61c5,2026-04-26T00:00:00+00:00,Norma Dumont,Joselyne Edwards,total,under,340,2.5
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,54e3384b808042a9f21b3139925a61c5,2026-04-26T00:00:00+00:00,Norma Dumont,Joselyne Edwards,moneyline,away,190,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,54e3384b808042a9f21b3139925a61c5,2026-04-26T00:00:00+00:00,Norma Dumont,Joselyne Edwards,moneyline,home,-250,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,54e3384b808042a9f21b3139925a61c5,2026-04-26T00:00:00+00:00,Norma Dumont,Joselyne Edwards,moneyline,away,200,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,54e3384b808042a9f21b3139925a61c5,2026-04-26T00:00:00+00:00,Norma Dumont,Joselyne Edwards,moneyline,home,-250,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,1e2535b41da42e943080f31ad43b4106,2026-04-26T00:00:00+00:00,Sean Jr. Clancy,Justin Burlinson,moneyline,away,225,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,1e2535b41da42e943080f31ad43b4106,2026-04-26T00:00:00+00:00,Sean Jr. Clancy,Justin Burlinson,moneyline,home,-265,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,3c6748aa1b40bddddf19f5deb5ee482b,2026-04-26T00:00:00+00:00,Marcus Buchecha,Ryan Spann,moneyline,home,-155,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,3c6748aa1b40bddddf19f5deb5ee482b,2026-04-26T00:00:00+00:00,Marcus Buchecha,Ryan Spann,moneyline,away,135,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,3c6748aa1b40bddddf19f5deb5ee482b,2026-04-26T00:00:00+00:00,Marcus Buchecha,Ryan Spann,total,over,135,1.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,3c6748aa1b40bddddf19f5deb5ee482b,2026-04-26T00:00:00+00:00,Marcus Buchecha,Ryan Spann,total,under,-155,1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,3c6748aa1b40bddddf19f5deb5ee482b,2026-04-26T00:00:00+00:00,Marcus Buchecha,Ryan Spann,moneyline,home,-155,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,3c6748aa1b40bddddf19f5deb5ee482b,2026-04-26T00:00:00+00:00,Marcus Buchecha,Ryan Spann,moneyline,away,130,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,3c6748aa1b40bddddf19f5deb5ee482b,2026-04-26T00:00:00+00:00,Marcus Buchecha,Ryan Spann,spread,home,-135,-3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,3c6748aa1b40bddddf19f5deb5ee482b,2026-04-26T00:00:00+00:00,Marcus Buchecha,Ryan Spann,spread,away,100,3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,3c6748aa1b40bddddf19f5deb5ee482b,2026-04-26T00:00:00+00:00,Marcus Buchecha,Ryan Spann,total,over,135,1.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,3c6748aa1b40bddddf19f5deb5ee482b,2026-04-26T00:00:00+00:00,Marcus Buchecha,Ryan Spann,total,under,-175,1.5
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,3c6748aa1b40bddddf19f5deb5ee482b,2026-04-26T00:00:00+00:00,Marcus Buchecha,Ryan Spann,moneyline,home,-158,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,3c6748aa1b40bddddf19f5deb5ee482b,2026-04-26T00:00:00+00:00,Marcus Buchecha,Ryan Spann,moneyline,away,124,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,3c6748aa1b40bddddf19f5deb5ee482b,2026-04-26T00:00:00+00:00,Marcus Buchecha,Ryan Spann,moneyline,home,-150,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,3c6748aa1b40bddddf19f5deb5ee482b,2026-04-26T00:00:00+00:00,Marcus Buchecha,Ryan Spann,moneyline,away,125,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,23622692ba6376fbe9735a2d8d9db338,2026-04-26T00:00:00+00:00,Norbert Pietrzak,Michael Tchamou,moneyline,away,250,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,23622692ba6376fbe9735a2d8d9db338,2026-04-26T00:00:00+00:00,Norbert Pietrzak,Michael Tchamou,moneyline,home,-400,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,2259acc08cdedd31fadfe5c7ecd499cd,2026-04-26T00:00:00+00:00,Montel Jackson,Raoni Barcelos,moneyline,home,-175,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,2259acc08cdedd31fadfe5c7ecd499cd,2026-04-26T00:00:00+00:00,Montel Jackson,Raoni Barcelos,moneyline,away,150,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,2259acc08cdedd31fadfe5c7ecd499cd,2026-04-26T00:00:00+00:00,Montel Jackson,Raoni Barcelos,total,over,-170,2.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,2259acc08cdedd31fadfe5c7ecd499cd,2026-04-26T00:00:00+00:00,Montel Jackson,Raoni Barcelos,total,under,149,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,2259acc08cdedd31fadfe5c7ecd499cd,2026-04-26T00:00:00+00:00,Montel Jackson,Raoni Barcelos,moneyline,home,-180,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,2259acc08cdedd31fadfe5c7ecd499cd,2026-04-26T00:00:00+00:00,Montel Jackson,Raoni Barcelos,moneyline,away,150,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,2259acc08cdedd31fadfe5c7ecd499cd,2026-04-26T00:00:00+00:00,Montel Jackson,Raoni Barcelos,spread,home,100,-3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,2259acc08cdedd31fadfe5c7ecd499cd,2026-04-26T00:00:00+00:00,Montel Jackson,Raoni Barcelos,spread,away,-135,3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,2259acc08cdedd31fadfe5c7ecd499cd,2026-04-26T00:00:00+00:00,Montel Jackson,Raoni Barcelos,total,over,-180,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,2259acc08cdedd31fadfe5c7ecd499cd,2026-04-26T00:00:00+00:00,Montel Jackson,Raoni Barcelos,total,under,140,2.5
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,2259acc08cdedd31fadfe5c7ecd499cd,2026-04-26T00:00:00+00:00,Montel Jackson,Raoni Barcelos,moneyline,home,-186,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,2259acc08cdedd31fadfe5c7ecd499cd,2026-04-26T00:00:00+00:00,Montel Jackson,Raoni Barcelos,moneyline,away,144,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,2259acc08cdedd31fadfe5c7ecd499cd,2026-04-26T00:00:00+00:00,Montel Jackson,Raoni Barcelos,moneyline,home,-190,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,2259acc08cdedd31fadfe5c7ecd499cd,2026-04-26T00:00:00+00:00,Montel Jackson,Raoni Barcelos,moneyline,away,155,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,603c2116df1a33656747844818613243,2026-04-26T01:15:00+00:00,Davey Grant,Adrian Luna Martinetti,moneyline,away,114,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,603c2116df1a33656747844818613243,2026-04-26T01:15:00+00:00,Davey Grant,Adrian Luna Martinetti,moneyline,home,-135,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,603c2116df1a33656747844818613243,2026-04-26T01:15:00+00:00,Davey Grant,Adrian Luna Martinetti,spread,away,-170,3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,603c2116df1a33656747844818613243,2026-04-26T01:15:00+00:00,Davey Grant,Adrian Luna Martinetti,spread,home,125,-3.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,603c2116df1a33656747844818613243,2026-04-26T01:15:00+00:00,Davey Grant,Adrian Luna Martinetti,total,over,-166,2.5
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,603c2116df1a33656747844818613243,2026-04-26T01:15:00+00:00,Davey Grant,Adrian Luna Martinetti,total,under,130,2.5
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,603c2116df1a33656747844818613243,2026-04-26T01:15:00+00:00,Davey Grant,Adrian Luna Martinetti,moneyline,away,105,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,603c2116df1a33656747844818613243,2026-04-26T01:15:00+00:00,Davey Grant,Adrian Luna Martinetti,moneyline,home,-125,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,5651a6ddf566cba04945523e6a35b62b,2026-04-26T01:15:00+00:00,Juan Martinetti,Davey Grant,moneyline,away,-130,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,5651a6ddf566cba04945523e6a35b62b,2026-04-26T01:15:00+00:00,Juan Martinetti,Davey Grant,moneyline,home,110,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,5651a6ddf566cba04945523e6a35b62b,2026-04-26T01:15:00+00:00,Juan Martinetti,Davey Grant,total,over,-160,2.5
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,5651a6ddf566cba04945523e6a35b62b,2026-04-26T01:15:00+00:00,Juan Martinetti,Davey Grant,total,under,140,2.5
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,5651a6ddf566cba04945523e6a35b62b,2026-04-26T01:15:00+00:00,Juan Martinetti,Davey Grant,moneyline,away,-130,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,5651a6ddf566cba04945523e6a35b62b,2026-04-26T01:15:00+00:00,Juan Martinetti,Davey Grant,moneyline,home,102,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,5df097b38ef78a244dd9274d2ab025ce,2026-05-02T11:00:00+00:00,Shamil Gaziev,Brando Pericic,moneyline,away,-155,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,5df097b38ef78a244dd9274d2ab025ce,2026-05-02T11:00:00+00:00,Shamil Gaziev,Brando Pericic,moneyline,home,135,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,60a030118d41e15f4715b4bda63f8e00,2026-05-02T11:00:00+00:00,Jack Jenkins,Marwan Rahiki,moneyline,home,-110,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,60a030118d41e15f4715b4bda63f8e00,2026-05-02T11:00:00+00:00,Jack Jenkins,Marwan Rahiki,moneyline,away,-110,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,2f4054240d75e5992a009c2eb2886288,2026-05-02T11:00:00+00:00,Tim Elliott,Stephen Erceg,moneyline,away,-400,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,2f4054240d75e5992a009c2eb2886288,2026-05-02T11:00:00+00:00,Tim Elliott,Stephen Erceg,moneyline,home,300,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,ae22ee2cfaa7d47bdfbf58c00e46a7d7,2026-05-03T04:00:00+00:00,Jack Della Maddalena,Carlos Prates,moneyline,away,-110,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,ae22ee2cfaa7d47bdfbf58c00e46a7d7,2026-05-03T04:00:00+00:00,Jack Della Maddalena,Carlos Prates,moneyline,home,-110,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,ae22ee2cfaa7d47bdfbf58c00e46a7d7,2026-05-03T04:00:00+00:00,Jack Della Maddalena,Carlos Prates,moneyline,away,-102,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,ae22ee2cfaa7d47bdfbf58c00e46a7d7,2026-05-03T04:00:00+00:00,Jack Della Maddalena,Carlos Prates,moneyline,home,-118,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,ae22ee2cfaa7d47bdfbf58c00e46a7d7,2026-05-03T04:00:00+00:00,Jack Della Maddalena,Carlos Prates,moneyline,away,-106,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,ae22ee2cfaa7d47bdfbf58c00e46a7d7,2026-05-03T04:00:00+00:00,Jack Della Maddalena,Carlos Prates,moneyline,home,-120,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,9572ebf9d60e9a4a050db937e02dcf03,2026-05-10T01:00:00+00:00,Khamzat Chimaev,Sean Strickland,moneyline,home,-450,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,9572ebf9d60e9a4a050db937e02dcf03,2026-05-10T01:00:00+00:00,Khamzat Chimaev,Sean Strickland,moneyline,away,350,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,9572ebf9d60e9a4a050db937e02dcf03,2026-05-10T01:00:00+00:00,Khamzat Chimaev,Sean Strickland,moneyline,home,-455,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,9572ebf9d60e9a4a050db937e02dcf03,2026-05-10T01:00:00+00:00,Khamzat Chimaev,Sean Strickland,moneyline,away,350,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,9572ebf9d60e9a4a050db937e02dcf03,2026-05-10T01:00:00+00:00,Khamzat Chimaev,Sean Strickland,moneyline,home,-520,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,9572ebf9d60e9a4a050db937e02dcf03,2026-05-10T01:00:00+00:00,Khamzat Chimaev,Sean Strickland,moneyline,away,350,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,9572ebf9d60e9a4a050db937e02dcf03,2026-05-10T01:00:00+00:00,Khamzat Chimaev,Sean Strickland,moneyline,home,-525,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,9572ebf9d60e9a4a050db937e02dcf03,2026-05-10T01:00:00+00:00,Khamzat Chimaev,Sean Strickland,moneyline,away,340,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,bca7261228cf53e0ef8c55e76cdf2138,2026-05-10T02:15:00+00:00,King Green,Jeremy Stephens,moneyline,away,250,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,bca7261228cf53e0ef8c55e76cdf2138,2026-05-10T02:15:00+00:00,King Green,Jeremy Stephens,moneyline,home,-300,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,bca7261228cf53e0ef8c55e76cdf2138,2026-05-10T02:15:00+00:00,King Green,Jeremy Stephens,moneyline,away,245,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,bca7261228cf53e0ef8c55e76cdf2138,2026-05-10T02:15:00+00:00,King Green,Jeremy Stephens,moneyline,home,-305,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,bca7261228cf53e0ef8c55e76cdf2138,2026-05-10T02:15:00+00:00,King Green,Jeremy Stephens,moneyline,away,240,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,bca7261228cf53e0ef8c55e76cdf2138,2026-05-10T02:15:00+00:00,King Green,Jeremy Stephens,moneyline,home,-330,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f7214563fa457f83d32ae08128c0dfa1,2026-05-10T02:45:00+00:00,Jan Blachowicz,Bogdan Guskov,moneyline,away,-125,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f7214563fa457f83d32ae08128c0dfa1,2026-05-10T02:45:00+00:00,Jan Blachowicz,Bogdan Guskov,moneyline,home,105,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,f7214563fa457f83d32ae08128c0dfa1,2026-05-10T02:45:00+00:00,Jan Blachowicz,Bogdan Guskov,moneyline,away,-125,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,f7214563fa457f83d32ae08128c0dfa1,2026-05-10T02:45:00+00:00,Jan Blachowicz,Bogdan Guskov,moneyline,home,105,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,f7214563fa457f83d32ae08128c0dfa1,2026-05-10T02:45:00+00:00,Jan Blachowicz,Bogdan Guskov,moneyline,away,-136,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,f7214563fa457f83d32ae08128c0dfa1,2026-05-10T02:45:00+00:00,Jan Blachowicz,Bogdan Guskov,moneyline,home,106,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,a2b05838698a5f914b569f502d372985,2026-05-10T03:15:00+00:00,Sean Brady,Joaquin Buckley,moneyline,away,160,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,a2b05838698a5f914b569f502d372985,2026-05-10T03:15:00+00:00,Sean Brady,Joaquin Buckley,moneyline,home,-185,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,a2b05838698a5f914b569f502d372985,2026-05-10T03:15:00+00:00,Sean Brady,Joaquin Buckley,moneyline,away,160,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,a2b05838698a5f914b569f502d372985,2026-05-10T03:15:00+00:00,Sean Brady,Joaquin Buckley,moneyline,home,-192,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,a2b05838698a5f914b569f502d372985,2026-05-10T03:15:00+00:00,Sean Brady,Joaquin Buckley,moneyline,away,164,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,a2b05838698a5f914b569f502d372985,2026-05-10T03:15:00+00:00,Sean Brady,Joaquin Buckley,moneyline,home,-215,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,dc70600ccf557c5bce24b0f1e73fa45f,2026-05-10T03:45:00+00:00,Alexander Volkov,Waldo Cortes-Acosta,moneyline,home,-170,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,dc70600ccf557c5bce24b0f1e73fa45f,2026-05-10T03:45:00+00:00,Alexander Volkov,Waldo Cortes-Acosta,moneyline,away,145,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,dc70600ccf557c5bce24b0f1e73fa45f,2026-05-10T03:45:00+00:00,Alexander Volkov,Waldo Cortes-Acosta,moneyline,home,-170,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,dc70600ccf557c5bce24b0f1e73fa45f,2026-05-10T03:45:00+00:00,Alexander Volkov,Waldo Cortes-Acosta,moneyline,away,142,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,dc70600ccf557c5bce24b0f1e73fa45f,2026-05-10T03:45:00+00:00,Alexander Volkov,Waldo Cortes-Acosta,moneyline,home,-174,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,dc70600ccf557c5bce24b0f1e73fa45f,2026-05-10T03:45:00+00:00,Alexander Volkov,Waldo Cortes-Acosta,moneyline,away,136,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,1976a9195475f1efe57d2c1a3a85c019,2026-05-10T04:00:00+00:00,Joshua Van,Tatsuro Taira,moneyline,home,150,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,1976a9195475f1efe57d2c1a3a85c019,2026-05-10T04:00:00+00:00,Joshua Van,Tatsuro Taira,moneyline,away,-180,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,1976a9195475f1efe57d2c1a3a85c019,2026-05-10T04:00:00+00:00,Joshua Van,Tatsuro Taira,moneyline,home,170,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,1976a9195475f1efe57d2c1a3a85c019,2026-05-10T04:00:00+00:00,Joshua Van,Tatsuro Taira,moneyline,away,-200,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,1976a9195475f1efe57d2c1a3a85c019,2026-05-10T04:00:00+00:00,Joshua Van,Tatsuro Taira,moneyline,home,164,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,1976a9195475f1efe57d2c1a3a85c019,2026-05-10T04:00:00+00:00,Joshua Van,Tatsuro Taira,moneyline,away,-215,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,1b275b79bdfb54ec649b1c4a1cd01b60,2026-05-17T00:00:00+00:00,Francis Ngannou,Philipe Lins,moneyline,home,-1500,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,1b275b79bdfb54ec649b1c4a1cd01b60,2026-05-17T00:00:00+00:00,Francis Ngannou,Philipe Lins,moneyline,away,800,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,a39fe54b3c38dbba822aaa3d29cca5dd,2026-05-17T00:00:00+00:00,Ronda Rousey,Gina Carano,moneyline,away,375,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,a39fe54b3c38dbba822aaa3d29cca5dd,2026-05-17T00:00:00+00:00,Ronda Rousey,Gina Carano,moneyline,home,-500,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,0068bfd36cef60b3e373c762b5b6338a,2026-05-17T00:00:00+00:00,Nate Diaz,Mike Perry,moneyline,away,-215,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,0068bfd36cef60b3e373c762b5b6338a,2026-05-17T00:00:00+00:00,Nate Diaz,Mike Perry,moneyline,home,185,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f1fb488f82150df01e4c09f56f5efe09,2026-06-02T02:00:00+00:00,Islam Makhachev,Ilia Topuria,moneyline,away,199,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f1fb488f82150df01e4c09f56f5efe09,2026-06-02T02:00:00+00:00,Islam Makhachev,Ilia Topuria,moneyline,home,-234,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,c8dbccd9eda383d9c76dc15e4a3c96a7,2026-06-14T02:00:00+00:00,Alex Pereira,Carlos Ulberg,moneyline,home,-175,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,c8dbccd9eda383d9c76dc15e4a3c96a7,2026-06-14T02:00:00+00:00,Alex Pereira,Carlos Ulberg,moneyline,away,150,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,b1a902b892f239a0404c75781af22e87,2026-06-14T02:00:00+00:00,Alex Pereira,Jiri Prochazka,moneyline,home,-300,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,b1a902b892f239a0404c75781af22e87,2026-06-14T02:00:00+00:00,Alex Pereira,Jiri Prochazka,moneyline,away,250,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,e7a638f5736f2d0edc762b56fc404f74,2026-06-14T02:00:00+00:00,Alex Pereira,Jon Jones,moneyline,home,210,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,e7a638f5736f2d0edc762b56fc404f74,2026-06-14T02:00:00+00:00,Alex Pereira,Jon Jones,moneyline,away,-250,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,a3c203ddf1665927314db9cc73ede377,2026-06-14T02:00:00+00:00,Magomed Ankalaev,Carlos Ulberg,moneyline,away,210,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,a3c203ddf1665927314db9cc73ede377,2026-06-14T02:00:00+00:00,Magomed Ankalaev,Carlos Ulberg,moneyline,home,-250,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,2f1aabeeefbe5b02db96846ac879a6ae,2026-06-15T00:00:00+00:00,Derrick Lewis,Josh Hokit,moneyline,home,240,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,2f1aabeeefbe5b02db96846ac879a6ae,2026-06-15T00:00:00+00:00,Derrick Lewis,Josh Hokit,moneyline,away,-298,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,2f1aabeeefbe5b02db96846ac879a6ae,2026-06-15T00:00:00+00:00,Derrick Lewis,Josh Hokit,moneyline,home,260,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,2f1aabeeefbe5b02db96846ac879a6ae,2026-06-15T00:00:00+00:00,Derrick Lewis,Josh Hokit,moneyline,away,-310,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,2f1aabeeefbe5b02db96846ac879a6ae,2026-06-15T00:00:00+00:00,Derrick Lewis,Josh Hokit,moneyline,home,240,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,2f1aabeeefbe5b02db96846ac879a6ae,2026-06-15T00:00:00+00:00,Derrick Lewis,Josh Hokit,moneyline,away,-330,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,4b4920d2454497566b519a271f9e1e93,2026-06-15T00:30:00+00:00,Diego Lopes,Steve Garcia Jr.,moneyline,home,-185,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,4b4920d2454497566b519a271f9e1e93,2026-06-15T00:30:00+00:00,Diego Lopes,Steve Garcia Jr.,moneyline,away,154,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,4b4920d2454497566b519a271f9e1e93,2026-06-15T00:30:00+00:00,Diego Lopes,Steve Garcia Jr.,moneyline,home,-185,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,4b4920d2454497566b519a271f9e1e93,2026-06-15T00:30:00+00:00,Diego Lopes,Steve Garcia Jr.,moneyline,away,160,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,4b4920d2454497566b519a271f9e1e93,2026-06-15T00:30:00+00:00,Diego Lopes,Steve Garcia Jr.,moneyline,home,-200,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,4b4920d2454497566b519a271f9e1e93,2026-06-15T00:30:00+00:00,Diego Lopes,Steve Garcia Jr.,moneyline,away,154,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,4b4920d2454497566b519a271f9e1e93,2026-06-15T00:30:00+00:00,Diego Lopes,Steve Garcia Jr.,moneyline,home,-200,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,4b4920d2454497566b519a271f9e1e93,2026-06-15T00:30:00+00:00,Diego Lopes,Steve Garcia Jr.,moneyline,away,150,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,9cf76c6ecde4824965ca04da644dfefa,2026-06-15T01:00:00+00:00,Bo Nickal,Kyle Daukaus,moneyline,home,-310,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,9cf76c6ecde4824965ca04da644dfefa,2026-06-15T01:00:00+00:00,Bo Nickal,Kyle Daukaus,moneyline,away,250,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,9cf76c6ecde4824965ca04da644dfefa,2026-06-15T01:00:00+00:00,Bo Nickal,Kyle Daukaus,moneyline,home,-280,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,9cf76c6ecde4824965ca04da644dfefa,2026-06-15T01:00:00+00:00,Bo Nickal,Kyle Daukaus,moneyline,away,240,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,9cf76c6ecde4824965ca04da644dfefa,2026-06-15T01:00:00+00:00,Bo Nickal,Kyle Daukaus,moneyline,home,-330,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,9cf76c6ecde4824965ca04da644dfefa,2026-06-15T01:00:00+00:00,Bo Nickal,Kyle Daukaus,moneyline,away,240,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,9cf76c6ecde4824965ca04da644dfefa,2026-06-15T01:00:00+00:00,Bo Nickal,Kyle Daukaus,moneyline,home,-375,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,9cf76c6ecde4824965ca04da644dfefa,2026-06-15T01:00:00+00:00,Bo Nickal,Kyle Daukaus,moneyline,away,260,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,54eb45b661945af7aa7da285a12e835c,2026-06-15T01:30:00+00:00,Mauricio Ruffy,Michael Chandler,moneyline,home,-625,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,54eb45b661945af7aa7da285a12e835c,2026-06-15T01:30:00+00:00,Mauricio Ruffy,Michael Chandler,moneyline,away,455,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,54eb45b661945af7aa7da285a12e835c,2026-06-15T01:30:00+00:00,Mauricio Ruffy,Michael Chandler,moneyline,home,-600,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,54eb45b661945af7aa7da285a12e835c,2026-06-15T01:30:00+00:00,Mauricio Ruffy,Michael Chandler,moneyline,away,450,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,54eb45b661945af7aa7da285a12e835c,2026-06-15T01:30:00+00:00,Mauricio Ruffy,Michael Chandler,moneyline,home,-480,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,54eb45b661945af7aa7da285a12e835c,2026-06-15T01:30:00+00:00,Mauricio Ruffy,Michael Chandler,moneyline,away,330,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,54eb45b661945af7aa7da285a12e835c,2026-06-15T01:30:00+00:00,Mauricio Ruffy,Michael Chandler,moneyline,home,-650,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,54eb45b661945af7aa7da285a12e835c,2026-06-15T01:30:00+00:00,Mauricio Ruffy,Michael Chandler,moneyline,away,400,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,20d0d02349fe04d63631b1e3f1879fa3,2026-06-15T02:00:00+00:00,Sean O'Malley,Aiemann Zahabi,moneyline,away,310,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,20d0d02349fe04d63631b1e3f1879fa3,2026-06-15T02:00:00+00:00,Sean O'Malley,Aiemann Zahabi,moneyline,home,-395,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,20d0d02349fe04d63631b1e3f1879fa3,2026-06-15T02:00:00+00:00,Sean O'Malley,Aiemann Zahabi,moneyline,away,345,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,20d0d02349fe04d63631b1e3f1879fa3,2026-06-15T02:00:00+00:00,Sean O'Malley,Aiemann Zahabi,moneyline,home,-415,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,20d0d02349fe04d63631b1e3f1879fa3,2026-06-15T02:00:00+00:00,Sean O'Malley,Aiemann Zahabi,moneyline,away,300,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,20d0d02349fe04d63631b1e3f1879fa3,2026-06-15T02:00:00+00:00,Sean O'Malley,Aiemann Zahabi,moneyline,home,-430,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,20d0d02349fe04d63631b1e3f1879fa3,2026-06-15T02:00:00+00:00,Sean O'Malley,Aiemann Zahabi,moneyline,away,325,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,20d0d02349fe04d63631b1e3f1879fa3,2026-06-15T02:00:00+00:00,Sean O'Malley,Aiemann Zahabi,moneyline,home,-500,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,1e972b73d422aa4cadb9185ca87c3c93,2026-06-15T02:30:00+00:00,Alex Pereira,Ciryl Gane,moneyline,home,-115,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,1e972b73d422aa4cadb9185ca87c3c93,2026-06-15T02:30:00+00:00,Alex Pereira,Ciryl Gane,moneyline,away,-105,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,1e972b73d422aa4cadb9185ca87c3c93,2026-06-15T02:30:00+00:00,Alex Pereira,Ciryl Gane,moneyline,home,-110,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,1e972b73d422aa4cadb9185ca87c3c93,2026-06-15T02:30:00+00:00,Alex Pereira,Ciryl Gane,moneyline,away,-110,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,1e972b73d422aa4cadb9185ca87c3c93,2026-06-15T02:30:00+00:00,Alex Pereira,Ciryl Gane,moneyline,home,-108,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,1e972b73d422aa4cadb9185ca87c3c93,2026-06-15T02:30:00+00:00,Alex Pereira,Ciryl Gane,moneyline,away,-118,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,1e972b73d422aa4cadb9185ca87c3c93,2026-06-15T02:30:00+00:00,Alex Pereira,Ciryl Gane,moneyline,home,-120,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,1e972b73d422aa4cadb9185ca87c3c93,2026-06-15T02:30:00+00:00,Alex Pereira,Ciryl Gane,moneyline,away,-110,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,e34a17d5cf2a82a5161a54631e06770c,2026-06-15T03:00:00+00:00,Ilia Topuria,Justin Gaethje,moneyline,home,-675,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,e34a17d5cf2a82a5161a54631e06770c,2026-06-15T03:00:00+00:00,Ilia Topuria,Justin Gaethje,moneyline,away,490,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,e34a17d5cf2a82a5161a54631e06770c,2026-06-15T03:00:00+00:00,Ilia Topuria,Justin Gaethje,moneyline,home,-800,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,e34a17d5cf2a82a5161a54631e06770c,2026-06-15T03:00:00+00:00,Ilia Topuria,Justin Gaethje,moneyline,away,550,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,e34a17d5cf2a82a5161a54631e06770c,2026-06-15T03:00:00+00:00,Ilia Topuria,Justin Gaethje,moneyline,home,-770,
+2026-04-23T06:53:40.658470+00:00,fanduel,MMA,e34a17d5cf2a82a5161a54631e06770c,2026-06-15T03:00:00+00:00,Ilia Topuria,Justin Gaethje,moneyline,away,470,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,e34a17d5cf2a82a5161a54631e06770c,2026-06-15T03:00:00+00:00,Ilia Topuria,Justin Gaethje,moneyline,home,-1000,
+2026-04-23T06:53:40.658470+00:00,betmgm,MMA,e34a17d5cf2a82a5161a54631e06770c,2026-06-15T03:00:00+00:00,Ilia Topuria,Justin Gaethje,moneyline,away,525,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,891965c02d665af81f9308428b8f33e7,2026-06-27T14:00:00+00:00,Valentina Shevchenko,Natalia Silva,moneyline,away,210,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,891965c02d665af81f9308428b8f33e7,2026-06-27T14:00:00+00:00,Valentina Shevchenko,Natalia Silva,moneyline,home,-250,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,ee37a39c1d8a992a65c6ff399fa48c63,2026-06-28T02:00:00+00:00,Alexandre Pantoja,Joshua Van,moneyline,home,-180,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,ee37a39c1d8a992a65c6ff399fa48c63,2026-06-28T02:00:00+00:00,Alexandre Pantoja,Joshua Van,moneyline,away,155,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,1ca0b61248b7eb5feef12a04661003e0,2026-06-28T02:00:00+00:00,Tom Aspinall,Ciryl Gane,moneyline,away,175,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,1ca0b61248b7eb5feef12a04661003e0,2026-06-28T02:00:00+00:00,Tom Aspinall,Ciryl Gane,moneyline,home,-205,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,702055a9e35d07bddba5fd446eef719c,2026-06-28T02:00:00+00:00,Islam Makhachev,Michael Morales,moneyline,home,-315,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,702055a9e35d07bddba5fd446eef719c,2026-06-28T02:00:00+00:00,Islam Makhachev,Michael Morales,moneyline,away,265,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,ee6203b3168fb34a63a60ad51dd01050,2026-06-28T02:00:00+00:00,Weili Zhang,Mackenzie Dern,moneyline,away,350,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,ee6203b3168fb34a63a60ad51dd01050,2026-06-28T02:00:00+00:00,Weili Zhang,Mackenzie Dern,moneyline,home,-450,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,05b3dc3515568962c8e7351c06ff69c0,2026-06-28T02:00:00+00:00,Merab Dvalishvili,Petr Yan,moneyline,home,150,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,05b3dc3515568962c8e7351c06ff69c0,2026-06-28T02:00:00+00:00,Merab Dvalishvili,Petr Yan,moneyline,away,-175,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f09d8755975042bcd105a5ab258253ff,2026-08-02T03:10:00+00:00,Ilia Topuria,Arman Tsarukyan,moneyline,away,165,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,f09d8755975042bcd105a5ab258253ff,2026-08-02T03:10:00+00:00,Ilia Topuria,Arman Tsarukyan,moneyline,home,-190,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,944dd8a4945ba0df2c4370de73387c5d,2026-12-31T17:00:00+00:00,Conor McGregor,Jorge Masvidal,moneyline,home,-145,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,944dd8a4945ba0df2c4370de73387c5d,2026-12-31T17:00:00+00:00,Conor McGregor,Jorge Masvidal,moneyline,away,125,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,96b5f4dba85f6b98816b6660cf21241d,2026-12-31T19:00:00+00:00,Michael Chandler,Conor McGregor,moneyline,away,100,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,96b5f4dba85f6b98816b6660cf21241d,2026-12-31T19:00:00+00:00,Michael Chandler,Conor McGregor,moneyline,home,-120,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,b40b838fc3b12e959a10d678ed58321f,2026-12-31T19:25:00+00:00,Islam Makhachev,Kamaru Usman,moneyline,home,-310,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,b40b838fc3b12e959a10d678ed58321f,2026-12-31T19:25:00+00:00,Islam Makhachev,Kamaru Usman,moneyline,away,250,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,fa2d7e022c2c47e0855f04084d08f163,2026-12-31T20:00:00+00:00,Tom Aspinall,Ciryl Gane,moneyline,away,160,
+2026-04-23T06:53:40.658470+00:00,draftkings,MMA,fa2d7e022c2c47e0855f04084d08f163,2026-12-31T20:00:00+00:00,Tom Aspinall,Ciryl Gane,moneyline,home,-192,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,fcee675894f8285afc8daf0808198b74,2027-07-02T02:00:00+00:00,Islam Makhachev,Kamaru Usman,moneyline,home,-330,
+2026-04-23T06:53:40.658470+00:00,betonlineag,MMA,fcee675894f8285afc8daf0808198b74,2027-07-02T02:00:00+00:00,Islam Makhachev,Kamaru Usman,moneyline,away,270,
