@@ -4627,3 +4627,55 @@ timestamp_utc,book,sport,event_id,event_start_time,home_team,away_team,market_ty
 2026-08-30T22:32:50.470936+00:00,fanduel,MMA,mma_stub_001,2026-09-06T22:32:50.469917+00:00,Jon Jones,Stipe Miocic,moneyline,away,210,
 2026-08-30T22:32:50.470936+00:00,fanduel,MMA,mma_stub_002,2026-09-07T00:32:50.469917+00:00,Islam Makhachev,Charles Oliveira,moneyline,home,-180,
 2026-08-30T22:32:50.470936+00:00,fanduel,MMA,mma_stub_002,2026-09-07T00:32:50.469917+00:00,Islam Makhachev,Charles Oliveira,moneyline,away,155,
+2026-08-31T01:13:55.434716+00:00,fanduel,NFL,nfl_stub_001,2026-09-02T01:13:54.659539+00:00,Kansas City Chiefs,Buffalo Bills,moneyline,home,-150,
+2026-08-31T01:13:55.434716+00:00,fanduel,NFL,nfl_stub_001,2026-09-02T01:13:54.659539+00:00,Kansas City Chiefs,Buffalo Bills,moneyline,away,130,
+2026-08-31T01:13:55.434716+00:00,fanduel,NFL,nfl_stub_001,2026-09-02T01:13:54.659539+00:00,Kansas City Chiefs,Buffalo Bills,spread,home,-110,-3.0
+2026-08-31T01:13:55.434716+00:00,fanduel,NFL,nfl_stub_001,2026-09-02T01:13:54.659539+00:00,Kansas City Chiefs,Buffalo Bills,spread,away,-110,3.0
+2026-08-31T01:13:55.434716+00:00,fanduel,NFL,nfl_stub_001,2026-09-02T01:13:54.659539+00:00,Kansas City Chiefs,Buffalo Bills,total,over,-110,47.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NFL,nfl_stub_001,2026-09-02T01:13:54.659539+00:00,Kansas City Chiefs,Buffalo Bills,total,under,-110,47.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NFL,nfl_stub_002,2026-09-03T01:13:54.659539+00:00,San Francisco 49ers,Dallas Cowboys,moneyline,home,-180,
+2026-08-31T01:13:55.434716+00:00,fanduel,NFL,nfl_stub_002,2026-09-03T01:13:54.659539+00:00,San Francisco 49ers,Dallas Cowboys,moneyline,away,155,
+2026-08-31T01:13:55.434716+00:00,fanduel,NFL,nfl_stub_002,2026-09-03T01:13:54.659539+00:00,San Francisco 49ers,Dallas Cowboys,spread,home,-105,-4.0
+2026-08-31T01:13:55.434716+00:00,fanduel,NFL,nfl_stub_002,2026-09-03T01:13:54.659539+00:00,San Francisco 49ers,Dallas Cowboys,spread,away,-115,4.0
+2026-08-31T01:13:55.434716+00:00,fanduel,NFL,nfl_stub_002,2026-09-03T01:13:54.659539+00:00,San Francisco 49ers,Dallas Cowboys,total,over,-108,49.0
+2026-08-31T01:13:55.434716+00:00,fanduel,NFL,nfl_stub_002,2026-09-03T01:13:54.659539+00:00,San Francisco 49ers,Dallas Cowboys,total,under,-112,49.0
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_001,2026-09-01T01:13:54.850432+00:00,Los Angeles Lakers,Boston Celtics,moneyline,home,120,
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_001,2026-09-01T01:13:54.850432+00:00,Los Angeles Lakers,Boston Celtics,moneyline,away,-140,
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_001,2026-09-01T01:13:54.850432+00:00,Los Angeles Lakers,Boston Celtics,spread,home,-110,2.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_001,2026-09-01T01:13:54.850432+00:00,Los Angeles Lakers,Boston Celtics,spread,away,-110,-2.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_001,2026-09-01T01:13:54.850432+00:00,Los Angeles Lakers,Boston Celtics,total,over,-110,225.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_001,2026-09-01T01:13:54.850432+00:00,Los Angeles Lakers,Boston Celtics,total,under,-110,225.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_002,2026-09-01T04:13:54.850432+00:00,Golden State Warriors,Phoenix Suns,moneyline,home,-165,
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_002,2026-09-01T04:13:54.850432+00:00,Golden State Warriors,Phoenix Suns,moneyline,away,145,
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_002,2026-09-01T04:13:54.850432+00:00,Golden State Warriors,Phoenix Suns,spread,home,-108,-4.0
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_002,2026-09-01T04:13:54.850432+00:00,Golden State Warriors,Phoenix Suns,spread,away,-112,4.0
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_002,2026-09-01T04:13:54.850432+00:00,Golden State Warriors,Phoenix Suns,total,over,-105,232.0
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_002,2026-09-01T04:13:54.850432+00:00,Golden State Warriors,Phoenix Suns,total,under,-115,232.0
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_001,2026-09-01T01:13:55.173809+00:00,Los Angeles Lakers,Boston Celtics,moneyline,home,120,
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_001,2026-09-01T01:13:55.173809+00:00,Los Angeles Lakers,Boston Celtics,moneyline,away,-140,
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_001,2026-09-01T01:13:55.173809+00:00,Los Angeles Lakers,Boston Celtics,spread,home,-110,2.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_001,2026-09-01T01:13:55.173809+00:00,Los Angeles Lakers,Boston Celtics,spread,away,-110,-2.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_001,2026-09-01T01:13:55.173809+00:00,Los Angeles Lakers,Boston Celtics,total,over,-110,225.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_001,2026-09-01T01:13:55.173809+00:00,Los Angeles Lakers,Boston Celtics,total,under,-110,225.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_002,2026-09-01T04:13:55.173809+00:00,Golden State Warriors,Phoenix Suns,moneyline,home,-165,
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_002,2026-09-01T04:13:55.173809+00:00,Golden State Warriors,Phoenix Suns,moneyline,away,145,
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_002,2026-09-01T04:13:55.173809+00:00,Golden State Warriors,Phoenix Suns,spread,home,-108,-4.0
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_002,2026-09-01T04:13:55.173809+00:00,Golden State Warriors,Phoenix Suns,spread,away,-112,4.0
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_002,2026-09-01T04:13:55.173809+00:00,Golden State Warriors,Phoenix Suns,total,over,-105,232.0
+2026-08-31T01:13:55.434716+00:00,fanduel,NBA,nba_stub_002,2026-09-01T04:13:55.173809+00:00,Golden State Warriors,Phoenix Suns,total,under,-115,232.0
+2026-08-31T01:13:55.434716+00:00,fanduel,NHL,nhl_stub_001,2026-09-01T01:13:55.284116+00:00,Toronto Maple Leafs,Montreal Canadiens,moneyline,home,-155,
+2026-08-31T01:13:55.434716+00:00,fanduel,NHL,nhl_stub_001,2026-09-01T01:13:55.284116+00:00,Toronto Maple Leafs,Montreal Canadiens,moneyline,away,135,
+2026-08-31T01:13:55.434716+00:00,fanduel,NHL,nhl_stub_001,2026-09-01T01:13:55.284116+00:00,Toronto Maple Leafs,Montreal Canadiens,spread,home,-115,-1.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NHL,nhl_stub_001,2026-09-01T01:13:55.284116+00:00,Toronto Maple Leafs,Montreal Canadiens,spread,away,-105,1.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NHL,nhl_stub_001,2026-09-01T01:13:55.284116+00:00,Toronto Maple Leafs,Montreal Canadiens,total,over,-110,6.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NHL,nhl_stub_001,2026-09-01T01:13:55.284116+00:00,Toronto Maple Leafs,Montreal Canadiens,total,under,-110,6.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NHL,nhl_stub_002,2026-09-01T04:13:55.284116+00:00,Vegas Golden Knights,Colorado Avalanche,moneyline,home,-130,
+2026-08-31T01:13:55.434716+00:00,fanduel,NHL,nhl_stub_002,2026-09-01T04:13:55.284116+00:00,Vegas Golden Knights,Colorado Avalanche,moneyline,away,110,
+2026-08-31T01:13:55.434716+00:00,fanduel,NHL,nhl_stub_002,2026-09-01T04:13:55.284116+00:00,Vegas Golden Knights,Colorado Avalanche,spread,home,105,-1.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NHL,nhl_stub_002,2026-09-01T04:13:55.284116+00:00,Vegas Golden Knights,Colorado Avalanche,spread,away,-125,1.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NHL,nhl_stub_002,2026-09-01T04:13:55.284116+00:00,Vegas Golden Knights,Colorado Avalanche,total,over,-105,5.5
+2026-08-31T01:13:55.434716+00:00,fanduel,NHL,nhl_stub_002,2026-09-01T04:13:55.284116+00:00,Vegas Golden Knights,Colorado Avalanche,total,under,-115,5.5
+2026-08-31T01:13:55.434716+00:00,fanduel,MMA,mma_stub_001,2026-09-07T01:13:55.433524+00:00,Jon Jones,Stipe Miocic,moneyline,home,-250,
+2026-08-31T01:13:55.434716+00:00,fanduel,MMA,mma_stub_001,2026-09-07T01:13:55.433524+00:00,Jon Jones,Stipe Miocic,moneyline,away,210,
+2026-08-31T01:13:55.434716+00:00,fanduel,MMA,mma_stub_002,2026-09-07T03:13:55.433524+00:00,Islam Makhachev,Charles Oliveira,moneyline,home,-180,
+2026-08-31T01:13:55.434716+00:00,fanduel,MMA,mma_stub_002,2026-09-07T03:13:55.433524+00:00,Islam Makhachev,Charles Oliveira,moneyline,away,155,
