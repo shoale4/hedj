@@ -41,3 +41,6 @@ data/raw/*
 .env.twitter
 .vercel
 data/alerted_arbs.json
+
+# Prediction market data/cache
+data/prediction_markets/

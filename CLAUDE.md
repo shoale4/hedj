@@ -1,5 +1,35 @@
 # Hedj - Claude Code Context Document
 
+## Current Direction (Oct 2026): Kalshi prop trading
+
+Sportsbook arb polling is retired. All GitHub Actions workflows were deleted
+(the Odds API key had expired and the feed was committing stub data). The
+`web/` app and `arb_alerts.py`/`tight_line_summary.py` remain but get no fresh data.
+
+New focus: find mispriced Kalshi sports contracts using sportsbook prices as
+the fair-value reference, then trade them automatically.
+
+- `scripts/prop_calibration.py` - Backtest: pregame Kalshi price vs settlement
+  for every settled market in a series (public API, cached in
+  `data/prediction_markets/cache/`, gitignored). Per-sport snapshot timing in
+  `LEAD_HOURS`. First result (NFL TD markets): long shots hit MORE often than
+  priced, so buying NO on TD long shots loses ~3% after taker fees.
+- `scripts/kalshi_edge_scanner.py` - Pulls props from 10 books via The Odds API
+  (`bookmakers=` list bills as one region; ~11 credits per NFL game), de-vigs
+  two-sided quotes, shapes alt ladders, compares to Kalshi ladders
+  ("60+" == Over 59.5 == Kalshi `floor_strike`). One-sided exchange quotes
+  (Novig/ProphetX/Underdog) are excluded: they are stale resting asks.
+- `scripts/kalshi_client.py` - Authenticated client; supports Ed25519 (current
+  Kalshi default) and RSA keys. Credentials in `~/.kalshi/env`.
+- `scripts/notify.py` - Optional ntfy.sh push helper.
+
+Kalshi API changed in 2026: prices are `*_dollars` strings, sizes/volume
+`*_fp`, orderbook is `orderbook_fp` with `yes_dollars`/`no_dollars`.
+`kalshi_market_maker.py` and `prediction_arb.py` still read the old cent
+fields and are broken. Settled markets older than the cutoff live under
+`/historical/markets` (and `/historical/markets/{ticker}/candlesticks`).
+2026 NFL anytime TD series is `KXNFLTD` (was `KXNFLANYTD`).
+
 ## What is Hedj?
 Hedj is a sports betting arbitrage and line tracking tool. It compares odds across 12+ sportsbooks to find:
 1. **Arbitrage opportunities** - Guaranteed profit by betting both sides at different books
