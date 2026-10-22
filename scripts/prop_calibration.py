@@ -24,6 +24,7 @@ import argparse
 import hashlib
 import json
 import math
+import random
 import sys
 import threading
 import time
@@ -33,7 +34,7 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 KALSHI_BASE = "https://api.elections.kalshi.com/trade-api/v2"
@@ -105,12 +106,16 @@ def _get(path: str, cache: bool = True) -> dict:
                 data = json.loads(resp.read().decode())
             break
         except HTTPError as e:
-            if e.code == 429:
+            if e.code == 429 or e.code >= 500:
                 time.sleep(2 ** attempt)
                 continue
             if e.code == 404:
                 return {}
             raise
+        except (URLError, TimeoutError, ConnectionError):
+            # Dropped connections (e.g. the machine slept mid-run): retry
+            time.sleep(2 ** attempt)
+            continue
     else:
         raise RuntimeError(f"rate limited: {url}")
 
@@ -176,14 +181,25 @@ def _candle_quote(candle: dict, side: str) -> Optional[float]:
     return _f(q.get("close_dollars", q.get("close")))
 
 
-def pregame_snapshot(market: dict, series: str, lead: timedelta) -> Optional[Snapshot]:
-    # Historical markets lack occurrence_datetime; expected_expiration_time matches it
-    occ = market.get("occurrence_datetime") or market.get("expected_expiration_time")
+def pregame_snapshot(market: dict, series: str, lead: timedelta, anchor: str = "event") -> Optional[Snapshot]:
+    # Historical markets lack occurrence_datetime; expected_expiration_time matches it.
+    # Non-sports markets have no game time, so they anchor on close_time instead.
+    if anchor == "close":
+        occ = market.get("close_time")
+    else:
+        occ = market.get("occurrence_datetime") or market.get("expected_expiration_time")
     if not occ:
         return None
+    if anchor == "close" and market.get("open_time"):
+        # Never snapshot earlier than halfway through the market's life
+        life = datetime.fromisoformat(occ.replace("Z", "+00:00")) - datetime.fromisoformat(
+            market["open_time"].replace("Z", "+00:00"))
+        lead = min(lead, life / 2)
     kickoff_approx = datetime.fromisoformat(occ.replace("Z", "+00:00")) - lead
     snap_ts = int(kickoff_approx.timestamp())
-    start_ts = snap_ts - 6 * 3600
+    # Candles are only written when something changes, so quiet non-sports
+    # markets need a longer look back for their standing quote
+    start_ts = snap_ts - (7 * 24 if anchor == "close" else 6) * 3600
 
     ticker = market["ticker"]
     if market["_historical"]:
@@ -272,6 +288,10 @@ def main():
     parser.add_argument("--lead-hours", type=float, default=None,
                         help="Snapshot this many hours before expected expiration "
                              "(default: per-sport preset)")
+    parser.add_argument("--anchor", choices=["event", "close"], default="event",
+                        help="Time the snapshot from the event (sports) or from market close")
+    parser.add_argument("--sample", type=int, default=0,
+                        help="Test at most this many random markets per series (0 = all)")
     parser.add_argument("--out", default="calibration_snapshots.json",
                         help="Snapshot output filename under data/prediction_markets/")
     parser.add_argument("--include-preseason", action="store_true",
@@ -287,10 +307,13 @@ def main():
             markets = [m for m in markets if "AUG" not in m["event_ticker"].split("-")[1]]
         print(f"{series}: {len(markets):,} settled markets with volume >= {args.min_volume:.0f}",
               flush=True)
+        if args.sample and len(markets) > args.sample:
+            markets = random.Random(0).sample(markets, args.sample)
+            print(f"  sampled {len(markets):,}", flush=True)
 
         with ThreadPoolExecutor(max_workers=args.workers) as pool:
             lead = lead_for(series, args.lead_hours)
-            snaps = list(pool.map(lambda m: pregame_snapshot(m, series, lead), markets))
+            snaps = list(pool.map(lambda m: pregame_snapshot(m, series, lead, args.anchor), markets))
         snaps = [s for s in snaps if s]
         print(f"  {len(snaps):,} with a usable pregame quote", flush=True)
         all_snaps.extend(snaps)
