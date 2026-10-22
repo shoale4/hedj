@@ -38,6 +38,15 @@ the fair-value reference, then trade them automatically.
   Kalshi default) and RSA keys. Credentials in `~/.kalshi/env`.
 - `scripts/notify.py` - Optional ntfy.sh push helper.
 
+hedj.app is the private trading desk in `dashboard/` (Next.js 16, Vercel
+project `hedj`, root directory `dashboard`, auto-deploys from `main`; builds
+are skipped unless `dashboard/` changed). Single password via
+`DASHBOARD_PASSWORD` + `AUTH_SECRET` env vars, checked in `proxy.ts`. Pages:
+Today (paper picks), Results (paper P&L vs backtest), Strategies (board JSON
+written by `build_dashboard_data.py` to `dashboard/data/board/`). The old arb
+site in `web/` is no longer deployed; the hedj-exchange project lost the
+domain on 2026-10-22.
+
 Kalshi API changed in 2026: prices are `*_dollars` strings, sizes/volume
 `*_fp`, orderbook is `orderbook_fp` with `yes_dollars`/`no_dollars`.
 `kalshi_market_maker.py` and `prediction_arb.py` still read the old cent
