@@ -1,0 +1,58 @@
+[
+ {
+  "pair": "QB passing yards + his receiver's yards",
+  "pairs": 1950,
+  "both_hit": 0.3277,
+  "priced": 0.2417,
+  "ratio": 1.356
+ },
+ {
+  "pair": "QB passing TDs + his teammate scores a TD",
+  "pairs": 552,
+  "both_hit": 0.2156,
+  "priced": 0.1669,
+  "ratio": 1.291
+ },
+ {
+  "pair": "QB passing yards + opposing receiver's yards",
+  "pairs": 1955,
+  "both_hit": 0.2685,
+  "priced": 0.2412,
+  "ratio": 1.113
+ },
+ {
+  "pair": "Two receivers, opposite teams",
+  "pairs": 4747,
+  "both_hit": 0.2414,
+  "priced": 0.2296,
+  "ratio": 1.051
+ },
+ {
+  "pair": "Two receivers, same team",
+  "pairs": 3970,
+  "both_hit": 0.2315,
+  "priced": 0.2276,
+  "ratio": 1.017
+ },
+ {
+  "pair": "QB passing yards + his RB's rushing yards",
+  "pairs": 690,
+  "both_hit": 0.2507,
+  "priced": 0.2505,
+  "ratio": 1.001
+ },
+ {
+  "pair": "RB rushing yards + teammate receiver's yards",
+  "pairs": 4277,
+  "both_hit": 0.216,
+  "priced": 0.2346,
+  "ratio": 0.921
+ },
+ {
+  "pair": "Two TD scorers, same team",
+  "pairs": 2387,
+  "both_hit": 0.1052,
+  "priced": 0.1211,
+  "ratio": 0.868
+ }
+]

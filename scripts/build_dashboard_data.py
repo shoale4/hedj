@@ -2,7 +2,8 @@
 """
 Build the strategy dashboard's data files from the backtest snapshots.
 
-Writes to data/prediction_markets/dashboard/:
+Writes to data/prediction_markets/dashboard/ (and the same rows as JSON to
+dashboard/data/board/ for hedj.app):
     strategies.csv     one row per strategy x month: bets, cost, profit
     correlations.csv   same-game leg pairs: how often both hit vs. priced
     factors.csv        player factors that held up in both seasons
@@ -25,6 +26,7 @@ from pathlib import Path
 
 DATA = Path(__file__).parent.parent / "data" / "prediction_markets"
 OUT = DATA / "dashboard"
+SITE = Path(__file__).parent.parent / "dashboard" / "data" / "board"   # committed, read by hedj.app
 TAKER_COEFF = 0.07
 
 NFL_OVERS = {"KXNFLREC", "KXNFLRECYDS", "KXNFLPASSYDS"}
@@ -223,6 +225,8 @@ def write(name: str, rows: list):
         w.writeheader()
         w.writerows(rows)
     print(f"  {len(rows):5d} rows -> {OUT / name}")
+    SITE.mkdir(parents=True, exist_ok=True)
+    (SITE / name.replace(".csv", ".json")).write_text(json.dumps(rows, indent=1))
 
 
 def main():

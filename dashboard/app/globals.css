@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* Trading desk: near-black slate, one ink color, green/red only for money */
+:root {
+  --bg: #0c1014;
+  --panel: #131920;
+  --line: #222b35;
+  --fg: #e8edf2;
+  --muted: #8593a3;
+  --up: #3fd18b;
+  --down: #ff6b6b;
+  --warn: #f2b84b;
+  --accent: #7fb3ff;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-up: var(--up);
+  --color-down: var(--down);
+  --color-warn: var(--warn);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.num {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}

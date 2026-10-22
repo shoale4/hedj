@@ -1,0 +1,26 @@
+[
+ {
+  "factor": "Quiet market",
+  "meaning": "Overs in markets with little pregame open interest hit more than priced",
+  "edge_2025": 0.0648,
+  "edge_2026": 0.0348
+ },
+ {
+  "factor": "High implied team total",
+  "meaning": "Overs for players on teams Vegas expects to score a lot hit more than priced",
+  "edge_2025": 0.0176,
+  "edge_2026": 0.0297
+ },
+ {
+  "factor": "Home team",
+  "meaning": "Home players' overs hit slightly more than priced",
+  "edge_2025": 0.0114,
+  "edge_2026": 0.0102
+ },
+ {
+  "factor": "Cold streak",
+  "meaning": "Players coming off quiet games hit more than priced, hot streaks less (market chases form)",
+  "edge_2025": 0.0264,
+  "edge_2026": 0.0113
+ }
+]
