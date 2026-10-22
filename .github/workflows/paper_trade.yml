@@ -2,9 +2,13 @@ name: Paper trade
 
 # Logs the strategy board's picks at live Kalshi prices and settles old ones.
 # Public market data only: no secrets needed.
+#
+# GitHub skips short cron schedules on quiet repos, so each run stays alive
+# for ~5h45m and scans every 10 minutes; a new run is scheduled every 4 hours
+# and queues behind the current one, which keeps coverage continuous.
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "7 */4 * * *"
   workflow_dispatch:
 
 permissions:
@@ -17,7 +21,7 @@ concurrency:
 jobs:
   paper-trade:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v4
 
@@ -25,18 +29,17 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Scan and settle
-        run: python scripts/paper_trader.py
-
-      - name: Commit picks
+      - name: Scan and settle every 10 minutes
         run: |
           git config user.name "hedj-paper-bot"
           git config user.email "hedj-paper-bot@users.noreply.github.com"
-          git add paper/picks.csv
-          if git diff --cached --quiet; then
-            echo "No changes"
-          else
-            git commit -m "Paper trade: update picks [skip ci]"
-            git pull --rebase
-            git push
-          fi
+          end=$(( $(date +%s) + 345 * 60 ))
+          while [ "$(date +%s)" -lt "$end" ]; do
+            python scripts/paper_trader.py || echo "scan failed, retrying next round"
+            git add paper/picks.csv
+            if ! git diff --cached --quiet; then
+              git commit -q -m "Paper trade: update picks [skip ci]"
+              git pull -q --rebase && git push -q || echo "push failed, will retry"
+            fi
+            sleep 540
+          done

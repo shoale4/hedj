@@ -25,8 +25,8 @@ the fair-value reference, then trade them automatically.
   monthly results, same-game leg correlations, player factors. NBA/NHL
   preseason is excluded via `SEASON_START`.
 - `scripts/paper_trader.py` - Logs the board's Bet/Watch picks at live prices
-  for games starting within 45 min, records available size at the quote, and
-  settles them. Public data only. Runs every 15 min via
+  for games starting within 20 min, records available size at the quote, and
+  settles them. Public data only. Runs every 10 min via
   `.github/workflows/paper_trade.yml`, which commits `paper/picks.csv`.
   Kalshi `occurrence_datetime` = game start + 3h on live markets.
 - `scripts/kalshi_edge_scanner.py` - Pulls props from 10 books via The Odds API

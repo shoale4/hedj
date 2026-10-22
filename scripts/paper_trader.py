@@ -15,7 +15,7 @@ Each run:
 Picks are one contract each, like the backtest. A market can count for more
 than one strategy (a quiet-market over is also a plain over).
 
-Runs every 15 minutes on GitHub Actions (.github/workflows/paper_trade.yml),
+Runs every 10 minutes on GitHub Actions (.github/workflows/paper_trade.yml),
 which commits paper/picks.csv.
 
     python scripts/paper_trader.py            # scan + settle + summary
@@ -37,7 +37,7 @@ KALSHI_BASE = "https://api.elections.kalshi.com/trade-api/v2"
 PICKS = Path(__file__).parent.parent / "paper" / "picks.csv"
 TAKER_COEFF = 0.07
 MAX_SPREAD = 0.10          # same filter as the backtest
-LOOKAHEAD_MIN = 45         # log markets whose game starts within this many minutes
+LOOKAHEAD_MIN = 20         # log markets whose game starts within this many minutes (scans run every 10)
 START_OFFSET = timedelta(hours=3)   # occurrence_datetime is the start + 3h
 
 NFL_OVERS = {"KXNFLREC", "KXNFLRECYDS", "KXNFLPASSYDS"}
