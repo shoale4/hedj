@@ -153,8 +153,10 @@ class Snapshot:
     yes_bid: float
     yes_ask: float
     result: int   # 1 = YES settled, 0 = NO
-    volume: float
+    volume: float          # lifetime, includes in-game trading
     game_date: str
+    pregame_oi: float = 0.0     # open interest at the snapshot candle
+    pregame_vol6h: float = 0.0  # contracts traded in the 6h before the snapshot
 
     @property
     def mid(self) -> float:
@@ -202,6 +204,7 @@ def pregame_snapshot(market: dict, series: str, lead: timedelta) -> Optional[Sna
             continue
         if ask - bid > MAX_SPREAD:
             return None
+        pregame_vol = sum(_f(x.get("volume_fp", x.get("volume"))) or 0 for x in candles)
         return Snapshot(
             ticker=ticker,
             series=series,
@@ -211,6 +214,8 @@ def pregame_snapshot(market: dict, series: str, lead: timedelta) -> Optional[Sna
             result=1 if market["result"] == "yes" else 0,
             volume=_f(market.get("volume_fp", market.get("volume"))) or 0,
             game_date=kickoff_approx.date().isoformat(),
+            pregame_oi=_f(c.get("open_interest_fp", c.get("open_interest"))) or 0,
+            pregame_vol6h=pregame_vol,
         )
     return None
 

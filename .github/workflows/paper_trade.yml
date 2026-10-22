@@ -1,0 +1,42 @@
+name: Paper trade
+
+# Logs the strategy board's picks at live Kalshi prices and settles old ones.
+# Public market data only: no secrets needed.
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paper-trade
+  cancel-in-progress: false
+
+jobs:
+  paper-trade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scan and settle
+        run: python scripts/paper_trader.py
+
+      - name: Commit picks
+        run: |
+          git config user.name "hedj-paper-bot"
+          git config user.email "hedj-paper-bot@users.noreply.github.com"
+          git add paper/picks.csv
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Paper trade: update picks [skip ci]"
+            git pull --rebase
+            git push
+          fi

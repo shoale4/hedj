@@ -2,8 +2,9 @@
 
 ## Current Direction (Oct 2026): Kalshi prop trading
 
-Sportsbook arb polling is retired. All GitHub Actions workflows were deleted
-(the Odds API key had expired and the feed was committing stub data). The
+Sportsbook arb polling is retired. The old GitHub Actions workflows were deleted
+(the Odds API key had expired and the feed was committing stub data); the only
+workflow now is `paper_trade.yml`. The
 `web/` app and `arb_alerts.py`/`tight_line_summary.py` remain but get no fresh data.
 
 New focus: find mispriced Kalshi sports contracts using sportsbook prices as
@@ -12,8 +13,22 @@ the fair-value reference, then trade them automatically.
 - `scripts/prop_calibration.py` - Backtest: pregame Kalshi price vs settlement
   for every settled market in a series (public API, cached in
   `data/prediction_markets/cache/`, gitignored). Per-sport snapshot timing in
-  `LEAD_HOURS`. First result (NFL TD markets): long shots hit MORE often than
-  priced, so buying NO on TD long shots loses ~3% after taker fees.
+  `LEAD_HOURS`. Snapshots also record pregame open interest and 6h volume
+  (lifetime volume includes in-game trading and leaks the outcome).
+  Backtests cover NFL, NBA, NCAAF, NHL and daily-high weather (2025-27).
+  Long shots hit MORE often than priced, so NO on long shots loses ~3-4%.
+- `scripts/player_research.py` - Joins NFL prop snapshots to nflverse box
+  scores, snap counts and schedules (`--download`), tests pregame player
+  factors per season, and fits an out-of-sample logistic model.
+- `scripts/build_dashboard_data.py` - Turns snapshots into the strategy
+  board's CSVs (`data/prediction_markets/dashboard/`): one rule per strategy,
+  monthly results, same-game leg correlations, player factors. NBA/NHL
+  preseason is excluded via `SEASON_START`.
+- `scripts/paper_trader.py` - Logs the board's Bet/Watch picks at live prices
+  for games starting within 45 min, records available size at the quote, and
+  settles them. Public data only. Runs every 15 min via
+  `.github/workflows/paper_trade.yml`, which commits `paper/picks.csv`.
+  Kalshi `occurrence_datetime` = game start + 3h on live markets.
 - `scripts/kalshi_edge_scanner.py` - Pulls props from 10 books via The Odds API
   (`bookmakers=` list bills as one region; ~11 credits per NFL game), de-vigs
   two-sided quotes, shapes alt ladders, compares to Kalshi ladders
