@@ -29,6 +29,11 @@ the fair-value reference, then trade them automatically.
   settles them. Public data only. Runs every 10 min via
   `.github/workflows/paper_trade.yml`, which commits `paper/picks.csv`.
   Kalshi `occurrence_datetime` = game start + 3h on live markets.
+- `scripts/maker_backtest.py` - Replays paper strategies as resting limit
+  orders at bid+1¢ against real pregame trades (`--lead-min` placement,
+  `--strict` fills). Oct 2026 result: NO strategies fill 55-99% and gain per
+  pick resting 2h; long-shot overs rarely fill and the fills are adverse
+  (they win less often), so overs stay taker.
 - `scripts/kalshi_edge_scanner.py` - Pulls props from 10 books via The Odds API
   (`bookmakers=` list bills as one region; ~11 credits per NFL game), de-vigs
   two-sided quotes, shapes alt ladders, compares to Kalshi ladders
