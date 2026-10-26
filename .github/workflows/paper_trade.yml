@@ -35,12 +35,16 @@ jobs:
           git config user.email "hedj-paper-bot@users.noreply.github.com"
           end=$(( $(date +%s) + 345 * 60 ))
           while [ "$(date +%s)" -lt "$end" ]; do
+            # This bot is the only writer of picks.csv. A queued run checks out the
+            # commit from when it was scheduled, so start every round from the
+            # latest push or the first commit conflicts and wedges the run
+            git fetch -q origin main && git reset -q --hard origin/main
             # A hung API call must not stall the whole run
             timeout 480 python scripts/paper_trader.py || echo "scan failed or timed out, retrying next round"
             git add paper/picks.csv
             if ! git diff --cached --quiet; then
               git commit -q -m "Paper trade: update picks [skip ci]"
-              git pull -q --rebase && git push -q || { git rebase --abort 2>/dev/null; echo "push failed, will retry"; }
+              git push -q origin HEAD:main || echo "push failed, will retry next round"
             fi
             sleep 540
           done
