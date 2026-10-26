@@ -30,7 +30,7 @@ import time
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 KALSHI_BASE = "https://api.elections.kalshi.com/trade-api/v2"
@@ -85,12 +85,14 @@ def get(path: str) -> dict:
             with urlopen(req, timeout=30) as resp:
                 return json.loads(resp.read().decode())
         except HTTPError as e:
-            if e.code == 429:
+            if e.code == 429 or e.code >= 500:
                 time.sleep(2 ** attempt)
                 continue
             if e.code == 404:
                 return {}
             raise
+        except (URLError, TimeoutError, ConnectionError):
+            time.sleep(2 ** attempt)
     raise RuntimeError(f"rate limited: {url}")
 
 
@@ -174,11 +176,15 @@ def scan(picks: list, now: datetime) -> int:
     return added
 
 
-def settle(picks: list, now: datetime) -> int:
-    settled, cache = 0, {}
+def settle(picks: list, now: datetime, budget_s: float = 240) -> int:
+    """Settle finished picks, stopping after budget_s so a slow API can't
+    stall a round; whatever is left settles on the next one"""
+    settled, cache, deadline = 0, {}, time.monotonic() + budget_s
     for p in picks:
         if p["result"]:
             continue
+        if time.monotonic() > deadline:
+            break
         if datetime.fromisoformat(p["game_start"].replace("Z", "+00:00")) > now - timedelta(hours=2):
             continue
         if p["ticker"] not in cache:
@@ -219,7 +225,9 @@ def main():
     picks = load_picks()
     if not args.report:
         now = datetime.now(timezone.utc)
-        added, settled = scan(picks, now), settle(picks, now)
+        added = scan(picks, now)
+        save_picks(picks)   # keep new picks even if settling gets cut off
+        settled = settle(picks, now)
         save_picks(picks)
         print(f"{now:%Y-%m-%d %H:%M}Z: {added} new picks, {settled} settled, {len(picks)} total")
     report(picks)
