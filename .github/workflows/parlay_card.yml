@@ -1,0 +1,44 @@
+name: Parlay card
+
+# Builds the weekly parlay card (scripts/parlay_builder.py) once books have
+# posted Sunday and Monday props, and commits paper/parlays.csv for
+# hedj.app/parlays. One odds pull is ~11 Odds API credits per game.
+on:
+  schedule:
+    - cron: "0 14 * * 6"   # Saturday 9am CDT / 8am CST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: parlay-card
+  cancel-in-progress: false
+
+jobs:
+  card:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build the card
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          python scripts/player_research.py --download > /dev/null
+          # Saturday morning through Monday night
+          python scripts/parlay_builder.py --days 3
+
+      - name: Commit
+        run: |
+          git config user.name "hedj-paper-bot"
+          git config user.email "hedj-paper-bot@users.noreply.github.com"
+          git add paper/parlays.csv
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Parlay card [skip ci]"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 10; done
