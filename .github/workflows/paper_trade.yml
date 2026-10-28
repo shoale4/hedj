@@ -41,7 +41,8 @@ jobs:
             git fetch -q origin main && git reset -q --hard origin/main
             # A hung API call must not stall the whole run
             timeout 480 python scripts/paper_trader.py || echo "scan failed or timed out, retrying next round"
-            git add paper/picks.csv
+            [ -f paper/parlays.csv ] && { timeout 120 python scripts/parlay_builder.py --settle || echo "parlay settle failed"; }
+            git add paper/picks.csv paper/parlays.csv 2>/dev/null || git add paper/picks.csv
             if ! git diff --cached --quiet; then
               git commit -q -m "Paper trade: update picks [skip ci]"
               git push -q origin HEAD:main || echo "push failed, will retry next round"
