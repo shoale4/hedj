@@ -14,8 +14,11 @@ export type Leg = {
   result: "" | "yes" | "no";
 };
 
+export const MONTHLY_BUDGET = 100;
+
 export type Parlay = {
   id: string;
+  kind: "regular" | "big swing";
   builtAt: Date;
   status: "open" | "won" | "lost";
   fair: number;
@@ -41,6 +44,7 @@ export async function loadParlays(): Promise<{ parlays: Parlay[]; error?: string
         const status = r.status as Parlay["status"];
         p = {
           id: r.parlay_id,
+          kind: r.kind === "big swing" ? "big swing" : "regular",
           builtAt: new Date(r.built_at),
           status,
           fair: Number(r.parlay_fair),

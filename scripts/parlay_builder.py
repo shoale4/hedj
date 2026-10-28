@@ -58,6 +58,7 @@ LEG_SERIES = {
 LEG_FAIR = (0.40, 0.85)     # legs that are likely enough to stack
 LEG_MAX_GAP = 0.02          # Kalshi ask may be at most this far above book fair
 PARLAY_FAIR = (0.05, 0.25)  # about +300 to +1900
+BIG_SWING_FAIR = (0.02, 0.06)   # one long shot a week: about +1600 to +5000
 MARKUP = 1.10               # Kalshi combo price vs product of leg prices
 STACK_MARKUP = 1.21         # ...when the combo has a QB-receiver stack
 TARGET_EDGE = 1.05          # max price leaves 5% edge vs fair
@@ -261,25 +262,34 @@ def price_parlay(legs: tuple) -> dict:
     return {"fair": fair, "est_price": est, "ev": fair / est - 1, "max_price": fair / TARGET_EDGE, "stack": stack}
 
 
-def build_card(legs: list, n_parlays: int, top: int) -> list:
-    pool = legs[:top]
-    candidates = []
-    for k in (3, 4):
+def candidates(pool: list, sizes: tuple, fair_range: tuple) -> list:
+    out = []
+    for k in sizes:
         for combo in itertools.combinations(pool, k):
             if any(pair_lift(a, b) < 1 for a, b in itertools.combinations(combo, 2)):
                 continue
-            if len({(l["player"]) for l in combo}) < k:
+            if len({l["player"] for l in combo}) < k:
                 continue
             p = price_parlay(combo)
-            if PARLAY_FAIR[0] <= p["fair"] <= PARLAY_FAIR[1] and p["ev"] > 0:
-                candidates.append((p["ev"] + sum(l["score"] for l in combo) / 100, combo, p))
+            if fair_range[0] <= p["fair"] <= fair_range[1] and p["ev"] > 0:
+                out.append((p["ev"] + sum(l["score"] for l in combo) / 100, combo, p))
+    return sorted(out, key=lambda c: -c[0])
+
+
+def build_card(legs: list, n_parlays: int, top: int, big_swing: bool) -> list:
+    """n_parlays regular parlays (no shared legs), then optionally one 4-5 leg long shot"""
     card, used = [], set()
-    for _, combo, p in sorted(candidates, key=lambda c: -c[0]):
+    for _, combo, p in candidates(legs[:top], (3, 4), PARLAY_FAIR):
         if any(l["ticker"] in used for l in combo):
             continue
-        card.append((combo, p))
+        card.append((combo, {**p, "big": False}))
         used |= {l["ticker"] for l in combo}
         if len(card) == n_parlays:
+            break
+    if big_swing:
+        # Fewer legs to search: 5-leg combos of the top 35 would be 300K+
+        for _, combo, p in candidates(legs[:22], (4, 5), BIG_SWING_FAIR):
+            card.append((combo, {**p, "big": True}))
             break
     return card
 
@@ -287,7 +297,7 @@ def build_card(legs: list, n_parlays: int, top: int) -> list:
 def print_card(card: list, stake: float):
     for i, (combo, p) in enumerate(card, 1):
         pays = 1 / p["max_price"] - 1
-        print(f"\nParlay {i}: {len(combo)} legs, fair {p['fair']:.1%} (+{(1 / p['fair'] - 1) * 100:.0f}),"
+        print(f"\n{'BIG SWING' if p['big'] else 'Parlay'} {i}: {len(combo)} legs, fair {p['fair']:.1%} (+{(1 / p['fair'] - 1) * 100:.0f}),"
               f" est. Kalshi price {p['est_price'] * 100:.1f}¢ -> EV {p['ev']:+.0%}"
               f"{' [QB stack]' if p['stack'] else ''}")
         print(f"  BUY ONLY AT {p['max_price'] * 100:.1f}¢ OR LESS (pays {pays:.1f}x)  stake ${stake:.0f}")
@@ -298,7 +308,7 @@ def print_card(card: list, stake: float):
 # Log + settle
 # ---------------------------------------------------------------------------
 
-FIELDS = ["built_at", "parlay_id", "status", "legs", "parlay_fair", "est_price", "max_price", "stake",
+FIELDS = ["built_at", "parlay_id", "kind", "status", "legs", "parlay_fair", "est_price", "max_price", "stake",
           "ticker", "title", "game_start", "line", "leg_ask", "leg_fair", "why", "leg_result", "settled_at"]
 
 
@@ -320,7 +330,8 @@ def log_card(card: list, stake: float):
         pid = f"{now:%Y%m%d}-{i}"
         for l in combo:
             rows.append({
-                "built_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "parlay_id": pid, "status": "open",
+                "built_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "parlay_id": pid,
+                "kind": "big swing" if p["big"] else "regular", "status": "open",
                 "legs": len(combo), "parlay_fair": f"{p['fair']:.4f}", "est_price": f"{p['est_price']:.4f}",
                 "max_price": f"{p['max_price']:.4f}", "stake": f"{stake:.2f}", "ticker": l["ticker"],
                 "title": l["title"], "game_start": l["start"].strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -355,7 +366,8 @@ def settle() -> int:
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--days", type=int, default=7, help="games starting within this many days")
-    ap.add_argument("--parlays", type=int, default=4)
+    ap.add_argument("--parlays", type=int, default=3, help="regular parlays (plus one big swing)")
+    ap.add_argument("--no-big-swing", action="store_true")
     ap.add_argument("--budget", type=float, default=20)
     ap.add_argument("--top", type=int, default=35, help="best legs to combine")
     ap.add_argument("--use-cache", action="store_true", help="reuse the last odds pull (0 credits)")
@@ -368,11 +380,12 @@ def main():
         return
     legs = load_legs(args.days, args.use_cache, Research())
     print(f"{len(legs)} qualifying legs", file=sys.stderr)
-    card = build_card(legs, args.parlays, args.top)
+    card = build_card(legs, args.parlays, args.top, not args.no_big_swing)
     if not card:
         print("No parlays meet the rules this week: pass")
         return
-    stake = max(1, round(args.budget / len(card)))
+    # Fixed slice of the weekly budget; a thin week spends less instead of betting more per parlay
+    stake = max(1, round(args.budget / (args.parlays + (0 if args.no_big_swing else 1))))
     print_card(card, stake)
     if not args.dry_run:
         log_card(card, stake)

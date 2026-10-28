@@ -1,6 +1,7 @@
 import { Card, Shell, Stat } from "@/components/Shell";
 import { dayTime, pct, tone, usd } from "@/lib/format";
-import { loadParlays, type Leg } from "@/lib/parlays";
+import { dayKey } from "@/lib/picks";
+import { loadParlays, MONTHLY_BUDGET, type Leg } from "@/lib/parlays";
 
 export const revalidate = 120;
 
@@ -19,14 +20,17 @@ export default async function ParlaysPage() {
   const profit = settled.reduce((a, p) => a + (p.profit ?? 0), 0);
   const won = settled.filter((p) => p.status === "won").length;
   const open = parlays.filter((p) => p.status === "open");
+  const month = dayKey(new Date()).slice(0, 7);
+  const spentThisMonth = parlays.filter((p) => dayKey(p.builtAt).startsWith(month)).reduce((a, p) => a + p.stake, 0);
 
   return (
     <Shell active="/parlays">
       <div>
         <h1 className="text-2xl font-semibold">Parlays</h1>
         <p className="mt-1 max-w-prose text-sm text-muted">
-          A few 3–4 leg NFL parlays a week, built from legs Kalshi prices at or below the sportsbooks’ fair odds,
+          Three 3–4 leg NFL parlays and one longer big swing a week, built from legs Kalshi prices at or below the sportsbooks’ fair odds,
           ranked by recent form and matchup. Only buy at the max price or less. Results assume you paid the max price.
+          Budget rule: about $20 a week. After four weeks in profit, raise it 25%; if a month loses the full budget, pause and review.
         </p>
       </div>
 
@@ -37,8 +41,8 @@ export default async function ParlaysPage() {
         <Stat label="Record" value={`${won}–${settled.length - won}`} note="won–lost" />
         <Stat label="Profit" value={usd(settled.length ? profit : null)} toneClass={tone(profit)}
           note={staked ? `${pct(profit / staked, 0)} on $${staked.toFixed(0)}` : "nothing settled yet"} />
-        <Stat label="Expected hit rate" value={parlays.length ? pct(parlays.reduce((a, p) => a + p.fair, 0) / parlays.length).replace("+", "") : "—"}
-          note="average fair odds per parlay" />
+        <Stat label="This month" value={`$${spentThisMonth.toFixed(0)}`} note={`of $${MONTHLY_BUDGET} budget`}
+          toneClass={spentThisMonth > MONTHLY_BUDGET ? "text-down" : ""} />
       </section>
 
       {parlays.length === 0 && (
@@ -50,7 +54,7 @@ export default async function ParlaysPage() {
       {parlays.map((p) => (
         <Card
           key={p.id}
-          title={`${p.legs.length}-leg parlay · ${american(p.maxPrice)} or better`}
+          title={`${p.kind === "big swing" ? "Big swing" : "Parlay"} · ${p.legs.length} legs · ${american(p.maxPrice)} or better`}
           note={`Built ${dayTime(p.builtAt)} · fair ${(p.fair * 100).toFixed(1)}% · buy at ${(p.maxPrice * 100).toFixed(1)}¢ or less · $${p.stake.toFixed(0)}`}
         >
           <ul className="flex flex-col gap-2.5">
