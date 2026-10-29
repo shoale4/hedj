@@ -18,7 +18,7 @@ export const MONTHLY_BUDGET = 100;
 
 export type Parlay = {
   id: string;
-  kind: "regular" | "big swing";
+  kind: "long shot" | "parlay" | "big swing";
   builtAt: Date;
   status: "open" | "won" | "lost";
   fair: number;
@@ -26,7 +26,9 @@ export type Parlay = {
   maxPrice: number;
   stake: number;
   legs: Leg[];
-  /** Profit if bought at the max price; null while open */
+  /** Set once place_parlays.py bought it */
+  placed: { price: number; contracts: number } | null;
+  /** Actual profit if placed, otherwise as if bought at the max price; null while open */
   profit: number | null;
 };
 
@@ -42,9 +44,13 @@ export async function loadParlays(): Promise<{ parlays: Parlay[]; error?: string
         const stake = Number(r.stake);
         const maxPrice = Number(r.max_price);
         const status = r.status as Parlay["status"];
+        const placed = r.placed_at ? { price: Number(r.paid_price), contracts: Number(r.contracts) } : null;
+        const cost = placed ? placed.price * placed.contracts : stake;
+        const payout = placed ? placed.contracts : stake / maxPrice;
         p = {
           id: r.parlay_id,
-          kind: r.kind === "big swing" ? "big swing" : "regular",
+          // Cards before Oct 29 logged parlays as "regular"
+          kind: r.kind === "big swing" || r.kind === "long shot" ? r.kind : "parlay",
           builtAt: new Date(r.built_at),
           status,
           fair: Number(r.parlay_fair),
@@ -52,7 +58,8 @@ export async function loadParlays(): Promise<{ parlays: Parlay[]; error?: string
           maxPrice,
           stake,
           legs: [],
-          profit: status === "won" ? stake / maxPrice - stake : status === "lost" ? -stake : null,
+          placed,
+          profit: status === "won" ? payout - cost : status === "lost" ? -cost : null,
         };
         byId.set(p.id, p);
       }

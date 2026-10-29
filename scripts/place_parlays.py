@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """
-Place the open parlays from paper/parlays.csv on Kalshi, only at or under each
-parlay's max price. Real money: run it yourself.
+Place the open bets from paper/parlays.csv on Kalshi, only at or under each
+bet's max price. Real money: run it yourself.
+
+Long-shot singles are a limit order: buy YES at the highest price whose cost
+including the taker fee is within the max price, immediate-or-cancel, so it
+only fills against asks already at or under that price.
 
 For each open, unplaced parlay whose games haven't started:
 1. Checks every leg is still open, and creates the combo market from the legs
@@ -21,6 +25,7 @@ For each open, unplaced parlay whose games haven't started:
 """
 
 import argparse
+import math
 import sys
 import time
 from datetime import datetime, timezone
@@ -78,7 +83,49 @@ def yes_position(client: KalshiClient, ticker: str) -> float:
     return 0.0
 
 
+def limit_for(max_price: float) -> float:
+    """Highest whole-cent price whose cost with the taker fee stays within max_price"""
+    p = math.floor(max_price * 100) / 100
+    while p > 0.01 and p + taker_fee(p) > max_price:
+        p = round(p - 0.01, 2)
+    return p
+
+
+def place_single(client: KalshiClient, leg: dict, dry_run: bool, auto_yes: bool) -> dict:
+    stake, max_price = float(leg["stake"]), float(leg["max_price"])
+    m = get(f"/markets/{leg['ticker']}").get("market", {})
+    if m.get("status") not in ("open", "active"):
+        print(f"  skip: market is {m.get('status')}")
+        return {}
+    ask, limit = _f(m.get("yes_ask_dollars")), limit_for(max_price)
+    count = math.floor(stake / (limit + taker_fee(limit)) * 100) / 100
+    print(f"  ask {ask * 100:.0f}¢, limit {limit * 100:.0f}¢ (max {max_price * 100:.1f}¢ incl. fee), {count:g} contracts")
+    if not 0 < ask <= limit:
+        print("  ask is over the limit: skip")
+        return {}
+    if dry_run:
+        print("  dry run: not buying")
+        return {}
+    if not auto_yes and input(f"  Buy up to {count:g} YES at {limit * 100:.0f}¢ or less? [y/N] ").strip().lower() != "y":
+        print("  skipped")
+        return {}
+    order = client.request("POST", "/portfolio/events/orders", {
+        "ticker": leg["ticker"], "side": "bid", "count": f"{count:.2f}", "price": f"{limit:.4f}",
+        "time_in_force": "immediate_or_cancel", "self_trade_prevention_type": "taker_at_cross",
+    })
+    filled = _f(order.get("fill_count"))
+    if not filled:
+        print("  nothing filled")
+        return {}
+    price = _f(order.get("average_fill_price")) or limit
+    print(f"  bought {filled:g} YES at {price * 100:.1f}¢")
+    return {"combo_ticker": "", "paid_price": f"{price:.4f}", "contracts": f"{filled:g}",
+            "placed_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
+
+
 def place(client: KalshiClient, pid: str, legs: list, dry_run: bool, auto_yes: bool) -> dict:
+    if len(legs) == 1:
+        return place_single(client, legs[0], dry_run, auto_yes)
     stake, max_price = float(legs[0]["stake"]), float(legs[0]["max_price"])
     markets = [get(f"/markets/{l['ticker']}").get("market", {}) for l in legs]
     for l, m in zip(legs, markets):
@@ -151,8 +198,11 @@ def main():
             continue
         if min(datetime.fromisoformat(l["game_start"].replace("Z", "+00:00")) for l in legs) <= now:
             continue
+        if len({l["kind"] for l in legs}) > 1 or any(int(l["legs"]) != len(legs) for l in legs):
+            print(f"\n{pid}: rows don't match the logged leg count, refusing to place")
+            continue
         stake = float(legs[0]["stake"])
-        print(f"\nParlay {pid} ({len(legs)} legs, ${stake:.0f}):")
+        print(f"\n{legs[0].get('kind') or 'parlay'} {pid} ({len(legs)} leg{'s' if len(legs) > 1 else ''}, ${stake:.0f}):")
         for l in legs:
             print(f"  - {l['title']}")
         if spent + stake > args.max_spend or (not args.dry_run and stake > balance - spent):

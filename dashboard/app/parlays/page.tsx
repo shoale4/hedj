@@ -7,6 +7,8 @@ export const revalidate = 120;
 
 const american = (p: number) => `+${Math.round((1 / p - 1) * 100)}`;
 
+const KIND_LABEL = { "long shot": "Long shot", parlay: "Parlay", "big swing": "Big swing" } as const;
+
 function LegMark({ leg }: { leg: Leg }) {
   if (leg.result === "yes") return <span className="text-up">✓</span>;
   if (leg.result === "no") return <span className="text-down">✗</span>;
@@ -15,21 +17,25 @@ function LegMark({ leg }: { leg: Leg }) {
 
 export default async function ParlaysPage() {
   const { parlays, error } = await loadParlays();
-  const settled = parlays.filter((p) => p.profit !== null);
-  const staked = settled.reduce((a, p) => a + p.stake, 0);
+  // Money stats count only bets actually placed; unplaced ones stay on the page as paper results
+  const placed = parlays.filter((p) => p.placed);
+  const cost = (p: (typeof parlays)[number]) => (p.placed ? p.placed.price * p.placed.contracts : 0);
+  const settled = placed.filter((p) => p.profit !== null);
+  const staked = settled.reduce((a, p) => a + cost(p), 0);
   const profit = settled.reduce((a, p) => a + (p.profit ?? 0), 0);
   const won = settled.filter((p) => p.status === "won").length;
-  const open = parlays.filter((p) => p.status === "open");
+  const open = placed.filter((p) => p.status === "open");
   const month = dayKey(new Date()).slice(0, 7);
-  const spentThisMonth = parlays.filter((p) => dayKey(p.builtAt).startsWith(month)).reduce((a, p) => a + p.stake, 0);
+  const spentThisMonth = placed.filter((p) => dayKey(p.builtAt).startsWith(month)).reduce((a, p) => a + cost(p), 0);
 
   return (
     <Shell active="/parlays">
       <div>
         <h1 className="text-2xl font-semibold">Parlays</h1>
         <p className="mt-1 max-w-prose text-sm text-muted">
-          Three 3–4 leg NFL parlays and one longer big swing a week, built from legs Kalshi prices at or below the sportsbooks’ fair odds,
-          ranked by recent form and matchup. Only buy at the max price or less. Results assume you paid the max price.
+          Each week: long-shot single legs that the sportsbooks rate well above Kalshi’s price, plus a parlay and a big swing that
+          are only bought if Kalshi’s quote comes in at or under the max price. Ranked by recent form and matchup.
+          Placed bets show what you paid; the rest are scored as if bought at the max price.
           Budget rule: about $20 a week. After four weeks in profit, raise it 25%; if a month loses the full budget, pause and review.
         </p>
       </div>
@@ -37,7 +43,7 @@ export default async function ParlaysPage() {
       {error && <p className="rounded-md border border-down/40 px-3 py-2 text-sm text-down">Couldn’t load parlays: {error}</p>}
 
       <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <Stat label="Open" value={String(open.length)} note={`$${open.reduce((a, p) => a + p.stake, 0).toFixed(0)} staked`} />
+        <Stat label="Open" value={String(open.length)} note={`$${open.reduce((a, p) => a + cost(p), 0).toFixed(2)} staked`} />
         <Stat label="Record" value={`${won}–${settled.length - won}`} note="won–lost" />
         <Stat label="Profit" value={usd(settled.length ? profit : null)} toneClass={tone(profit)}
           note={staked ? `${pct(profit / staked, 0)} on $${staked.toFixed(0)}` : "nothing settled yet"} />
@@ -54,8 +60,9 @@ export default async function ParlaysPage() {
       {parlays.map((p) => (
         <Card
           key={p.id}
-          title={`${p.kind === "big swing" ? "Big swing" : "Parlay"} · ${p.legs.length} legs · ${american(p.maxPrice)} or better`}
-          note={`Built ${dayTime(p.builtAt)} · fair ${(p.fair * 100).toFixed(1)}% · buy at ${(p.maxPrice * 100).toFixed(1)}¢ or less · $${p.stake.toFixed(0)}`}
+          title={`${KIND_LABEL[p.kind]}${p.legs.length > 1 ? ` · ${p.legs.length} legs` : ""} · ${american(p.maxPrice)} or better`}
+          note={`Built ${dayTime(p.builtAt)} · fair ${(p.fair * 100).toFixed(1)}% · buy at ${(p.maxPrice * 100).toFixed(1)}¢ or less · ${
+            p.placed ? `placed: ${p.placed.contracts} at ${(p.placed.price * 100).toFixed(1)}¢` : `$${p.stake.toFixed(0)}, not placed`}`}
         >
           <ul className="flex flex-col gap-2.5">
             {p.legs.map((l) => (

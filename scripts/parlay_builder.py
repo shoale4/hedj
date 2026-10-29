@@ -58,6 +58,8 @@ LEG_SERIES = {
 }
 LEG_FAIR = (0.40, 0.85)     # legs that are likely enough to stack
 LEG_MAX_GAP = 0.02          # Kalshi ask may be at most this far above book fair
+LONG_SHOT_ASK = (0.04, 0.25)   # singles that pay 4-25x
+LONG_SHOT_MIN_EDGE = 0.02       # books' fair must beat Kalshi's price + fee by 2 points
 PARLAY_FAIR = (0.05, 0.25)  # about +300 to +1900
 BIG_SWING_FAIR = (0.02, 0.06)   # one long shot a week: about +1600 to +5000
 # Kalshi combo quotes vs the product of the legs' asks. Live RFQ quotes on
@@ -196,7 +198,8 @@ def research_points(r: dict, line: float) -> tuple:
 # Legs + parlays
 # ---------------------------------------------------------------------------
 
-def load_legs(days: int, use_cache: bool, research: Research) -> list:
+def match_legs(days: int, use_cache: bool, research: Research) -> list:
+    """Every open Kalshi prop in the window that the books price, with research"""
     cfg = scanner.SPORTS["nfl"]
     events = scanner.fetch_events(scanner.load_api_key(), cfg["odds_sport"], days * 24)
     keys = sorted({k for _, ks in cfg["stats"].values() for k in ks})
@@ -224,7 +227,7 @@ def load_legs(days: int, use_cache: bool, research: Research) -> list:
             ladder = ladders.get(name, {}).get(stat)
             fair = scanner.fair_at(ladder, line) if ladder and line is not None else None
             ask = _f(m.get("yes_ask_dollars"))
-            if fair is None or not 0 < ask < 1 or not LEG_FAIR[0] <= fair <= LEG_FAIR[1] or ask > fair + LEG_MAX_GAP:
+            if fair is None or not 0 < ask < 1:
                 continue
             r = research.leg(name, series, line, (start - timedelta(hours=6)).date().isoformat())
             if not r or r["injury"] in ("Out", "Doubtful"):
@@ -233,16 +236,44 @@ def load_legs(days: int, use_cache: bool, research: Research) -> list:
             legs.append({
                 "ticker": m["ticker"], "title": m.get("title", ""), "series": series, "player": name,
                 "team": r["team"], "game": m["event_ticker"].split("-")[1], "start": start,
-                "line": line, "ask": ask, "fair": fair, "score": (fair - ask) * 100 + pts,
+                "line": line, "ask": ask, "fair": fair, "pts": pts, "score": (fair - ask) * 100 + pts,
                 "why": "; ".join([f"books {fair:.0%} vs Kalshi {ask:.0%}"] + why),
             })
-    # One rung per player and stat: the best-scoring line
+    return legs
+
+
+def best_rung(legs: list, key) -> list:
+    """Keep the best-scoring leg per key (e.g. one line per player and stat)"""
     best = {}
     for leg in legs:
-        k = (leg["player"], leg["series"])
+        k = key(leg)
         if k not in best or leg["score"] > best[k]["score"]:
             best[k] = leg
     return sorted(best.values(), key=lambda x: -x["score"])
+
+
+def parlay_legs(legs: list) -> list:
+    ok = [l for l in legs if LEG_FAIR[0] <= l["fair"] <= LEG_FAIR[1] and l["ask"] <= l["fair"] + LEG_MAX_GAP]
+    return best_rung(ok, lambda l: (l["player"], l["series"]))
+
+
+def long_shots(legs: list, n: int) -> list:
+    """Cheap single legs the books rate well above Kalshi's price, after fees.
+    Scored by return on cost plus the research tiebreak; one per player, at
+    most two per game"""
+    picks = []
+    for l in legs:
+        cost = l["ask"] + scanner.taker_fee(l["ask"])
+        if LONG_SHOT_ASK[0] <= l["ask"] <= LONG_SHOT_ASK[1] and l["fair"] - cost >= LONG_SHOT_MIN_EDGE:
+            picks.append({**l, "score": (l["fair"] / cost - 1) * 100 + l["pts"] * 5})
+    out, per_game = [], defaultdict(int)
+    for l in best_rung(picks, lambda l: l["player"]):
+        if per_game[l["game"]] < 2:
+            out.append(l)
+            per_game[l["game"]] += 1
+        if len(out) == n:
+            break
+    return out
 
 
 def price_parlay(legs: tuple) -> dict:
@@ -281,31 +312,38 @@ def candidates(pool: list, sizes: tuple, fair_range: tuple) -> list:
     return sorted(out, key=lambda c: -c[0])
 
 
-def build_card(legs: list, n_parlays: int, top: int, big_swing: bool) -> list:
-    """n_parlays regular parlays (no shared legs), then optionally one 4-5 leg long shot"""
-    card, used = [], set()
-    for _, combo, p in candidates(legs[:top], (3, 4), PARLAY_FAIR):
+def build_card(all_legs: list, args) -> list:
+    """Long-shot singles, then parlays (no shared legs) and optionally one 4-5
+    leg big swing. Parlays are only bought if Kalshi's quote beats max_price"""
+    card = []
+    for l in long_shots(all_legs, args.singles):
+        cost = l["ask"] + scanner.taker_fee(l["ask"])
+        card.append(((l,), {"kind": "long shot", "fair": l["fair"], "est_price": cost, "ev": l["fair"] / cost - 1,
+                            "max_price": l["fair"] / TARGET_EDGE, "stack": False, "stake": args.single_stake}))
+    legs, used, n = parlay_legs(all_legs), set(), 0
+    for _, combo, p in candidates(legs[:args.top], (3, 4), PARLAY_FAIR):
+        if n == args.parlays:
+            break
         if any(l["ticker"] in used for l in combo):
             continue
-        card.append((combo, {**p, "big": False}))
+        card.append((combo, {**p, "kind": "parlay", "stake": args.parlay_stake}))
         used |= {l["ticker"] for l in combo}
-        if len(card) == n_parlays:
-            break
-    if big_swing:
+        n += 1
+    if not args.no_big_swing:
         # Fewer legs to search: 5-leg combos of the top 35 would be 300K+
         for _, combo, p in candidates(legs[:22], (4, 5), BIG_SWING_FAIR):
-            card.append((combo, {**p, "big": True}))
+            card.append((combo, {**p, "kind": "big swing", "stake": args.parlay_stake}))
             break
     return card
 
 
-def print_card(card: list, stake: float):
+def print_card(card: list):
     for i, (combo, p) in enumerate(card, 1):
-        pays = 1 / p["max_price"] - 1
-        print(f"\n{'BIG SWING' if p['big'] else 'Parlay'} {i}: {len(combo)} legs, fair {p['fair']:.1%} (+{(1 / p['fair'] - 1) * 100:.0f}),"
-              f" est. Kalshi price {p['est_price'] * 100:.1f}¢ -> EV {p['ev']:+.0%}"
+        pays = 1 / p["max_price"]
+        print(f"\n{p['kind'].upper()} {i}: {len(combo)} leg{'s' if len(combo) > 1 else ''}, fair {p['fair']:.1%}"
+              f" (+{(1 / p['fair'] - 1) * 100:.0f}), est. Kalshi cost {p['est_price'] * 100:.1f}¢ -> EV {p['ev']:+.0%}"
               f"{' [QB stack]' if p['stack'] else ''}")
-        print(f"  BUY ONLY AT {p['max_price'] * 100:.1f}¢ OR LESS (pays {pays:.1f}x)  stake ${stake:.0f}")
+        print(f"  BUY ONLY AT {p['max_price'] * 100:.1f}¢ OR LESS incl. fee (pays {pays:.1f}x)  stake ${p['stake']:.0f}")
         for l in combo:
             print(f"  - {l['title']}  [{l['start']:%a %-I:%M%p} UTC]\n      {l['why']}")
 
@@ -331,22 +369,26 @@ def save_rows(rows: list):
         w.writerows(rows)
 
 
-def log_card(card: list, stake: float):
+def log_card(card: list):
     rows, now = load_rows(), datetime.now(timezone.utc)
-    for i, (combo, p) in enumerate(card, 1):
+    # Number on from earlier cards the same day so ids never collide
+    taken = {r["parlay_id"] for r in rows}
+    n = sum(1 for pid in taken if pid.startswith(f"{now:%Y%m%d}-"))
+    for i, (combo, p) in enumerate(card, n + 1):
         pid = f"{now:%Y%m%d}-{i}"
+        assert pid not in taken, pid
         for l in combo:
             rows.append({
                 "built_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "parlay_id": pid,
-                "kind": "big swing" if p["big"] else "regular", "status": "open",
+                "kind": p["kind"], "status": "open",
                 "legs": len(combo), "parlay_fair": f"{p['fair']:.4f}", "est_price": f"{p['est_price']:.4f}",
-                "max_price": f"{p['max_price']:.4f}", "stake": f"{stake:.2f}", "ticker": l["ticker"],
+                "max_price": f"{p['max_price']:.4f}", "stake": f"{p['stake']:.2f}", "ticker": l["ticker"],
                 "title": l["title"], "game_start": l["start"].strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "line": l["line"], "leg_ask": f"{l['ask']:.2f}", "leg_fair": f"{l['fair']:.4f}",
                 "why": l["why"], "leg_result": "", "settled_at": "",
             })
     save_rows(rows)
-    print(f"\nLogged {len(card)} parlays to {PARLAYS.relative_to(ROOT)}")
+    print(f"\nLogged {len(card)} bets to {PARLAYS.relative_to(ROOT)}")
 
 
 def settle() -> int:
@@ -373,9 +415,11 @@ def settle() -> int:
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--days", type=int, default=7, help="games starting within this many days")
-    ap.add_argument("--parlays", type=int, default=3, help="regular parlays (plus one big swing)")
+    ap.add_argument("--singles", type=int, default=4, help="long-shot single legs")
+    ap.add_argument("--single-stake", type=float, default=3)
+    ap.add_argument("--parlays", type=int, default=1, help="regular parlays (plus one big swing)")
+    ap.add_argument("--parlay-stake", type=float, default=4)
     ap.add_argument("--no-big-swing", action="store_true")
-    ap.add_argument("--budget", type=float, default=20)
     ap.add_argument("--top", type=int, default=35, help="best legs to combine")
     ap.add_argument("--use-cache", action="store_true", help="reuse the last odds pull (0 credits)")
     ap.add_argument("--dry-run", action="store_true", help="print the card without logging it")
@@ -385,17 +429,16 @@ def main():
     if args.settle:
         print(f"{settle()} legs settled")
         return
-    legs = load_legs(args.days, args.use_cache, Research())
-    print(f"{len(legs)} qualifying legs", file=sys.stderr)
-    card = build_card(legs, args.parlays, args.top, not args.no_big_swing)
+    legs = match_legs(args.days, args.use_cache, Research())
+    print(f"{len(legs)} legs priced by the books", file=sys.stderr)
+    # Fixed stakes: a thin week spends less instead of betting more per bet
+    card = build_card(legs, args)
     if not card:
-        print("No parlays meet the rules this week: pass")
+        print("Nothing meets the rules this week: pass")
         return
-    # Fixed slice of the weekly budget; a thin week spends less instead of betting more per parlay
-    stake = max(1, round(args.budget / (args.parlays + (0 if args.no_big_swing else 1))))
-    print_card(card, stake)
+    print_card(card)
     if not args.dry_run:
-        log_card(card, stake)
+        log_card(card)
 
 
 if __name__ == "__main__":
