@@ -16,8 +16,9 @@ fairly priced legs, instead of thousands of single bets.
    same-game pair lifts measured in the backtest (QB yards + his receiver hit
    together 1.36x as often as priced independently; RB + teammate receiver
    and two same-team TD scorers hit together less often and are avoided).
-   Kalshi combos cost ~1.10x the legs' prices (1.21x for QB-receiver stacks),
-   so expected value is fair odds vs that estimated combo price.
+   Live Kalshi combo quotes run ~1.45x the legs' prices across games and
+   ~2.2x within one game (Oct 29 RFQs), so expected value is fair odds vs that
+   estimated combo price.
 4. Output: the card with a max price per parlay (only buy if Kalshi quotes
    this or less), appended to paper/parlays.csv, one row per leg.
 
@@ -59,8 +60,11 @@ LEG_FAIR = (0.40, 0.85)     # legs that are likely enough to stack
 LEG_MAX_GAP = 0.02          # Kalshi ask may be at most this far above book fair
 PARLAY_FAIR = (0.05, 0.25)  # about +300 to +1900
 BIG_SWING_FAIR = (0.02, 0.06)   # one long shot a week: about +1600 to +5000
-MARKUP = 1.10               # Kalshi combo price vs product of leg prices
-STACK_MARKUP = 1.21         # ...when the combo has a QB-receiver stack
+# Kalshi combo quotes vs the product of the legs' asks. Live RFQ quotes on
+# 2026-10-29 (1-2 makers answering): ~1.5x across games, ~2.2x within one
+# game. Historical first trades suggested 1.10x/1.21x; trust the live quotes.
+MARKUP = 1.45
+SAME_GAME_MARKUP = 2.2
 TARGET_EDGE = 1.05          # max price leaves 5% edge vs fair
 LIFT_SHRINK = 0.5           # count half of each measured same-game lift
 
@@ -258,7 +262,8 @@ def price_parlay(legs: tuple) -> dict:
     for leg in legs:
         ask *= leg["ask"]
     stack = any(is_stack(a, b) for a, b in itertools.combinations(legs, 2))
-    est = min(ask * (STACK_MARKUP if stack else MARKUP), 0.99)
+    same_game = len({l["game"] for l in legs}) < len(legs)
+    est = min(ask * (SAME_GAME_MARKUP if same_game else MARKUP), 0.99)
     return {"fair": fair, "est_price": est, "ev": fair / est - 1, "max_price": fair / TARGET_EDGE, "stack": stack}
 
 
@@ -309,7 +314,9 @@ def print_card(card: list, stake: float):
 # ---------------------------------------------------------------------------
 
 FIELDS = ["built_at", "parlay_id", "kind", "status", "legs", "parlay_fair", "est_price", "max_price", "stake",
-          "ticker", "title", "game_start", "line", "leg_ask", "leg_fair", "why", "leg_result", "settled_at"]
+          "ticker", "title", "game_start", "line", "leg_ask", "leg_fair", "why", "leg_result", "settled_at",
+          # Filled in by place_parlays.py when the parlay is actually bought
+          "combo_ticker", "paid_price", "contracts", "placed_at"]
 
 
 def load_rows() -> list:
@@ -319,7 +326,7 @@ def load_rows() -> list:
 def save_rows(rows: list):
     PARLAYS.parent.mkdir(parents=True, exist_ok=True)
     with open(PARLAYS, "w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=FIELDS, lineterminator="\n")
+        w = csv.DictWriter(f, fieldnames=FIELDS, lineterminator="\n", restval="")
         w.writeheader()
         w.writerows(rows)
 
