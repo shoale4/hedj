@@ -7,6 +7,11 @@ on:
   schedule:
     - cron: "0 14 * * 6"   # Saturday 9am CDT / 8am CST
   workflow_dispatch:
+    inputs:
+      check_key:
+        description: "Only test the Odds API key (free call, no card)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -26,7 +31,18 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Check the Odds API key
+        if: ${{ inputs.check_key }}
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          # The events list costs 0 credits
+          code=$(curl -s -o /dev/null -w "%{http_code}" "https://api.the-odds-api.com/v4/sports/americanfootball_nfl/events?apiKey=$ODDS_API_KEY")
+          echo "Odds API returned $code"
+          [ "$code" = "200" ]
+
       - name: Build the card
+        if: ${{ !inputs.check_key }}
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
@@ -35,6 +51,7 @@ jobs:
           python scripts/parlay_builder.py --days 3
 
       - name: Commit
+        if: ${{ !inputs.check_key }}
         run: |
           git config user.name "hedj-paper-bot"
           git config user.email "hedj-paper-bot@users.noreply.github.com"
