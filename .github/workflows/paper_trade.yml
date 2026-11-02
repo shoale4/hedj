@@ -1,7 +1,8 @@
 name: Paper trade
 
 # Logs the strategy board's picks at live Kalshi prices and settles old ones.
-# Public market data only: no secrets needed.
+# Public market data, plus the Odds API key for book_gap_paper.py (women's
+# college basketball, 1 credit per tip-off window).
 #
 # GitHub skips short cron schedules on quiet repos, so each run stays alive
 # for ~5h45m and scans every 10 minutes; a new run is scheduled every 4 hours
@@ -30,6 +31,8 @@ jobs:
           python-version: "3.12"
 
       - name: Scan and settle every 10 minutes
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
           git config user.name "hedj-paper-bot"
           git config user.email "hedj-paper-bot@users.noreply.github.com"
@@ -42,7 +45,8 @@ jobs:
             # A hung API call must not stall the whole run
             timeout 480 python scripts/paper_trader.py || echo "scan failed or timed out, retrying next round"
             [ -f paper/parlays.csv ] && { timeout 120 python scripts/parlay_builder.py --settle || echo "parlay settle failed"; }
-            git add paper/picks.csv paper/parlays.csv 2>/dev/null || git add paper/picks.csv
+            timeout 120 python scripts/book_gap_paper.py || echo "women's college gap scan failed"
+            git add paper/picks.csv paper/parlays.csv paper/wncaab_gaps.csv 2>/dev/null || git add paper/picks.csv
             if ! git diff --cached --quiet; then
               git commit -q -m "Paper trade: update picks [skip ci]"
               git push -q origin HEAD:main || echo "push failed, will retry next round"
