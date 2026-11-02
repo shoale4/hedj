@@ -5,7 +5,8 @@ name: Parlay card
 # hedj.app/parlays. One odds pull is ~11 Odds API credits per game.
 on:
   schedule:
-    - cron: "0 14 * * 6"   # Saturday 9am CDT / 8am CST
+    - cron: "0 14 * * 4"   # Thursday 8am CST: Thursday night game
+    - cron: "0 14 * * 6"   # Saturday 8am CST: Sunday and Monday
   workflow_dispatch:
     inputs:
       check_key:
@@ -47,8 +48,9 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
           python scripts/player_research.py --download > /dev/null
-          # Saturday morning through Monday night
-          python scripts/parlay_builder.py --days 3
+          # Thursday: that night's game only. Saturday: through Monday night
+          if [ "$(date -u +%u)" = "4" ]; then days=1; else days=3; fi
+          python scripts/parlay_builder.py --days $days
 
       - name: Commit
         if: ${{ !inputs.check_key }}

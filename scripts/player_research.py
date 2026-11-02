@@ -50,6 +50,7 @@ NFLVERSE_FILES = [
     "stats_player/stats_player_week_2025.csv", "stats_player/stats_player_week_2026.csv",
     "schedules/games.csv",
     "snap_counts/snap_counts_2025.csv", "snap_counts/snap_counts_2026.csv",
+    "injuries/injuries_2026.csv",   # parlay_builder.py skips Out/Doubtful legs
 ]
 SEASONS = ("2025", "2026")
 TAKER_COEFF = 0.07
@@ -362,6 +363,9 @@ def main():
 
     if args.download:
         download()
+        # CI (parlay_card.yml) only needs the CSVs; the snapshots are gitignored
+        if not (DATA / args.snapshots).exists():
+            return 0
     snapshots = json.load(open(DATA / args.snapshots))
     rows, misses = build_rows(snapshots)
     consistent = sum(r["consistent"] for r in rows)
