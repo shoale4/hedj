@@ -1,1 +1,1 @@
-logged_at,game_start,game,team,ticker,book_fair,n_books,yes_bid,yes_ask,ask_size,open_interest,pick,price,fee,edge,result,profit,settled_at
+logged_at,league,game_start,game,team,ticker,book_fair,n_books,yes_bid,yes_ask,ask_size,open_interest,pick,price,fee,edge,result,profit,settled_at
