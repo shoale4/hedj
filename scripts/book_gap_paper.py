@@ -1,5 +1,5 @@
 """
-Paper test: do sportsbooks price women's college basketball better than Kalshi?
+Paper test: do sportsbooks price college basketball (women's and men's) better than Kalshi?
 
 The calibration backtest (women_lines_snapshots.json, 2025-26 season) found no
 reliable edge in Kalshi's women's college moneylines on their own. This checks
@@ -32,15 +32,18 @@ sys.path.insert(0, str(Path(__file__).parent))
 import kalshi_edge_scanner as scanner  # noqa: E402
 
 ROOT = Path(__file__).parent.parent
-LOG = ROOT / "paper" / "wncaab_gaps.csv"
+LOG = ROOT / "paper" / "college_gaps.csv"
 KALSHI_BASE = "https://api.elections.kalshi.com/trade-api/v2"
-ODDS_SPORT = "basketball_wncaab"
-SERIES = "KXNCAAWBGAME"
+# league -> (Odds API sport, Kalshi moneyline series). Both use school names on Kalshi
+LEAGUES = {
+    "wncaab": ("basketball_wncaab", "KXNCAAWBGAME"),
+    "ncaab": ("basketball_ncaab", "KXNCAAMBGAME"),
+}
 LOOKAHEAD_MIN = 30
 MIN_EDGE = 0.02          # book fair must beat Kalshi's price + fee by 2 points
 BOOKMAKERS = ["pinnacle", "fanduel", "draftkings", "williamhill_us", "betmgm",
               "fanatics", "betrivers", "bovada", "betonlineag", "lowvig"]
-FIELDS = ["logged_at", "game_start", "game", "team", "ticker", "book_fair", "n_books",
+FIELDS = ["logged_at", "league", "game_start", "game", "team", "ticker", "book_fair", "n_books",
           "yes_bid", "yes_ask", "ask_size", "open_interest", "pick", "price", "fee", "edge",
           "result", "profit", "settled_at"]
 
@@ -64,7 +67,8 @@ def norm(name: str) -> str:
 
 
 # Odds API school names that Kalshi spells differently
-ALIASES = {"nc state": "north carolina state"}
+ALIASES = {"nc state": "north carolina state", "csu ": "cal state ", "cal baptist": "california baptist",
+           "fort wayne": "purdue fort wayne"}
 
 
 def names_match(kalshi: str, odds: str) -> int:
@@ -73,6 +77,7 @@ def names_match(kalshi: str, odds: str) -> int:
     length so the longest Kalshi name wins (Arizona St. over Arizona)"""
     k, o = norm(kalshi), norm(odds)
     for short, full in ALIASES.items():
+        short, full = short.strip(), full.strip()
         if o.startswith(short + " "):
             o = full + o[len(short):]
     return len(k) if k and (o == k or o.startswith(k + " ")) else 0
@@ -90,10 +95,10 @@ def save(rows: list):
         w.writerows(rows)
 
 
-def kalshi_open() -> list:
+def kalshi_open(series: str) -> list:
     out, cursor = [], ""
     while True:
-        d, _ = get(f"{KALSHI_BASE}/markets?series_ticker={SERIES}&status=open&limit=1000"
+        d, _ = get(f"{KALSHI_BASE}/markets?series_ticker={series}&status=open&limit=1000"
                    + (f"&cursor={cursor}" if cursor else ""))
         out += d.get("markets", [])
         cursor = d.get("cursor")
@@ -122,20 +127,21 @@ def fair_by_team(event: dict) -> dict:
     return out
 
 
-def scan(rows: list) -> int:
+def scan(rows: list, league: str) -> int:
+    odds_sport, series = LEAGUES[league]
     key = scanner.load_api_key()
     now = datetime.now(timezone.utc)
-    events, _ = get(f"{scanner.ODDS_BASE}/sports/{ODDS_SPORT}/events?apiKey={key}")
+    events, _ = get(f"{scanner.ODDS_BASE}/sports/{odds_sport}/events?apiKey={key}")
     logged = {r["game"] for r in rows}
     due = [e for e in events
            if now < datetime.fromisoformat(e["commence_time"].replace("Z", "+00:00")) <= now + timedelta(minutes=LOOKAHEAD_MIN)
            and e["id"] not in logged]
     if not due:
         return 0
-    odds, headers = get(f"{scanner.ODDS_BASE}/sports/{ODDS_SPORT}/odds?apiKey={key}&markets=h2h&oddsFormat=american"
+    odds, headers = get(f"{scanner.ODDS_BASE}/sports/{odds_sport}/odds?apiKey={key}&markets=h2h&oddsFormat=american"
                         f"&bookmakers={','.join(BOOKMAKERS)}&eventIds={','.join(e['id'] for e in due)}")
     print(f"odds credits: last={headers.get('x-requests-last')} remaining={headers.get('x-requests-remaining')}")
-    markets = kalshi_open()
+    markets = kalshi_open(series)
     added = 0
     for e in odds:
         start = datetime.fromisoformat(e["commence_time"].replace("Z", "+00:00"))
@@ -171,7 +177,7 @@ def scan(rows: list) -> int:
             elif 0 < bid < 1 and (1 - p) - (1 - bid) - scanner.taker_fee(1 - bid) >= MIN_EDGE:
                 pick, price, edge = "NO", 1 - bid, (1 - p) - (1 - bid) - scanner.taker_fee(1 - bid)
             rows.append({
-                "logged_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "game_start": e["commence_time"],
+                "logged_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "league": league, "game_start": e["commence_time"],
                 "game": e["id"], "team": team, "ticker": m["ticker"], "book_fair": f"{p:.4f}", "n_books": n,
                 "yes_bid": f"{bid:.2f}", "yes_ask": f"{ask:.2f}", "ask_size": f"{_f(m.get('yes_ask_size_fp')):.0f}",
                 "open_interest": f"{_f(m.get('open_interest_fp')):.0f}", "pick": pick or "",
@@ -200,9 +206,14 @@ def settle(rows: list) -> int:
 
 
 def report(rows: list):
+    for league in LEAGUES:
+        report_league([r for r in rows if r.get("league", "wncaab") == league], league)
+
+
+def report_league(rows: list, league: str):
     done = [r for r in rows if r["result"]]
     picks = [r for r in done if r["pick"]]
-    print(f"Women's college hoops, books vs Kalshi: {len(rows)} sides logged, {len(done)} settled")
+    print(f"{league}, books vs Kalshi: {len(rows)} sides logged, {len(done)} settled")
     if done:
         gap = statistics.mean(float(r["book_fair"]) - (float(r["yes_bid"]) + float(r["yes_ask"])) / 2 for r in done)
         print(f"  avg book fair minus Kalshi mid: {gap * 100:+.1f} pts")
@@ -219,7 +230,12 @@ def main():
     args = ap.parse_args()
     rows = load()
     if not args.report:
-        added = scan(rows)
+        added = 0
+        for league in LEAGUES:
+            try:
+                added += scan(rows, league)
+            except Exception as e:  # one league's outage shouldn't block the other
+                print(f"{league} scan failed: {e}")
         settled = settle(rows)
         save(rows)
         print(f"logged {added}, settled {settled}")
