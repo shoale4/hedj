@@ -1,1 +1,3 @@
 logged_at,league,game_start,game,team,ticker,book_fair,n_books,yes_bid,yes_ask,ask_size,open_interest,pick,price,fee,edge,result,profit,settled_at
+2026-11-09T22:36:29Z,ncaab,2026-11-09T23:00:00Z,8a669cc3faabd6f315dddb8e2c261ebd,Marshall Thundering Herd,KXNCAAMBGAME-26NOV09MRSHOSU-MRSH,0.0337,6,0.02,0.03,25070,89647,,,,,,,
+2026-11-09T22:36:29Z,ncaab,2026-11-09T23:00:00Z,8a669cc3faabd6f315dddb8e2c261ebd,Ohio State Buckeyes,KXNCAAMBGAME-26NOV09MRSHOSU-OSU,0.9663,6,0.97,0.98,12503,29088,,,,,,,
