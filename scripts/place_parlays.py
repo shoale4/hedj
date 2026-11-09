@@ -22,12 +22,22 @@ For each open, unplaced parlay whose games haven't started:
 
     source ~/.kalshi/env && python scripts/place_parlays.py --dry-run   # quotes only, buys nothing
     source ~/.kalshi/env && python scripts/place_parlays.py             # asks before each buy
+
+Unattended (the private shoale4/hedj-bets repo, after each card builds):
+
+    python scripts/place_parlays.py --yes --max-spend 15 --ledger ../bets/bets.csv
+
+--ledger records real buys in that file instead of the public parlays.csv,
+and stops buying once the calendar month's settled bets are down
+--month-stop dollars.
 """
 
 import argparse
+import csv
 import math
 import sys
 import time
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -96,6 +106,9 @@ def place_single(client: KalshiClient, leg: dict, dry_run: bool, auto_yes: bool)
     m = get(f"/markets/{leg['ticker']}").get("market", {})
     if m.get("status") not in ("open", "active"):
         print(f"  skip: market is {m.get('status')}")
+        return {}
+    if not dry_run and yes_position(client, leg["ticker"]) > 0:
+        print("  already hold YES on this market: skip")   # e.g. last run's ledger didn't get saved
         return {}
     ask, limit = _f(m.get("yes_ask_dollars")), limit_for(max_price)
     count = math.floor(stake / (limit + taker_fee(limit)) * 100) / 100
@@ -179,11 +192,46 @@ def place(client: KalshiClient, pid: str, legs: list, dry_run: bool, auto_yes: b
             pass   # already executed or closed
 
 
+LEDGER_FIELDS = ["parlay_id", "kind", "legs", "stake", "max_price", "tickers", "title",
+                 "combo_ticker", "paid_price", "contracts", "placed_at"]
+
+
+def load_ledger(path: Path) -> list:
+    return list(csv.DictReader(open(path))) if path.exists() else []
+
+
+def append_ledger(path: Path, legs: list, result: dict):
+    new = not path.exists()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "a", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=LEDGER_FIELDS, lineterminator="\n")
+        if new:
+            w.writeheader()
+        l = legs[0]
+        w.writerow({"parlay_id": l["parlay_id"], "kind": l["kind"], "legs": l["legs"], "stake": l["stake"],
+                    "max_price": l["max_price"], "tickers": " ".join(x["ticker"] for x in legs),
+                    "title": " + ".join(x["title"] for x in legs), **result})
+
+
+def month_pnl(ledger: list, status: dict, month: str) -> float:
+    """Settled profit of real buys placed this calendar month (fees included)"""
+    pnl = 0.0
+    for b in ledger:
+        if not b["placed_at"].startswith(month) or status.get(b["parlay_id"]) not in ("won", "lost"):
+            continue
+        n, price = float(b["contracts"]), float(b["paid_price"])
+        cost = n * (price + taker_fee(price))
+        pnl += (n if status[b["parlay_id"]] == "won" else 0) - cost
+    return pnl
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dry-run", action="store_true", help="get quotes, buy nothing")
     ap.add_argument("--yes", action="store_true", help="don't ask before each buy")
     ap.add_argument("--max-spend", type=float, default=MAX_SPEND)
+    ap.add_argument("--ledger", type=Path, help="record real buys here instead of parlays.csv")
+    ap.add_argument("--month-stop", type=float, default=100, help="stop once this month is down this much")
     args = ap.parse_args()
 
     client = KalshiClient()
@@ -193,8 +241,20 @@ def main():
     parlays = {}
     for r in rows:
         parlays.setdefault(r["parlay_id"], []).append(r)
+    ledger = load_ledger(args.ledger) if args.ledger else []
+    placed_ids = {b["parlay_id"] for b in ledger}
+    # --max-spend is per card (parlay ids are YYYYMMDD-n), so hourly runs can't add up past it
+    card_spent = defaultdict(float)
+    for b in ledger:
+        card_spent[b["parlay_id"].split("-")[0]] += float(b["stake"])
+    if args.ledger:
+        pnl = month_pnl(ledger, {pid: legs[0]["status"] for pid, legs in parlays.items()}, f"{now:%Y-%m}")
+        print(f"This month's settled real bets: ${pnl:+.2f}")
+        if pnl <= -args.month_stop:
+            print(f"Down ${-pnl:.2f} this month, at or past the ${args.month_stop:.0f} stop: not buying")
+            return
     for pid, legs in parlays.items():
-        if legs[0]["status"] != "open" or legs[0].get("placed_at"):
+        if legs[0]["status"] != "open" or legs[0].get("placed_at") or pid in placed_ids:
             continue
         if min(datetime.fromisoformat(l["game_start"].replace("Z", "+00:00")) for l in legs) <= now:
             continue
@@ -205,8 +265,9 @@ def main():
         print(f"\n{legs[0].get('kind') or 'parlay'} {pid} ({len(legs)} leg{'s' if len(legs) > 1 else ''}, ${stake:.0f}):")
         for l in legs:
             print(f"  - {l['title']}")
-        if spent + stake > args.max_spend or (not args.dry_run and stake > balance - spent):
-            print("  over the spend cap or balance: skip")
+        card = pid.split("-")[0]
+        if card_spent[card] + stake > args.max_spend or (not args.dry_run and stake > balance - spent):
+            print(f"  over the ${args.max_spend:.0f} cap for this card (${card_spent[card]:.0f} spent) or the balance: skip")
             continue
         try:
             result = place(client, pid, legs, args.dry_run, args.yes)
@@ -215,9 +276,13 @@ def main():
             continue
         if result:
             spent += stake
-            for l in legs:
-                l.update(result)
-            save_rows(rows)   # record each buy as soon as it happens
+            card_spent[card] += stake
+            if args.ledger:
+                append_ledger(args.ledger, legs, result)   # record each buy as soon as it happens
+            else:
+                for l in legs:
+                    l.update(result)
+                save_rows(rows)
     print(f"\nSpent ${spent:.2f}")
 
 

@@ -14,6 +14,26 @@ export type Leg = {
   result: "" | "yes" | "no";
 };
 
+// Real buys placed by the private shoale4/hedj-bets repo (bets.csv). Optional: needs a
+// read-only GitHub token for that repo. Without it, placements come from parlays.csv.
+const LEDGER_URL = process.env.LEDGER_URL;
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+
+async function loadLedger(): Promise<Map<string, { price: number; contracts: number }>> {
+  const out = new Map<string, { price: number; contracts: number }>();
+  if (!LEDGER_URL) return out;
+  const res = await fetch(LEDGER_URL, {
+    headers: GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {},
+    next: { revalidate: 120 },
+  });
+  if (res.status === 404) return out;   // no real bets yet
+  if (!res.ok) throw new Error(`bets.csv returned ${res.status}`);
+  for (const r of parseCsv(await res.text())) {
+    out.set(r.parlay_id, { price: Number(r.paid_price), contracts: Number(r.contracts) });
+  }
+  return out;
+}
+
 export const MONTHLY_BUDGET = 100;
 
 export type Parlay = {
@@ -37,6 +57,7 @@ export async function loadParlays(): Promise<{ parlays: Parlay[]; error?: string
     const res = await fetch(PARLAYS_URL, { next: { revalidate: 120 } });
     if (res.status === 404) return { parlays: [] };
     if (!res.ok) throw new Error(`parlays.csv returned ${res.status}`);
+    const ledger = await loadLedger();
     const byId = new Map<string, Parlay>();
     for (const r of parseCsv(await res.text())) {
       let p = byId.get(r.parlay_id);
@@ -44,7 +65,9 @@ export async function loadParlays(): Promise<{ parlays: Parlay[]; error?: string
         const stake = Number(r.stake);
         const maxPrice = Number(r.max_price);
         const status = r.status as Parlay["status"];
-        const placed = r.placed_at ? { price: Number(r.paid_price), contracts: Number(r.contracts) } : null;
+        const placed =
+          ledger.get(r.parlay_id) ??
+          (r.placed_at ? { price: Number(r.paid_price), contracts: Number(r.contracts) } : null);
         const cost = placed ? placed.price * placed.contracts : stake;
         const payout = placed ? placed.contracts : stake / maxPrice;
         p = {
