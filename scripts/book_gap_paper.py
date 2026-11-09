@@ -62,13 +62,15 @@ def _f(v) -> float:
 
 
 def norm(name: str) -> str:
-    words = re.sub(r"[^a-z0-9 ]", " ", scanner.norm_name(name).lower()).split()
+    words = scanner.norm_name(name.replace("-", " ")).split()
     return " ".join("state" if w == "st" else w for w in words)
 
 
 # Odds API school names that Kalshi spells differently
-ALIASES = {"nc state": "north carolina state", "csu ": "cal state ", "cal baptist": "california baptist",
-           "fort wayne": "purdue fort wayne"}
+ALIASES = {"nc state": "north carolina state", "csu": "cal state", "cal baptist": "california baptist",
+           "fort wayne": "purdue fort wayne", "pennsylvania": "penn", "south carolina upstate": "usc upstate",
+           "umkc": "kansas city", "miami hurricanes": "miami fl hurricanes", "boston univ": "boston university",
+           "ul monroe": "louisiana monroe", "miss valley": "mississippi valley"}
 
 
 def names_match(kalshi: str, odds: str) -> int:
@@ -77,8 +79,7 @@ def names_match(kalshi: str, odds: str) -> int:
     length so the longest Kalshi name wins (Arizona St. over Arizona)"""
     k, o = norm(kalshi), norm(odds)
     for short, full in ALIASES.items():
-        short, full = short.strip(), full.strip()
-        if o.startswith(short + " "):
+        if o == short or o.startswith(short + " "):
             o = full + o[len(short):]
     return len(k) if k and (o == k or o.startswith(k + " ")) else 0
 
@@ -182,7 +183,7 @@ def scan(rows: list, league: str) -> int:
                 "yes_bid": f"{bid:.2f}", "yes_ask": f"{ask:.2f}", "ask_size": f"{_f(m.get('yes_ask_size_fp')):.0f}",
                 "open_interest": f"{_f(m.get('open_interest_fp')):.0f}", "pick": pick or "",
                 "price": f"{price:.2f}" if price else "", "fee": f"{scanner.taker_fee(price):.4f}" if price else "",
-                "edge": f"{edge:.4f}" if edge else "",
+                "edge": f"{edge:.4f}" if edge else "", "result": "", "profit": "", "settled_at": "",
             })
             added += 1
     return added
@@ -191,7 +192,7 @@ def scan(rows: list, league: str) -> int:
 def settle(rows: list) -> int:
     now, done = datetime.now(timezone.utc), 0
     for r in rows:
-        if r["result"] or datetime.fromisoformat(r["game_start"].replace("Z", "+00:00")) > now - timedelta(hours=2):
+        if r.get("result") or datetime.fromisoformat(r["game_start"].replace("Z", "+00:00")) > now - timedelta(hours=2):
             continue
         m, _ = get(f"{KALSHI_BASE}/markets/{r['ticker']}")
         res = m.get("market", {}).get("result")
