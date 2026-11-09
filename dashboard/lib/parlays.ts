@@ -23,7 +23,11 @@ async function loadLedger(): Promise<Map<string, { price: number; contracts: num
   const out = new Map<string, { price: number; contracts: number }>();
   if (!LEDGER_URL) return out;
   const res = await fetch(LEDGER_URL, {
-    headers: GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {},
+    // LEDGER_URL: https://api.github.com/repos/shoale4/hedj-bets/contents/bets.csv
+    headers: {
+      Accept: "application/vnd.github.raw",
+      ...(GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {}),
+    },
     next: { revalidate: 120 },
   });
   if (res.status === 404) return out;   // no real bets yet
