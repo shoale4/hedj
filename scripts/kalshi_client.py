@@ -61,15 +61,21 @@ class KalshiClient:
     def request(self, method: str, path: str, body: Optional[dict] = None) -> dict:
         full_path = f"{API_PREFIX}{path}"
         data = json.dumps(body).encode() if body is not None else None
-        req = Request(f"{KALSHI_HOST}{full_path}", data=data,
-                      headers=self._headers(method, full_path), method=method)
-        try:
-            with urlopen(req, timeout=15) as resp:
-                raw = resp.read().decode()
-        except HTTPError as e:
-            detail = e.read().decode(errors="replace")[:500]
-            raise RuntimeError(f"Kalshi {method} {path} -> {e.code}: {detail}") from None
-        return json.loads(raw) if raw else {}
+        for attempt in range(5):
+            # Re-sign each try: the signature covers the timestamp
+            req = Request(f"{KALSHI_HOST}{full_path}", data=data,
+                          headers=self._headers(method, full_path), method=method)
+            try:
+                with urlopen(req, timeout=15) as resp:
+                    raw = resp.read().decode()
+                return json.loads(raw) if raw else {}
+            except HTTPError as e:
+                detail = e.read().decode(errors="replace")[:500]
+                # A rate-limited request isn't processed, so retrying is safe even for orders
+                if e.code == 429 and attempt < 4:
+                    time.sleep(1 + attempt)
+                    continue
+                raise RuntimeError(f"Kalshi {method} {path} -> {e.code}: {detail}") from None
 
     # -- Portfolio --
 
