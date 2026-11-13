@@ -50,7 +50,7 @@ jobs:
           python scripts/player_research.py --download > /dev/null
           # Thursday: that night's game only. Saturday: through Monday night
           if [ "$(date -u +%u)" = "4" ]; then days=1; else days=3; fi
-          python scripts/parlay_builder.py --days $days
+          python scripts/parlay_builder.py --days $days --singles 6
 
       - name: Commit
         if: ${{ !inputs.check_key }}
