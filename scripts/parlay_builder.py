@@ -60,6 +60,10 @@ LEG_FAIR = (0.40, 0.85)     # legs that are likely enough to stack
 LEG_MAX_GAP = 0.02          # Kalshi ask may be at most this far above book fair
 LONG_SHOT_ASK = (0.04, 0.25)   # singles that pay 4-25x
 LONG_SHOT_MIN_EDGE = 0.02       # books' fair must beat Kalshi's price + fee by 2 points
+# Thin slate fallback: when nothing clears the rules, take up to FALLBACK_N
+# singles where the books still beat Kalshi's price + fee, just by less
+FALLBACK_MIN_EDGE = 0.005
+FALLBACK_N = 2
 PARLAY_FAIR = (0.05, 0.25)  # about +300 to +1900
 BIG_SWING_FAIR = (0.02, 0.06)   # one long shot a week: about +1600 to +5000
 # Kalshi combo quotes vs the product of the legs' asks. Live RFQ quotes on
@@ -257,14 +261,14 @@ def parlay_legs(legs: list) -> list:
     return best_rung(ok, lambda l: (l["player"], l["series"]))
 
 
-def long_shots(legs: list, n: int) -> list:
+def long_shots(legs: list, n: int, min_edge: float = LONG_SHOT_MIN_EDGE) -> list:
     """Cheap single legs the books rate well above Kalshi's price, after fees.
     Scored by return on cost plus the research tiebreak; one per player, at
     most two per game"""
     picks = []
     for l in legs:
         cost = l["ask"] + scanner.taker_fee(l["ask"])
-        if LONG_SHOT_ASK[0] <= l["ask"] <= LONG_SHOT_ASK[1] and l["fair"] - cost >= LONG_SHOT_MIN_EDGE:
+        if LONG_SHOT_ASK[0] <= l["ask"] <= LONG_SHOT_ASK[1] and l["fair"] - cost >= min_edge:
             picks.append({**l, "score": (l["fair"] / cost - 1) * 100 + l["pts"] * 5})
     out, per_game = [], defaultdict(int)
     for l in best_rung(picks, lambda l: l["player"]):
@@ -433,6 +437,14 @@ def main():
     print(f"{len(legs)} legs priced by the books", file=sys.stderr)
     # Fixed stakes: a thin week spends less instead of betting more per bet
     card = build_card(legs, args)
+    if not card:
+        # Thin slate: a couple of smaller-edge singles instead of sitting out
+        for l in long_shots(legs, FALLBACK_N, FALLBACK_MIN_EDGE):
+            cost = l["ask"] + scanner.taker_fee(l["ask"])
+            card.append(((l,), {"kind": "long shot", "fair": l["fair"], "est_price": cost, "ev": l["fair"] / cost - 1,
+                                "max_price": l["fair"] - FALLBACK_MIN_EDGE, "stack": False, "stake": args.single_stake}))
+        if card:
+            print("Nothing met the normal rules: thin-slate fallback picks")
     if not card:
         print("Nothing meets the rules this week: pass")
         return
