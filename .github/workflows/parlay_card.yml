@@ -55,6 +55,8 @@ jobs:
           # Thursday: that night's game only. Saturday: through Monday night
           if [ "$(date -u +%u)" = "4" ]; then days=1; else days=3; fi
           python scripts/parlay_builder.py --days $days --singles 6
+          # Saturday: college football team-total overs for that day's games
+          if [ "$(date -u +%u)" = "6" ]; then python scripts/college_card.py || echo "college card failed"; fi
 
       - name: Commit
         if: ${{ !inputs.check_key }}
