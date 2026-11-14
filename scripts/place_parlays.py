@@ -25,7 +25,7 @@ For each open, unplaced parlay whose games haven't started:
 
 Unattended (the private shoale4/hedj-bets repo, after each card builds):
 
-    python scripts/place_parlays.py --yes --max-spend 15 --ledger ../bets/bets.csv
+    python scripts/place_parlays.py --yes --max-spend 25 --week-cap 35 --ledger ../bets/bets.csv
 
 --ledger records real buys in that file instead of the public parlays.csv,
 and stops buying once the calendar month's settled bets are down
@@ -231,6 +231,7 @@ def main():
     ap.add_argument("--yes", action="store_true", help="don't ask before each buy")
     ap.add_argument("--max-spend", type=float, default=MAX_SPEND)
     ap.add_argument("--ledger", type=Path, help="record real buys here instead of parlays.csv")
+    ap.add_argument("--week-cap", type=float, help="total across every card in a Mon-Sun week")
     ap.add_argument("--month-stop", type=float, default=100, help="stop once this month is down this much")
     args = ap.parse_args()
 
@@ -244,9 +245,11 @@ def main():
     ledger = load_ledger(args.ledger) if args.ledger else []
     placed_ids = {b["parlay_id"] for b in ledger}
     # --max-spend is per card (parlay ids are YYYYMMDD-n), so hourly runs can't add up past it
-    card_spent = defaultdict(float)
+    card_spent, week_spent = defaultdict(float), defaultdict(float)
+    week_of = lambda pid: datetime.strptime(pid[:8], "%Y%m%d").strftime("%G-W%V")  # noqa: E731
     for b in ledger:
         card_spent[b["parlay_id"].split("-")[0]] += float(b["stake"])
+        week_spent[week_of(b["parlay_id"])] += float(b["stake"])
     if args.ledger:
         pnl = month_pnl(ledger, {pid: legs[0]["status"] for pid, legs in parlays.items()}, f"{now:%Y-%m}")
         print(f"This month's settled real bets: ${pnl:+.2f}")
@@ -269,6 +272,9 @@ def main():
         if card_spent[card] + stake > args.max_spend or (not args.dry_run and stake > balance - spent):
             print(f"  over the ${args.max_spend:.0f} cap for this card (${card_spent[card]:.0f} spent) or the balance: skip")
             continue
+        if args.week_cap is not None and week_spent[week_of(pid)] + stake > args.week_cap:
+            print(f"  over the ${args.week_cap:.0f} weekly cap (${week_spent[week_of(pid)]:.2f} spent): skip")
+            continue
         try:
             result = place(client, pid, legs, args.dry_run, args.yes)
         except RuntimeError as e:
@@ -277,6 +283,7 @@ def main():
         if result:
             spent += stake
             card_spent[card] += stake
+            week_spent[week_of(pid)] += stake
             if args.ledger:
                 append_ledger(args.ledger, legs, result)   # record each buy as soon as it happens
             else:
