@@ -450,6 +450,11 @@ def main():
     if args.settle:
         print(f"{settle()} legs settled")
         return
+    today = f"{datetime.now(timezone.utc):%Y%m%d}-"
+    if not args.dry_run and any(r["parlay_id"].startswith(today) for r in load_rows()):
+        # Backup crons cover GitHub's late schedules; one card per day
+        print("Today's card is already built")
+        return
     legs = match_legs(args.days, args.use_cache, Research())
     print(f"{len(legs)} legs priced by the books", file=sys.stderr)
     # Fixed stakes: a thin week spends less instead of betting more per bet

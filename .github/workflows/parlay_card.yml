@@ -7,6 +7,10 @@ on:
   schedule:
     - cron: "0 14 * * 4"   # Thursday 8am CST: Thursday night game
     - cron: "0 14 * * 6"   # Saturday 8am CST: Sunday and Monday
+    # Backups: GitHub runs schedules hours late. The builder skips if today's
+    # card exists, and a pass (no card) gets retried with fresher prices
+    - cron: "0 17,20 * * 4"
+    - cron: "0 16,19 * * 6"
   workflow_dispatch:
     inputs:
       check_key:
