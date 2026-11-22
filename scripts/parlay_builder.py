@@ -60,6 +60,10 @@ LEG_FAIR = (0.40, 0.85)     # legs that are likely enough to stack
 LEG_MAX_GAP = 0.02          # Kalshi ask may be at most this far above book fair
 LONG_SHOT_ASK = (0.04, 0.25)   # singles that pay 4-25x
 LONG_SHOT_MIN_EDGE = 0.02       # books' fair must beat Kalshi's price + fee by 2 points
+# Player profile: skip long shots more than a third above anything the player
+# has done in his last 17 games. Backtest (NFL 2025-27, 9K cheap overs): lines
+# under 75% of the player's best returned +2.5% (under 60%: -21%) vs +18.6% kept
+PLAUSIBLE = 0.75
 # Thin slate fallback: when nothing clears the rules, two 3-4 leg parlays of
 # likely legs, bought only if Kalshi's quote is at or under the books' fair
 # (no 5% edge required) and legs may sit up to 4 points over fair
@@ -162,6 +166,7 @@ class Research:
             "team": last["team"], "pos": last["position"],
             "hit_l8": sum(v > line for v in recent) / len(recent),
             "avg_l8": statistics.mean(recent), "avg_l3": statistics.mean(recent[-3:]),
+            "best_l17": max(stat(r) for r in rows[-17:]),
             "snap_l3": statistics.mean([p for _, p in sorted(self.snaps.get(name, []))[-3:]] or [0]),
             "implied": env.get("implied"), "roof": env.get("roof"),
             "injury": self.injuries.get(name, (0, ""))[1],
@@ -242,7 +247,7 @@ def match_legs(days: int, use_cache: bool, research: Research) -> list:
             legs.append({
                 "ticker": m["ticker"], "title": m.get("title", ""), "series": series, "player": name,
                 "team": r["team"], "game": m["event_ticker"].split("-")[1], "start": start,
-                "line": line, "ask": ask, "fair": fair, "pts": pts, "score": (fair - ask) * 100 + pts,
+                "line": line, "ask": ask, "fair": fair, "pts": pts, "best": r["best_l17"], "score": (fair - ask) * 100 + pts,
                 "why": "; ".join([f"books {fair:.0%} vs Kalshi {ask:.0%}"] + why),
             })
     return legs
@@ -270,8 +275,11 @@ def long_shots(legs: list, n: int) -> list:
     picks = []
     for l in legs:
         cost = l["ask"] + scanner.taker_fee(l["ask"])
+        if l["best"] < PLAUSIBLE * l["line"]:
+            continue   # never close to this line lately
         if LONG_SHOT_ASK[0] <= l["ask"] <= LONG_SHOT_ASK[1] and l["fair"] - cost >= LONG_SHOT_MIN_EDGE:
-            picks.append({**l, "score": (l["fair"] / cost - 1) * 100 + l["pts"] * 5})
+            picks.append({**l, "score": (l["fair"] / cost - 1) * 100 + l["pts"] * 5,
+                          "why": f"{l['why']}; best of last 17: {l['best']:.0f}"})
     out, per_game = [], defaultdict(int)
     for l in best_rung(picks, lambda l: l["player"]):
         if per_game[l["game"]] < 2:
